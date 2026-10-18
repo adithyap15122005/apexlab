@@ -14,6 +14,12 @@ type SceneFrameProps = {
   motionControl?:boolean;
   interactive?:boolean;
   explicitPlayback?:boolean;
+  /** Custom scenes provide their own lights, environment and controls. */
+  studio?:boolean;
+  /** Render at the display refresh rate while animating, instead of a 30 fps clock. */
+  smooth?:boolean;
+  canvas?:{fov?:number;near?:number;far?:number;dpr?:number;shadows?:boolean;antialias?:boolean;logarithmicDepthBuffer?:boolean;highPerformance?:boolean};
+  toolbar?:ReactNode;
 }
 class SceneBoundary extends Component<{children:ReactNode;fallback:ReactNode;onError:()=>void},{failed:boolean}>{
   state={failed:false}
@@ -21,9 +27,13 @@ class SceneBoundary extends Component<{children:ReactNode;fallback:ReactNode;onE
   componentDidCatch(){this.props.onError()}
   render(){return this.state.failed?this.props.fallback:this.props.children}
 }
-function FrameClock({running}:{running:boolean}){
+function FrameClock({running,smooth}:{running:boolean;smooth:boolean}){
   const invalidate=useThree(s=>s.invalidate)
-  useEffect(()=>{invalidate();if(!running)return;const id=setInterval(invalidate,1000/30);return()=>clearInterval(id)},[running,invalidate])
+  useEffect(()=>{
+    invalidate();if(!running)return
+    if(smooth){let frame=requestAnimationFrame(function loop(){invalidate();frame=requestAnimationFrame(loop)});return()=>cancelAnimationFrame(frame)}
+    const id=setInterval(invalidate,1000/30);return()=>clearInterval(id)
+  },[running,smooth,invalidate])
   return null
 }
 function ContextMonitor({onLost}:{onLost:()=>void}){
@@ -45,7 +55,7 @@ function CameraBridge({rotation,zoom,target}:{rotation:number;zoom:number;target
   },[rotation,zoom,camera,invalidate,target])
   return null
 }
-export default function SceneFrame({label,className='',fallback,camera=[8,4.3,7],target=[0,.4,0],animated=true,children,onPresentationChange,motionControl=true,interactive=true,explicitPlayback=false}:SceneFrameProps){
+export default function SceneFrame({label,className='',fallback,camera=[8,4.3,7],target=[0,.4,0],animated=true,children,onPresentationChange,motionControl=true,interactive=true,explicitPlayback=false,studio=true,smooth=false,canvas:canvasOptions,toolbar}:SceneFrameProps){
   const container=useRef<HTMLDivElement>(null)
   const [visible,setVisible]=useState(false)
   const [mounted,setMounted]=useState(false)
@@ -79,12 +89,13 @@ export default function SceneFrame({label,className='',fallback,camera=[8,4.3,7]
   return <div ref={container} className={`scene-frame ${className} ${show3d?'is-3d':'is-2d'}`} aria-label={label}>
     <div className="scene-toolbar"><span className="scene-label mono"><span className="tiny-dot"/>{show3d?'LIVE 3D STUDIO':'ANALYTICAL 2D'}</span><div className="scene-mode-switch" role="group" aria-label={`${label} display mode`}><button aria-pressed={show3d} disabled={!supported} onClick={()=>setEnabled(true)}><Box size={12}/>3D</button><button aria-pressed={!show3d} onClick={()=>setEnabled(false)}><View size={12}/>2D</button></div></div>
     <div className="scene-viewport" role="img" aria-label={`${label}. ${show3d?'Drag to orbit, pinch to zoom. Equivalent controls below.':'Two-dimensional alternative.'}`}>
-      {show3d&&mounted?<SceneBoundary fallback={fallback} onError={()=>setSupported(false)}><Suspense fallback={<div className="scene-loading"><span className="scene-loading-orbit"/><span className="mono">COMPOSING THE STUDIO</span></div>}><Canvas key={resetKey} camera={{position:camera,fov:37,near:.1,far:150}} dpr={[1,1.5]} frameloop="demand" gl={{antialias:true,alpha:true,powerPreference:'low-power'}} fallback={fallback} onCreated={({gl})=>{gl.domElement.setAttribute('aria-label',label)}}>
-        <ContextMonitor onLost={()=>setSupported(false)}/><ambientLight intensity={.65}/><hemisphereLight args={['#e9f1ff','#111810',1.2]}/><directionalLight position={[4,8,5]} intensity={3.2} color="#f1f4ff"/><directionalLight position={[-5,4,-4]} intensity={2} color="#d7ff99"/>
-        <Environment resolution={128} frames={1}><Lightformer intensity={3} position={[0,6,0]} scale={[10,4,1]} rotation-x={Math.PI/2}/><Lightformer intensity={2} position={[-5,2,2]} scale={[3,6,1]} rotation-y={Math.PI/2}/><Lightformer intensity={1} color="#d7ff87" position={[4,1,-4]} scale={[6,2,1]}/></Environment>
-        {children({active,motion,resetKey})}<OrbitControls makeDefault enabled={interactive} target={target} enablePan={false} enableDamping={false} minDistance={3.5} maxDistance={30} minPolarAngle={.15} maxPolarAngle={1.48} rotateSpeed={.65} zoomSpeed={.6}/><CameraBridge rotation={rotation} zoom={zoom} target={target}/><FrameClock running={active&&animated&&(motion||explicitPlayback)}/>
+      {show3d&&mounted?<SceneBoundary fallback={fallback} onError={()=>setSupported(false)}><Suspense fallback={<div className="scene-loading"><span className="scene-loading-orbit"/><span className="mono">COMPOSING THE STUDIO</span></div>}><Canvas key={resetKey} camera={{position:camera,fov:canvasOptions?.fov??37,near:canvasOptions?.near??.1,far:canvasOptions?.far??150}} dpr={[1,canvasOptions?.dpr??1.5]} shadows={canvasOptions?.shadows?'soft':false} frameloop="demand" gl={{antialias:canvasOptions?.antialias??true,alpha:studio,powerPreference:canvasOptions?.highPerformance?'high-performance':'low-power',logarithmicDepthBuffer:!!canvasOptions?.logarithmicDepthBuffer}} fallback={fallback} onCreated={({gl})=>{gl.domElement.setAttribute('aria-label',label)}}>
+        <ContextMonitor onLost={()=>setSupported(false)}/>
+        {studio&&<><ambientLight intensity={.65}/><hemisphereLight args={['#e9f1ff','#111810',1.2]}/><directionalLight position={[4,8,5]} intensity={3.2} color="#f1f4ff"/><directionalLight position={[-5,4,-4]} intensity={2} color="#d7ff99"/>
+        <Environment resolution={128} frames={1}><Lightformer intensity={3} position={[0,6,0]} scale={[10,4,1]} rotation-x={Math.PI/2}/><Lightformer intensity={2} position={[-5,2,2]} scale={[3,6,1]} rotation-y={Math.PI/2}/><Lightformer intensity={1} color="#d7ff87" position={[4,1,-4]} scale={[6,2,1]}/></Environment></>}
+        {children({active,motion,resetKey})}{studio&&<><OrbitControls makeDefault enabled={interactive} target={target} enablePan={false} enableDamping={false} minDistance={3.5} maxDistance={30} minPolarAngle={.15} maxPolarAngle={1.48} rotateSpeed={.65} zoomSpeed={.6}/><CameraBridge rotation={rotation} zoom={zoom} target={target}/></>}<FrameClock running={active&&animated&&(motion||explicitPlayback)} smooth={smooth}/>
       </Canvas></Suspense></SceneBoundary>:fallback}
     </div>
-    <div className="scene-controls"><span className="scene-instruction">{!supported?'3D unavailable · all tools work in 2D':show3d?(interactive?'DRAG TO ORBIT · PINCH TO ZOOM':'CINEMATIC CAMERA · SKIP TO EXPLORE'):'ALL DATA & CONTROLS AVAILABLE'}</span>{show3d&&<div><button disabled={!interactive} onClick={()=>setRotation(r=>r-.3)} aria-label={`${label}: rotate left`}><RotateCcw size={13}/></button><button disabled={!interactive} onClick={()=>setRotation(r=>r+.3)} aria-label={`${label}: rotate right`}><RotateCw size={13}/></button><button disabled={!interactive} onClick={()=>setZoom(z=>z+1)} aria-label={`${label}: zoom in`}><Plus size={14}/></button><button disabled={!interactive} onClick={()=>setZoom(z=>z-1)} aria-label={`${label}: zoom out`}><Minus size={14}/></button>{animated&&motionControl&&<button onClick={()=>setPaused(!paused)} aria-pressed={paused} aria-label={paused?'Resume scene motion':'Pause scene motion'}>{paused?<Play size={12}/>:<Pause size={12}/>}</button>}<button disabled={!interactive} onClick={reset} aria-label={`${label}: reset view`}><Expand size={13}/></button></div>}</div>
+    <div className="scene-controls"><span className="scene-instruction">{!supported?'3D unavailable · all tools work in 2D':show3d?(interactive?'DRAG TO ORBIT · PINCH TO ZOOM':'CINEMATIC CAMERA · SKIP TO EXPLORE'):'ALL DATA & CONTROLS AVAILABLE'}</span>{toolbar}{show3d&&studio&&<div><button disabled={!interactive} onClick={()=>setRotation(r=>r-.3)} aria-label={`${label}: rotate left`}><RotateCcw size={13}/></button><button disabled={!interactive} onClick={()=>setRotation(r=>r+.3)} aria-label={`${label}: rotate right`}><RotateCw size={13}/></button><button disabled={!interactive} onClick={()=>setZoom(z=>z+1)} aria-label={`${label}: zoom in`}><Plus size={14}/></button><button disabled={!interactive} onClick={()=>setZoom(z=>z-1)} aria-label={`${label}: zoom out`}><Minus size={14}/></button>{animated&&motionControl&&<button onClick={()=>setPaused(!paused)} aria-pressed={paused} aria-label={paused?'Resume scene motion':'Pause scene motion'}>{paused?<Play size={12}/>:<Pause size={12}/>}</button>}<button disabled={!interactive} onClick={reset} aria-label={`${label}: reset view`}><Expand size={13}/></button></div>}</div>
   </div>
 }

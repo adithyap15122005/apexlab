@@ -1,8 +1,11 @@
 import type { CameraMode, RecordedPosition } from '../../history/types'
 
 export const REPLAY_CAMERAS:{id:CameraMode;label:string;description:string}[]=[
+  {id:'director',label:'Director',description:'Automatic broadcast cuts · follows your driver'},
   {id:'onboard',label:'Cockpit',description:'Driver’s eyes · drag to look around'},
   {id:'tcam',label:'T-cam',description:'Above the roll hoop · follows your driver'},
+  {id:'nose',label:'Nose cam',description:'Low on the nose · front wheels and wing in view'},
+  {id:'rear',label:'Rear cam',description:'Roll hoop, facing back · DRS flap and rivals'},
   {id:'chase',label:'Chase',description:'Behind the car · follows your driver'},
   {id:'top',label:'Top view',description:'Directly overhead · follows your driver'},
   {id:'overview',label:'Whole circuit',description:'Top-down view · the entire recorded field'},

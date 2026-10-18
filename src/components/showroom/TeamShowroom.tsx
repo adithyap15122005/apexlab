@@ -3,7 +3,8 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpRight, Camera, ChevronRight, CircleGauge, Expand, Eye, RotateCcw, Scan } from 'lucide-react'
 import { PerspectiveCamera, Vector3 } from 'three'
 import SceneFrame from '../three/SceneFrame'
-import RaceCar, { type CarVariant } from '../three/RaceCar'
+import type { CarVariant } from '../three/RaceCar'
+import StudioCar from '../race3d/StudioCar'
 import { getDriverPortrait } from '../../history/people'
 import './TeamShowroom.css'
 
@@ -32,10 +33,10 @@ function ShowroomCamera({view,yaw,pitch}:{view:ShowroomView;yaw:number;pitch:num
   if(view==='exterior'){
    if(previous.current!==view){camera.position.set(...exteriorCamera);camera.lookAt(...target);perspective.fov=37;perspective.near=.1;perspective.updateProjectionMatrix()}
   }else if(view==='aero'){
-   camera.position.set(3.4,1.8,2.7);camera.lookAt(1.45,.4,0);perspective.fov=40;perspective.near=.05;perspective.updateProjectionMatrix()
+   camera.position.set(4.9,1.55,2.6);camera.lookAt(3,.32,0);perspective.fov=40;perspective.near=.05;perspective.updateProjectionMatrix()
   }else{
    const detail=view==='cockpit'
-   camera.position.set(detail?-.29:-.19,detail?1.01:1.035,detail?.12:0)
+   camera.position.set(detail?.28:.33,detail?1.0:1.0,detail?.1:0)
    const angle=detail?-.42+pitch:pitch-.035
    look.set(Math.cos(yaw)*Math.cos(angle),Math.sin(angle),Math.sin(yaw)*Math.cos(angle)).add(camera.position)
    camera.lookAt(look);perspective.fov=detail?62:74;perspective.near=.025;perspective.updateProjectionMatrix()
@@ -65,7 +66,8 @@ function Studio({car,driver,view,yaw,pitch,onLook}:{car:TeamCar;driver:Driver;vi
   <color attach="background" args={['#0a0f13']}/><fog attach="fog" args={['#0a0f13',12,35]}/>
   <ShowroomCamera view={view} yaw={yaw} pitch={pitch}/><DragLook inside={view==='driver'||view==='cockpit'} onLook={onLook}/>
   <directionalLight position={[-3,5,3]} color="#bcdfff" intensity={2.3}/><pointLight position={[2,2,-3]} color={car.accent} intensity={14} distance={12}/>
-  <RaceCar key={car.id} variant={car.id} bodyColor={car.body} secondaryColor={car.secondary} accent={car.accent} driverNumber={driver.number} teamName={car.short} compound="medium"/>
+  {/* The replay fleet's car, rotated to face +X and scaled to the garage's proportions. */}
+  <group position={[-.1,0,0]} rotation={[0,Math.PI/2,0]} scale={1.2}><StudioCar key={car.id} livery={{primary:car.body,secondary:car.secondary,accent:car.accent}} compound="#f2dc5c" driver={view==='exterior'||view==='aero'} interior={view==='driver'||view==='cockpit'} number={driver.number} label={car.short} spin={0}/></group>
   <mesh position={[0,-.05,0]} rotation={[-Math.PI/2,0,0]}><circleGeometry args={[12,80]}/><meshStandardMaterial color="#151d22" roughness={.24} metalness={.65}/></mesh>
   <mesh position={[0,-.034,0]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[3.9,3.91,100]}/><meshBasicMaterial color={car.accent} transparent opacity={.45}/></mesh>
   <gridHelper args={[24,48,'#283640','#182128']} position={[0,-.025,0]}/>

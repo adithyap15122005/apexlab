@@ -45,9 +45,9 @@ test('north-up whole-circuit camera fits wide and tall tracks on desktop and mob
     const height=circuitOverviewHeight(width,depth,aspect),verticalSpan=2*height*Math.tan(42*Math.PI/360)
     assert.ok(verticalSpan>depth&&verticalSpan*aspect>width)
   }
-  assert.equal(REPLAY_CAMERAS.length,8)
-  assert.equal(new Set(REPLAY_CAMERAS.map(view=>view.id)).size,8)
-  for(const id of ['top','overview','onboard','tcam','chase','helicopter','trackside','strategist'])assert.ok(REPLAY_CAMERAS.some(view=>view.id===id))
+  assert.equal(REPLAY_CAMERAS.length,11)
+  assert.equal(new Set(REPLAY_CAMERAS.map(view=>view.id)).size,11)
+  for(const id of ['director','top','overview','onboard','tcam','nose','rear','chase','helicopter','trackside','strategist'])assert.ok(REPLAY_CAMERAS.some(view=>view.id===id))
 })
 
 test('illustrative structures cannot cover a recorded road segment, including rotated buildings',()=>{

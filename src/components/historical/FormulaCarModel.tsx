@@ -39,7 +39,7 @@ export type FormulaLivery={primary:string;secondary:string;accent:string;halo:st
 /** Descriptive team-inspired paint; timing graphics colours are never full body paint. */
 export function formulaTeamLivery(team:string,timingAccent='#97acb4'):FormulaLivery{
   const name=team.toLowerCase(),carbon='#13191e'
-  if(name.includes('mercedes'))return {primary:'#252b30',secondary:'#b7c0c5',accent:'#00b9ab',halo:carbon,suit:'#d6dddf',label:'MERCEDES'}
+  if(name.includes('mercedes'))return {primary:'#202529',secondary:'#363d42',accent:'#00b9ab',halo:carbon,suit:'#d6dddf',label:'MERCEDES'}
   if(name.includes('ferrari'))return {primary:'#b71d2b',secondary:'#cc2530',accent:'#e9c34b',halo:carbon,suit:'#b9212d',label:'FERRARI'}
   if(name.includes('mclaren'))return {primary:'#e57c25',secondary:'#20262c',accent:'#e8953a',halo:carbon,suit:'#db7629',label:'MCLAREN'}
   if(name.includes('red bull'))return {primary:'#17243d',secondary:'#101a2d',accent:'#e4bc35',halo:carbon,suit:'#19263e',label:'RED BULL'}
