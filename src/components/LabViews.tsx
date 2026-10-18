@@ -1,8 +1,11 @@
-import { useEffect, useId, useMemo, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useId, useMemo, useRef, useState } from 'react';
 import type { CSSProperties, KeyboardEvent, PointerEvent } from 'react';
 import { BASE_STRATEGIES, COMPOUNDS, DRIVERS, PIT_LANE_LOSS, STATIONARY_STOP_TIME, TOTAL_LAPS, formatDelta, formatTime, simulateStrategy } from '../engine/race';
 import type { Compound, Strategy } from '../engine/race';
 import './LabViews.css';
+
+const TyreLab = lazy(()=>import('./three/TyreLab'));
+const StrategyDepth = lazy(()=>import('./three/StrategyDepth'));
 
 type LabProps = {
   lap: number;
@@ -47,6 +50,7 @@ export function StrategyView({ lap, setLap, driverId, analyst, safetyCar, onNavi
       <button className="button button-ghost" onClick={() => setStrategies(copyStrategies())}><span aria-hidden="true">↺</span> Reset strategies</button>
     </ViewHeading>
     <div className="strategy-context"><span className="tag">{driver.name}</span><span className="muted">46 laps · dry race · {safetyCar ? 'safety car enabled' : 'green-flag conditions'}</span><div className="strategy-legend">{compoundNames.map(compound => <CompoundLabel key={compound} compound={compound} />)}</div></div>
+    <Suspense fallback={null}><StrategyDepth strategies={strategies} results={results} lap={lap} setLap={setLap}/></Suspense>
     <div className="strategy-ruler"><span>STRATEGY / TYRE STINTS</span><div>{[1, 10, 20, 30, 40, 46].map(value => <span key={value} style={{ left: `${(value - 1) / 45 * 100}%` }}>{value}</span>)}</div><span>RACE ESTIMATE</span></div>
     <div className="strategy-rows">
       {strategies.map((strategy, index) => {
@@ -74,7 +78,7 @@ export function StrategyView({ lap, setLap, driverId, analyst, safetyCar, onNavi
       })}
     </div>
     <div className="strategy-insight"><div className="insight-symbol" aria-hidden="true">↗</div><div><p className="eyebrow">THE TIME BETWEEN THE LINES</p><h2>{fastest === -1 ? 'Choose two compounds to put a valid strategy on the board.' : `${strategies[fastest].name} gains ${gain.toFixed(2)} seconds over the slowest valid option.`}</h2><p className="muted">{fastest === -1 ? 'This dry-race scenario requires at least two different tyre compounds in each strategy. Update a stint or reset the baseline.' : strategies[fastest].pitLaps.length === 1 ? 'One stop limits the time spent in the pit lane. The remaining balance comes from compound pace and tyre age.' : 'The extra stop trades pit-lane time for fresher tyres. The total above includes both sides of that trade.'} All estimates use {driver.name}'s same baseline pace.</p></div><button className="button button-primary" onClick={() => onNavigate('pitwall')}>Make the call <span aria-hidden="true">↗</span></button></div>
-    <div className="resource-panel"><button className="resource-toggle" aria-expanded={resourceOpen} onClick={() => setResourceOpen(!resourceOpen)}><span><span className="eyebrow">A WIDER PERSPECTIVE</span><strong>Performance has a resource side.</strong></span><span aria-hidden="true">{resourceOpen ? '−' : '+'}</span></button>{resourceOpen && <div className="resource-content"><div className="resource-table-wrap"><table><caption className="sr-only">Tyre resources used by each strategy</caption><thead><tr><th>Strategy</th><th>Tyre sets</th><th>Pit stops</th><th>Stint lengths</th><th>Average set use</th></tr></thead><tbody>{strategies.map(strategy => { const bounds = [0, ...strategy.pitLaps, TOTAL_LAPS]; return <tr key={strategy.id}><th>{strategy.name}</th><td className="mono">{strategy.compounds.length}</td><td className="mono">{strategy.pitLaps.length}</td><td className="mono">{strategy.compounds.map((_, n) => `${bounds[n + 1] - bounds[n]}L`).join(' / ')}</td><td className="mono">{(TOTAL_LAPS / strategy.compounds.length).toFixed(1)} laps</td></tr>; })}</tbody></table></div><p className="muted">Fresher tyres may improve pace while requiring another set and stop. This comparison shows resource use; it does not assign an environmental benefit to a racing strategy.</p><button className="button button-ghost" onClick={download}>↓ Download scenario settings</button></div>}</div>
+    <Suspense fallback={null}><TyreLab lap={lap} driverId={driverId} safetyCar={safetyCar}/></Suspense><div className="resource-panel"><button className="resource-toggle" aria-expanded={resourceOpen} onClick={() => setResourceOpen(!resourceOpen)}><span><span className="eyebrow">A WIDER PERSPECTIVE</span><strong>Performance has a resource side.</strong></span><span aria-hidden="true">{resourceOpen ? '−' : '+'}</span></button>{resourceOpen && <div className="resource-content"><div className="resource-table-wrap"><table><caption className="sr-only">Tyre resources used by each strategy</caption><thead><tr><th>Strategy</th><th>Tyre sets</th><th>Pit stops</th><th>Stint lengths</th><th>Average set use</th></tr></thead><tbody>{strategies.map(strategy => { const bounds = [0, ...strategy.pitLaps, TOTAL_LAPS]; return <tr key={strategy.id}><th>{strategy.name}</th><td className="mono">{strategy.compounds.length}</td><td className="mono">{strategy.pitLaps.length}</td><td className="mono">{strategy.compounds.map((_, n) => `${bounds[n + 1] - bounds[n]}L`).join(' / ')}</td><td className="mono">{(TOTAL_LAPS / strategy.compounds.length).toFixed(1)} laps</td></tr>; })}</tbody></table></div><p className="muted">Fresher tyres may improve pace while requiring another set and stop. This comparison shows resource use; it does not assign an environmental benefit to a racing strategy.</p><button className="button button-ghost" onClick={download}>↓ Download scenario settings</button></div>}</div>
   </section>;
 }
 

@@ -25,14 +25,29 @@ npm run preview  # Serve the built app locally
 
 The production site is generated in `dist/`. It can be served by any static host. Pushing the source to GitHub does not itself publish a live website.
 
+## Interactive 3D studio
+
+The 3D experiences use original procedural geometry: no remote vehicle files, racing-team liveries, paid model downloads, or external asset servers are required. The visuals illustrate the same fictional race used by the strategy engine.
+
+- **Apex-01 hero:** explore an original open-wheel racing car with graphite bodywork, a generated carbon-style texture, lime aerodynamic details, and local studio lighting. Drag or use the camera buttons to inspect it. Restrained idle motion and a scroll-linked change of angle connect the car to the landing page.
+- **Circuit explorer:** orbit and zoom an elevated miniature circuit, explore its three sectors, and jump to representative race events. Driver markers, selected-driver timing, and highlighted pit stops follow the shared replay lap. The selected sector also has ordinary keyboard-accessible controls below the scene. Track positions are illustrative; timing comes from the model.
+- **Pit-stop experience:** a short sequence shows pit entry, a tyre change, and the rejoin. The service clock distinguishes the 2.4-second stationary stop from the modeled total pit-lane loss. Results calculate immediately; watching the animation is optional. Use **Skip animation**, or replay the stop after a decision. Travel time in the sequence is compressed for illustration.
+- **Tyre laboratory:** rotate a tyre, select Soft, Medium, or Hard, and change its age. A linked engine-derived chart compares running pace while holding fuel at the selected replay lap, so tyre differences are easier to understand. The laboratory follows the selected driver and lap until you experiment; **Sync to replay** restores that connection. Rubber tint and scuff marks illustrate wear, rather than simulating physical rubber or measured grip.
+
+- **Layered strategy routes:** a perspective view separates each strategy's path through the same race. Pit-lap edits update the paths and calculated times; **Flatten view** removes depth, and the original compound timelines remain available for precise comparison.
+
+Drag to orbit and pinch to zoom, or use the labeled rotate, zoom, and reset buttons. Each scene includes a **2D** switch. The 2D choice is stored as a local browser preference; if WebGL is unavailable or fails, a schematic alternative retains the strategy information and controls. Reduced-motion preferences suppress automatic scene motion. During the short pit sequence, the cinematic camera takes control; Skip restores direct camera interaction immediately.
+
+Scenes render on demand, stop their animation clock while off-screen or in a hidden tab, and cap device pixel ratio at 1.5. Animated scenes use a 30-frame-per-second invalidation clock. Studio lighting is generated locally, with a small one-frame reflection environment rather than a downloaded HDR image.
+
 ## A 75-second demonstration
 
 | Time | Action | What the visitor learns |
 | --- | --- | --- |
-| 0–10s | Start at the circuit hero and enter the Strategy Lab. | The product makes race strategy understandable through decisions. |
-| 10–25s | Scrub the replay around lap 18, then select an event. | Fresh tyres and pit timing change race pace; explanations follow the selected lap. |
+| 0–10s | Orbit the Apex-01 hero and enter the Strategy Lab. | The product makes race strategy understandable through decisions. |
+| 10–25s | Scrub the replay around lap 18 and inspect the 3D circuit or its 2D alternative. | Fresh tyres and pit timing change race pace; explanations follow the selected lap. |
 | 25–40s | Open Strategy Compare and move a pit lap or change compound. | A faster stint can be outweighed by the time lost in the pit lane. |
-| 40–60s | Open the Pit Wall, choose a stop and replacement tyre, then run the decision. | The model calculates a finishing time and comparison from the actual inputs. |
+| 40–60s | Open the Pit Wall, choose a stop and replacement tyre, then run the decision. Watch or skip the pit-stop sequence. | The model calculates a finishing time and comparison immediately from the actual inputs. |
 | 60–70s | Retry with another decision or enable the safety-car scenario. | Identical inputs repeat; a changed assumption can change the outcome. |
 | 70–75s | Open the learning/methodology information. | Results are transparent estimates, and the learning experience works without sign-in. |
 
@@ -75,11 +90,11 @@ The engine source is separate from the interface in `src/engine/`; its tests doc
 
 The interface uses semantic controls, readable labels, visible keyboard focus, textual tyre labels, chart descriptions, and reduced-motion support. The race playback can be paused and the essential data remains available without animation. Responsive layouts support desktop, tablet, and mobile exploration. These are implementation choices, not a claim of independent WCAG certification.
 
-The experience uses local sample data, self-hosted fonts, SVG graphics, and lightweight charts. It has no autoplay video, analytics tracker, or external data polling. Optional strategy resource information counts stops and tyre sets; it does not invent carbon or energy savings.
+The experience uses local sample data, self-hosted fonts, SVG graphics, procedural 3D geometry, and lightweight charts. It has no autoplay video, analytics tracker, or external data polling. Switching to 2D avoids the 3D renderer while preserving the learning tools. Optional strategy resource information counts stops and tyre sets; it does not invent carbon or energy savings.
 
 ## Technology
 
-React, TypeScript, Vite, Tailwind CSS, Framer Motion, Lucide icons, and custom SVG data visualizations. Fonts: Space Grotesk, Inter, and IBM Plex Mono, served locally through Fontsource.
+React, TypeScript, Vite, Tailwind CSS, Framer Motion, Lucide icons, custom SVG data visualizations, Three.js, React Three Fiber, and Drei. Fonts: Space Grotesk, Inter, and IBM Plex Mono, served locally through Fontsource. Shared 3D presentation, controls, fallback, and rendering policies live in `src/components/three/SceneFrame.tsx`.
 
 ## Repository
 
