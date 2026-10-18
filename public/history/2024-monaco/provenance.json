@@ -1,0 +1,332 @@
+{
+  "generatedAt": "2026-10-18T11:13:22.614Z",
+  "raceId": "2024-monaco",
+  "sessionKey": 9523,
+  "origin": "2024-05-26T13:03:11.068Z",
+  "raceSha256": "1dfa363ecb1d393f2c0c6a90c54c551cf810451a57d027cb8a16abf8891f0fca",
+  "raceBytes": 4008918,
+  "drivers": [
+    {
+      "number": 16,
+      "code": "LEC",
+      "locations": 8598,
+      "end": 8595.992,
+      "telemetry": 8597
+    },
+    {
+      "number": 81,
+      "code": "PIA",
+      "locations": 8606,
+      "end": 8603.189,
+      "telemetry": 8606
+    },
+    {
+      "number": 55,
+      "code": "SAI",
+      "locations": 8606,
+      "end": 8603.516,
+      "telemetry": 8606
+    },
+    {
+      "number": 4,
+      "code": "NOR",
+      "locations": 8606,
+      "end": 8604.623,
+      "telemetry": 8606
+    },
+    {
+      "number": 63,
+      "code": "RUS",
+      "locations": 8612,
+      "end": 8609.403,
+      "telemetry": 8612
+    },
+    {
+      "number": 1,
+      "code": "VER",
+      "locations": 8611,
+      "end": 8609.905,
+      "telemetry": 8611
+    },
+    {
+      "number": 44,
+      "code": "HAM",
+      "locations": 8613,
+      "end": 8610.993,
+      "telemetry": 8613
+    },
+    {
+      "number": 22,
+      "code": "TSU",
+      "locations": 8638,
+      "end": 8635.443,
+      "telemetry": 8638
+    },
+    {
+      "number": 23,
+      "code": "ALB",
+      "locations": 8652,
+      "end": 8650.054,
+      "telemetry": 8653
+    },
+    {
+      "number": 10,
+      "code": "GAS",
+      "locations": 8659,
+      "end": 8656.23,
+      "telemetry": 8659
+    },
+    {
+      "number": 14,
+      "code": "ALO",
+      "locations": 8601,
+      "end": 8599.87,
+      "telemetry": 8601
+    },
+    {
+      "number": 3,
+      "code": "RIC",
+      "locations": 8603,
+      "end": 8600.379,
+      "telemetry": 8603
+    },
+    {
+      "number": 77,
+      "code": "BOT",
+      "locations": 8603,
+      "end": 8600.54,
+      "telemetry": 8603
+    },
+    {
+      "number": 18,
+      "code": "STR",
+      "locations": 8603,
+      "end": 8601.963,
+      "telemetry": 8603
+    },
+    {
+      "number": 2,
+      "code": "SAR",
+      "locations": 8608,
+      "end": 8605.077,
+      "telemetry": 8608
+    },
+    {
+      "number": 24,
+      "code": "ZHO",
+      "locations": 8654,
+      "end": 8651.24,
+      "telemetry": 8654
+    },
+    {
+      "number": 31,
+      "code": "OCO",
+      "locations": 0,
+      "end": 0,
+      "telemetry": 0
+    },
+    {
+      "number": 11,
+      "code": "PER",
+      "locations": 0,
+      "end": 0,
+      "telemetry": 0
+    },
+    {
+      "number": 27,
+      "code": "HUL",
+      "locations": 0,
+      "end": 0,
+      "telemetry": 0
+    },
+    {
+      "number": 20,
+      "code": "MAG",
+      "locations": 0,
+      "end": 0,
+      "telemetry": 0
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T13%3A03%3A10.067&date%3C=2024-05-26T13%3A13%3A10.068",
+      "retrievedAt": "2026-10-18T11:10:18.174Z",
+      "bytes": 5940420,
+      "sha256": "2f8ba2981940ffb6777c7c89a70acd8cf5fba7f0d8646adcbee404312940c94c"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T13%3A13%3A10.067&date%3C=2024-05-26T13%3A23%3A10.068",
+      "retrievedAt": "2026-10-18T11:10:23.679Z",
+      "bytes": 5922225,
+      "sha256": "b10dd268d4a7a575325ba8e84d6b6e8661d65b482915b7cff2e514576830fdfa"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T13%3A23%3A10.067&date%3C=2024-05-26T13%3A33%3A10.068",
+      "retrievedAt": "2026-10-18T11:10:29.181Z",
+      "bytes": 5958289,
+      "sha256": "743c34fd2d0e582c40902529cf5101a407969f6518f19bcd336c9abf338bf6d5"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T13%3A33%3A10.067&date%3C=2024-05-26T13%3A43%3A10.068",
+      "retrievedAt": "2026-10-18T11:10:35.170Z",
+      "bytes": 5932529,
+      "sha256": "f94d8cc166cbe477c4a376be7c32bf8e70c23edf266888d7051d6a43cb4e6005"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T13%3A43%3A10.067&date%3C=2024-05-26T13%3A53%3A10.068",
+      "retrievedAt": "2026-10-18T11:10:44.465Z",
+      "bytes": 6113471,
+      "sha256": "b2f0dec16c98d6eaad2f9b4895fd334dff8b1fed8edfc4f1f60efc5001a3105e"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T13%3A53%3A10.067&date%3C=2024-05-26T14%3A03%3A10.068",
+      "retrievedAt": "2026-10-18T11:10:51.517Z",
+      "bytes": 6048431,
+      "sha256": "4d447cefe8c988cb8ef4d0dfa0aa2e33cf3fc3a6ce5c9ca71fea0d530fcb38f4"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T14%3A03%3A10.067&date%3C=2024-05-26T14%3A13%3A10.068",
+      "retrievedAt": "2026-10-18T11:10:59.126Z",
+      "bytes": 5952083,
+      "sha256": "e477cac946504256a5749caed7d612bc161cea5c835d7526d56b7b48e31401a4"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T14%3A13%3A10.067&date%3C=2024-05-26T14%3A23%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:06.608Z",
+      "bytes": 6051270,
+      "sha256": "b5f6f85079bff66c6529147e7213aa77e26ee739180971cda73bd7c723ec062e"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T14%3A23%3A10.067&date%3C=2024-05-26T14%3A33%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:12.249Z",
+      "bytes": 5902626,
+      "sha256": "abd1bf77df41393a6df89d64328a312971bb9cd6161858526311c9e5fda2ba16"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T14%3A33%3A10.067&date%3C=2024-05-26T14%3A43%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:17.813Z",
+      "bytes": 5928628,
+      "sha256": "ac2995a86088cf8024852e9f6f256b929897b70b06c2fe305fb77f6d29e47435"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T14%3A43%3A10.067&date%3C=2024-05-26T14%3A53%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:24.150Z",
+      "bytes": 6053655,
+      "sha256": "78c854ace4989e888b8c54082fa320da09312989e741c80d30edcb87a2a2c6e7"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T14%3A53%3A10.067&date%3C=2024-05-26T15%3A03%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:30.183Z",
+      "bytes": 5923291,
+      "sha256": "b7ff455bf1f0faab0b9f5807b1f4f5b546b8b6780e6154ab8ce350e65dbd61f3"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T15%3A03%3A10.067&date%3C=2024-05-26T15%3A13%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:37.911Z",
+      "bytes": 5938409,
+      "sha256": "191d13ceb948aa4c02cc70f4c7abbf0aa436e745446945b26e655a01ccd09605"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T15%3A13%3A10.067&date%3C=2024-05-26T15%3A23%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:45.160Z",
+      "bytes": 6023299,
+      "sha256": "cdfb8e1b1c2922391513ae94c4d3977c9df260305ca429c189fac04ff705bfff"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9523&date%3E=2024-05-26T15%3A23%3A10.067&date%3C=2024-05-26T15%3A27%3A28.298",
+      "retrievedAt": "2026-10-18T11:11:47.757Z",
+      "bytes": 2590696,
+      "sha256": "6ead0aa1d5d0836d6d7ebabacf4f48901cd08ba4e913df4b10323e758afcbe74"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T13%3A03%3A10.067&date%3C=2024-05-26T13%3A13%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:53.461Z",
+      "bytes": 7311230,
+      "sha256": "ce1842817b9861f1971e37988204f7b54c861247a18847bee6b3d5c6a69586e1"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T13%3A13%3A10.067&date%3C=2024-05-26T13%3A23%3A10.068",
+      "retrievedAt": "2026-10-18T11:11:59.815Z",
+      "bytes": 7317570,
+      "sha256": "67c6703ccec320b567ad750d737793d45fd01cc91e78a9af8461b930f857ca4d"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T13%3A23%3A10.067&date%3C=2024-05-26T13%3A33%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:05.330Z",
+      "bytes": 7394805,
+      "sha256": "ed706d527f9b8a61cc67b9c2efc100c6db1eb0f8826f875e037d783f33fb1266"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T13%3A33%3A10.067&date%3C=2024-05-26T13%3A43%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:09.204Z",
+      "bytes": 7323514,
+      "sha256": "b3a8cae6e4aacbe020e269b166b47b8aabbfd38c8497f549b06a9465fa776e0c"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T13%3A43%3A10.067&date%3C=2024-05-26T13%3A53%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:16.881Z",
+      "bytes": 7488283,
+      "sha256": "8f63db1d31d18503f7c1c83abddb1e12e250cc420287da5d0b099aed00f96c81"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T13%3A53%3A10.067&date%3C=2024-05-26T14%3A03%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:24.301Z",
+      "bytes": 7563765,
+      "sha256": "b55404b8977825e8b2f707920e7fc782dd21c43a54fea038beb24cec171452cb"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T14%3A03%3A10.067&date%3C=2024-05-26T14%3A13%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:34.866Z",
+      "bytes": 7548317,
+      "sha256": "557b4145f8d6f39cc6009be10f0172beb23139cc122f7826e5883fb52a46c11c"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T14%3A13%3A10.067&date%3C=2024-05-26T14%3A23%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:40.942Z",
+      "bytes": 7568193,
+      "sha256": "670a5248ba41919b591b5ad1b08f251e6f41a4e3db0e48cdf999e88efd9f7d98"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T14%3A23%3A10.067&date%3C=2024-05-26T14%3A33%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:48.979Z",
+      "bytes": 7558905,
+      "sha256": "4aa32dd303daeaa185f6171a7e288d2a122f72ea5a85d4e70602aa77e3c5aa61"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T14%3A33%3A10.067&date%3C=2024-05-26T14%3A43%3A10.068",
+      "retrievedAt": "2026-10-18T11:12:57.368Z",
+      "bytes": 7505987,
+      "sha256": "801f43f810af985cde3607e8507a5f2054bdc3f4c1f9928e0dcb145bcf8425c1"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T14%3A43%3A10.067&date%3C=2024-05-26T14%3A53%3A10.068",
+      "retrievedAt": "2026-10-18T11:13:03.008Z",
+      "bytes": 7549579,
+      "sha256": "1106f47f83871991ca31f267a055aebbfb91977002e78f8dadc27727313a157e"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T14%3A53%3A10.067&date%3C=2024-05-26T15%3A03%3A10.068",
+      "retrievedAt": "2026-10-18T11:13:09.393Z",
+      "bytes": 7625487,
+      "sha256": "75bd11fd37c716db2aff0c1ee8d5a6a0911ff40a5de188c8cd87325f040f8121"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T15%3A03%3A10.067&date%3C=2024-05-26T15%3A13%3A10.068",
+      "retrievedAt": "2026-10-18T11:13:14.116Z",
+      "bytes": 7553931,
+      "sha256": "bfac2d9727440e19ca10b5f3f47d8f1f313366656ad22785d52801d5fc759083"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T15%3A13%3A10.067&date%3C=2024-05-26T15%3A23%3A10.068",
+      "retrievedAt": "2026-10-18T11:13:18.196Z",
+      "bytes": 7550247,
+      "sha256": "f6a78eecbab9099b8c5668f0e3bda5aee7f1712f354b91ba18610e97c8941263"
+    },
+    {
+      "url": "https://api.openf1.org/v1/car_data?session_key=9523&date%3E=2024-05-26T15%3A23%3A10.067&date%3C=2024-05-26T15%3A27%3A28.298",
+      "retrievedAt": "2026-10-18T11:13:20.823Z",
+      "bytes": 3250511,
+      "sha256": "4f1c21fe30733b94def2a325930e708729da565cfcda3415c8a4241175bbb79f"
+    }
+  ]
+}

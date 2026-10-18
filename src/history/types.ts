@@ -2,7 +2,7 @@
 export type HistoricalCompound = 'SOFT'|'MEDIUM'|'HARD'|'INTERMEDIATE'|'WET'|'UNKNOWN'|string
 export type LocationSample = [time:number,x:number,y:number,z:number]
 export type TelemetrySample = [time:number,speed:number|null,throttle:number|null,brake:number|null,gear:number|null,rpm:number|null,drs:number|null]
-export type HistoricalDriver = {number:number;code:string;name:string;team:string;color:string;grid:number|null;finishPosition:number|null;classifiedLaps:number|null;resultTime:number|null;status:string}
+export type HistoricalDriver = {number:number;code:string;name:string;team:string;color:string;grid:number|null;finishPosition:number|null;classifiedLaps:number|null;recordedLaps?:number;resultTime:number|null;status:string}
 export type HistoricalLap = {lap:number;start:number|null;end:number|null;duration:number|null;sector1:number|null;sector2:number|null;sector3:number|null}
 export type HistoricalStint = {driver:number;stint:number;lapStart:number;lapEnd:number;compound:HistoricalCompound;tyreAgeAtStart:number|null}
 export type HistoricalPit = {driver:number;lap:number;time:number;duration:number|null;stationary:number|null}

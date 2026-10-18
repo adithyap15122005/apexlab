@@ -51,10 +51,12 @@ export function sampleTelemetry(samples:TelemetrySample[],time:number):RecordedT
 
 function competitiveLaps(race:HistoricalRace,number:number):HistoricalLap[] {
   const driver=race.drivers.find(driver=>driver.number===number)
-  return (race.laps[number]??[]).filter(lap=>driver?.classifiedLaps==null||lap.lap<=driver.classifiedLaps)
+  const limit=driver?.recordedLaps??driver?.classifiedLaps
+  return (race.laps[number]??[]).filter(lap=>limit==null||lap.lap<=limit)
 }
-const didNotStart=(status:string)=>/\bDNS\b|did not start|not started|withdrawn before/i.test(status)
-const didRetire=(status:string)=>/\bDNF\b|retir|not finish|collision|accident|engine|mechanical|disqual|\bDSQ\b/i.test(status)
+export const isNonStarter=(status:string)=>/\bDNS\b|did not start|not started|withdrawn before|^withdrew$/i.test(status)
+const finishedStatus=(status:string)=>/^(finished|lapped|\+\s*\d+\s*laps?)$/i.test(status.trim())
+const didRetire=(status:string)=>!!status.trim()&&!isNonStarter(status)&&!finishedStatus(status)&&!/^(unknown|unavailable|running)$/i.test(status.trim())
 
 /** All classification, lap timing, interval and position values remain provider records. */
 export function getDriverState(race:HistoricalRace,number:number,time:number):DriverRaceState {
@@ -66,11 +68,13 @@ export function getDriverState(race:HistoricalRace,number:number,time:number):Dr
   const completed=laps.filter(lap=>lap.end!=null&&lap.end<=clock&&lap.start!=null)
   const latest=started.at(-1)??null
   const finalEnd=laps.reduce<number|null>((last,lap)=>lap.end!=null&&lap.start!=null?Math.max(last??-Infinity,lap.end):last,null)
-  const dns=didNotStart(driver.status)||driver.classifiedLaps===0
-  const retirement=didRetire(driver.status)
+  // Zero completed laps can mean a first-lap collision, not necessarily a DNS.
+  const dns=isNonStarter(driver.status)
+  const disqualifiedWithRecord=/disqual|\bDSQ\b/i.test(driver.status)&&(driver.recordedLaps??0)>0
+  const retirement=didRetire(driver.status)&&!disqualifiedWithRecord
   const reachedEnd=finalEnd!=null&&clock>=finalEnd
   const retired=!dns&&retirement&&reachedEnd
-  const finished=!dns&&!retirement&&reachedEnd&&laps.length>0
+  const finished=!dns&&(finishedStatus(driver.status)||disqualifiedWithRecord)&&reachedEnd&&laps.length>0
   const currentLap=!dns&&!finished&&!retired&&latest&&(latest.end==null||clock<latest.end)?latest:null
   const completedLaps=dns?0:completed.reduce((largest,lap)=>Math.max(largest,lap.lap),0)
   const lap=dns?0:currentLap?.lap??latest?.lap??0

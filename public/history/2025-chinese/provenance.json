@@ -1,0 +1,192 @@
+{
+  "generatedAt": "2026-10-18T11:18:34.208Z",
+  "raceId": "2025-chinese",
+  "sessionKey": 9998,
+  "origin": "2025-03-23T07:03:38.697Z",
+  "raceSha256": "bed87af9ced31ea3f30fbc7016efd4d72a5fbe61daddf6ea50927c42b8bb4d57",
+  "raceBytes": 3895669,
+  "drivers": [
+    {
+      "number": 81,
+      "code": "PIA",
+      "locations": 5458,
+      "end": 5455.435
+    },
+    {
+      "number": 4,
+      "code": "NOR",
+      "locations": 5468,
+      "end": 5465.336
+    },
+    {
+      "number": 63,
+      "code": "RUS",
+      "locations": 5469,
+      "end": 5466.516
+    },
+    {
+      "number": 1,
+      "code": "VER",
+      "locations": 5475,
+      "end": 5472.126
+    },
+    {
+      "number": 31,
+      "code": "OCO",
+      "locations": 5508,
+      "end": 5505.533
+    },
+    {
+      "number": 12,
+      "code": "ANT",
+      "locations": 5512,
+      "end": 5509.338
+    },
+    {
+      "number": 23,
+      "code": "ALB",
+      "locations": 5513,
+      "end": 5511.842
+    },
+    {
+      "number": 87,
+      "code": "BEA",
+      "locations": 5518,
+      "end": 5516.879
+    },
+    {
+      "number": 18,
+      "code": "STR",
+      "locations": 5528,
+      "end": 5525.7
+    },
+    {
+      "number": 55,
+      "code": "SAI",
+      "locations": 5533,
+      "end": 5531.867
+    },
+    {
+      "number": 6,
+      "code": "HAD",
+      "locations": 5537,
+      "end": 5534.566
+    },
+    {
+      "number": 30,
+      "code": "LAW",
+      "locations": 5539,
+      "end": 5536.659
+    },
+    {
+      "number": 7,
+      "code": "DOO",
+      "locations": 5535,
+      "end": 5533.915
+    },
+    {
+      "number": 5,
+      "code": "BOR",
+      "locations": 5469,
+      "end": 5466.247
+    },
+    {
+      "number": 27,
+      "code": "HUL",
+      "locations": 5478,
+      "end": 5475.829
+    },
+    {
+      "number": 22,
+      "code": "TSU",
+      "locations": 5481,
+      "end": 5478.978
+    },
+    {
+      "number": 14,
+      "code": "ALO",
+      "locations": 449,
+      "end": 446.064
+    },
+    {
+      "number": 16,
+      "code": "LEC",
+      "locations": 5481,
+      "end": 5478.727
+    },
+    {
+      "number": 44,
+      "code": "HAM",
+      "locations": 5482,
+      "end": 5480.82
+    },
+    {
+      "number": 10,
+      "code": "GAS",
+      "locations": 5524,
+      "end": 5522.763
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T07%3A03%3A37.696&date%3C=2025-03-23T07%3A13%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:32.644Z",
+      "bytes": 5805276,
+      "sha256": "4d570527e429bd5c37c2865db0fd425b9ccb08ab7de3893fad02fcffdb4d4e71"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T07%3A13%3A37.696&date%3C=2025-03-23T07%3A23%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:32.742Z",
+      "bytes": 5778977,
+      "sha256": "a08a7c78e6a2005f255dedb3ce0078f33badced78a2e04f65893a9c7436151b5"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T07%3A23%3A37.696&date%3C=2025-03-23T07%3A33%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:32.834Z",
+      "bytes": 5760909,
+      "sha256": "4dd5b67fe8a5d8f430eb722ee403edfb183e318b2d55e9b65e7050135fff7bed"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T07%3A33%3A37.696&date%3C=2025-03-23T07%3A43%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:32.897Z",
+      "bytes": 5856090,
+      "sha256": "4b8b8e6b09e6849519a309d31745f4ba084db5f86c10de87f9803322ffc61617"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T07%3A43%3A37.696&date%3C=2025-03-23T07%3A53%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:33.002Z",
+      "bytes": 5911791,
+      "sha256": "8c941fb474ae87d1bad9d53bc231f973f44643d24a784eb699cba808738ddeab"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T07%3A53%3A37.696&date%3C=2025-03-23T08%3A03%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:33.073Z",
+      "bytes": 5793999,
+      "sha256": "7e36667ad212bd3fc7131b56291fb3c76829d55e87ef2c8e13f2b8d71b25e105"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T08%3A03%3A37.696&date%3C=2025-03-23T08%3A13%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:33.135Z",
+      "bytes": 5794035,
+      "sha256": "9bb52427427be6b5ec325d8cdf02922b118e84e53909db16e16b10fb271b8491"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T08%3A13%3A37.696&date%3C=2025-03-23T08%3A23%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:33.238Z",
+      "bytes": 5776035,
+      "sha256": "754ac63585073ad3f6f5253e4a1a258f755031382a32c858b5d9e2fe3de1d190"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T08%3A23%3A37.696&date%3C=2025-03-23T08%3A33%3A37.697",
+      "retrievedAt": "2026-10-18T11:18:33.300Z",
+      "bytes": 5824798,
+      "sha256": "2052eda1910a2f6022d1cfac2641fd7afe96b0190bfb110bf072374f4b0aacb7"
+    },
+    {
+      "url": "https://api.openf1.org/v1/location?session_key=9998&date%3E=2025-03-23T08%3A33%3A37.696&date%3C=2025-03-23T08%3A36%3A03.124",
+      "retrievedAt": "2026-10-18T11:18:33.339Z",
+      "bytes": 1432217,
+      "sha256": "ee2aefbb96bcc656ee20a6097040566fcfca926e8591cffbfa876f896d257fc4"
+    }
+  ]
+}

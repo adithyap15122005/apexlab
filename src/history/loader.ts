@@ -70,7 +70,10 @@ export function loadHistoricalRace(id='2024-british',signal?:AbortSignal):Promis
 export function loadDriverTelemetry(race:HistoricalRace,driver:number,signal?:AbortSignal):Promise<TelemetrySample[]>{
   if(signal?.aborted)return Promise.reject(new DOMException('Loading was cancelled.','AbortError'))
   const file=race.telemetryFiles[driver]
-  if(!file)return Promise.reject(new Error('No recorded telemetry file is available for this driver.'))
+  if(!file){
+    if(race.meta.year>=2023&&race.meta.sessionKey>0)return withAbort(cached(telemetry,`recorded:${race.meta.id}:${driver}`,async()=>{const {loadRecordedTelemetry}=await import('./archive');return validateTelemetry(await loadRecordedTelemetry(race,driver))}),signal)
+    return Promise.reject(new Error('No recorded telemetry file is available for this driver and race.'))
+  }
   const url=file.startsWith('/')?file:`/history/${race.meta.id}/${file}`
   if(!url.startsWith('/history/')||url.includes('..')||url.includes('://'))return Promise.reject(new Error('Telemetry must use the bundled recorded snapshot.'))
   return withAbort(cached(telemetry,url,async()=>validateTelemetry(await json(url))),signal)

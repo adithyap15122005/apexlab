@@ -1,0 +1,3688 @@
+{
+  "generatedAt": "2026-10-18T12:48:02.326Z",
+  "raceCount": 114,
+  "sourceResponses": [
+    {
+      "name": "results-2021-0",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results.json?limit=100&offset=0",
+      "retrievedAt": "2026-10-18T10:58:40.573Z",
+      "bytes": 62011,
+      "sha256": "0aa47f2bb623f21f8472aa460fb3e2e7c933734e5bbe0bb45f70229570916b65"
+    },
+    {
+      "name": "results-2021-100",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results.json?limit=100&offset=100",
+      "retrievedAt": "2026-10-18T10:58:41.889Z",
+      "bytes": 62100,
+      "sha256": "ad015058b7c058bd531f2f6367e62a61627e6b924d71f0101ce00626120ff5a4"
+    },
+    {
+      "name": "results-2021-200",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results.json?limit=100&offset=200",
+      "retrievedAt": "2026-10-18T10:58:42.819Z",
+      "bytes": 59647,
+      "sha256": "c7fe4c18f5c591c19755ab256ef6a20ab83a1ee6b9b784269510293d33d581bb"
+    },
+    {
+      "name": "results-2021-300",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results.json?limit=100&offset=300",
+      "retrievedAt": "2026-10-18T10:58:44.025Z",
+      "bytes": 61630,
+      "sha256": "94145b6d00a540ed22189b02fa1710709636f234435cebb85e11ab706293ae4b"
+    },
+    {
+      "name": "results-2021-400",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results.json?limit=100&offset=400",
+      "retrievedAt": "2026-10-18T10:58:45.670Z",
+      "bytes": 25129,
+      "sha256": "23aec5e324d758171a33f4b350a60e6704defa9be50e9299bceb3a1adc0b5772"
+    },
+    {
+      "name": "results-2022-0",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/results.json?limit=100&offset=0",
+      "retrievedAt": "2026-10-18T10:58:46.573Z",
+      "bytes": 62690,
+      "sha256": "ed4d1c069b7ca52b85f4427008580d122c66e717f40c1bbfa7546c39ba799702"
+    },
+    {
+      "name": "results-2022-100",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/results.json?limit=100&offset=100",
+      "retrievedAt": "2026-10-18T10:58:47.731Z",
+      "bytes": 62606,
+      "sha256": "580b27b746e58fcddb29190ae38cf37afac80d874da30bd973a9d9251984f19c"
+    },
+    {
+      "name": "results-2022-200",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/results.json?limit=100&offset=200",
+      "retrievedAt": "2026-10-18T10:58:49.145Z",
+      "bytes": 62538,
+      "sha256": "d80eef9f59b7cf4c48d3ae6017fa24ed4443c3897030eced5ff3be789bc34af5"
+    },
+    {
+      "name": "results-2022-300",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/results.json?limit=100&offset=300",
+      "retrievedAt": "2026-10-18T10:58:50.288Z",
+      "bytes": 62797,
+      "sha256": "aa74c7476fa29b96bdeb436f614fed2775c01e5613a5cdafc65e59c225b72710"
+    },
+    {
+      "name": "results-2022-400",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/results.json?limit=100&offset=400",
+      "retrievedAt": "2026-10-18T10:58:51.712Z",
+      "bytes": 25153,
+      "sha256": "bf393e1e9609815e32982faacc6d6852db7db8918a9c3c91fa9f98f85b9ce0c7"
+    },
+    {
+      "name": "results-2023-0",
+      "url": "https://api.jolpi.ca/ergast/f1/2023/results.json?limit=100&offset=0",
+      "retrievedAt": "2026-10-18T10:58:53.250Z",
+      "bytes": 64021,
+      "sha256": "9770366c70f97f7b670669a2f20d42500f8772f883aad62c9adb58e224817db1"
+    },
+    {
+      "name": "results-2023-100",
+      "url": "https://api.jolpi.ca/ergast/f1/2023/results.json?limit=100&offset=100",
+      "retrievedAt": "2026-10-18T10:58:54.485Z",
+      "bytes": 64268,
+      "sha256": "0753a4fac5ce54116553fe64dc7502bcd4a586c8e53705b626e7673ea500f471"
+    },
+    {
+      "name": "results-2023-200",
+      "url": "https://api.jolpi.ca/ergast/f1/2023/results.json?limit=100&offset=200",
+      "retrievedAt": "2026-10-18T10:58:56.523Z",
+      "bytes": 63349,
+      "sha256": "52f3324010ead5a5299f68e87a8dfc0302a23df30b312b6dc2b4664e86434b17"
+    },
+    {
+      "name": "results-2023-300",
+      "url": "https://api.jolpi.ca/ergast/f1/2023/results.json?limit=100&offset=300",
+      "retrievedAt": "2026-10-18T10:58:58.249Z",
+      "bytes": 62909,
+      "sha256": "adc0a426ad5b8e331799b3e11982f3400d2f0202bca70a3b5fce2c06df6865f8"
+    },
+    {
+      "name": "results-2023-400",
+      "url": "https://api.jolpi.ca/ergast/f1/2023/results.json?limit=100&offset=400",
+      "retrievedAt": "2026-10-18T10:58:58.963Z",
+      "bytes": 25910,
+      "sha256": "dc7df4fa61c087b067c7641d95e9464ed10368fd3b21ddafaa383a0fdf389cf7"
+    },
+    {
+      "name": "results-2024-0",
+      "url": "https://api.jolpi.ca/ergast/f1/2024/results.json?limit=100&offset=0",
+      "retrievedAt": "2026-10-18T10:59:00.413Z",
+      "bytes": 63385,
+      "sha256": "f0135d5558a4df808a76368b4b4ac00518898c431bc17736203352ac4ef111e2"
+    },
+    {
+      "name": "results-2024-100",
+      "url": "https://api.jolpi.ca/ergast/f1/2024/results.json?limit=100&offset=100",
+      "retrievedAt": "2026-10-18T10:59:01.364Z",
+      "bytes": 63026,
+      "sha256": "aa881ef66c695389799424b0448d7c3e7de4ecfaa8bec51a8b81151fc7fbd008"
+    },
+    {
+      "name": "results-2024-200",
+      "url": "https://api.jolpi.ca/ergast/f1/2024/results.json?limit=100&offset=200",
+      "retrievedAt": "2026-10-18T10:59:02.573Z",
+      "bytes": 64398,
+      "sha256": "56b8fd3249093027d90b24c477175a09f7f240ed6fbbf5b17049366e5c7028a0"
+    },
+    {
+      "name": "results-2024-300",
+      "url": "https://api.jolpi.ca/ergast/f1/2024/results.json?limit=100&offset=300",
+      "retrievedAt": "2026-10-18T10:59:03.634Z",
+      "bytes": 64140,
+      "sha256": "7aa3720d9621324a9dc4db99bcf2f85da73c7bbd2495a226dfe58ed7487df552"
+    },
+    {
+      "name": "results-2024-400",
+      "url": "https://api.jolpi.ca/ergast/f1/2024/results.json?limit=100&offset=400",
+      "retrievedAt": "2026-10-18T10:59:04.693Z",
+      "bytes": 49572,
+      "sha256": "fc8799d8bce062b1136a4b08b2c05ad376ee372218674cf0576d389c5013ad07"
+    },
+    {
+      "name": "results-2025-0",
+      "url": "https://api.jolpi.ca/ergast/f1/2025/results.json?limit=100&offset=0",
+      "retrievedAt": "2026-10-18T10:59:06.022Z",
+      "bytes": 58360,
+      "sha256": "8537c8d06ef21cb7d18875600c0541d54942ac2028f1b968e689396bb38efc3d"
+    },
+    {
+      "name": "results-2025-100",
+      "url": "https://api.jolpi.ca/ergast/f1/2025/results.json?limit=100&offset=100",
+      "retrievedAt": "2026-10-18T10:59:07.247Z",
+      "bytes": 59258,
+      "sha256": "7974425c887d26e57bfaea73bba1680632b41d9d9c8475294bb2b7f1a130f67b"
+    },
+    {
+      "name": "results-2025-200",
+      "url": "https://api.jolpi.ca/ergast/f1/2025/results.json?limit=100&offset=200",
+      "retrievedAt": "2026-10-18T10:59:08.677Z",
+      "bytes": 59061,
+      "sha256": "7fd99c338d834eef59e2b9bc39d134729ff9111bcb4fee9aa86c8cb6dfbf96c6"
+    },
+    {
+      "name": "results-2025-300",
+      "url": "https://api.jolpi.ca/ergast/f1/2025/results.json?limit=100&offset=300",
+      "retrievedAt": "2026-10-18T10:59:10.016Z",
+      "bytes": 59546,
+      "sha256": "6568df28863aaa3b478c7e7ee401c2604e9347576f1f9e8eaeb8be13c9b3ca08"
+    },
+    {
+      "name": "results-2025-400",
+      "url": "https://api.jolpi.ca/ergast/f1/2025/results.json?limit=100&offset=400",
+      "retrievedAt": "2026-10-18T10:59:10.997Z",
+      "bytes": 46388,
+      "sha256": "74e5b8e8791d40d9a5be10171f129e32542f108a0177e5b94781947c965e4192"
+    },
+    {
+      "name": "sessions-2023",
+      "url": "https://api.openf1.org/v1/sessions?year=2023&session_name=Race",
+      "retrievedAt": "2026-10-18T10:59:11.648Z",
+      "bytes": 8229,
+      "sha256": "1c4ebc39663a3ae9e1ce069a7739e4b2f14366b75e79769317499bcf8b6a3554"
+    },
+    {
+      "name": "sessions-2024",
+      "url": "https://api.openf1.org/v1/sessions?year=2024&session_name=Race",
+      "retrievedAt": "2026-10-18T10:59:13.492Z",
+      "bytes": 8583,
+      "sha256": "0802447b8798abea1959794a9e215b7c05bf033913ea63f5380c154d8ed285b5"
+    },
+    {
+      "name": "sessions-2025",
+      "url": "https://api.openf1.org/v1/sessions?year=2025&session_name=Race",
+      "retrievedAt": "2026-10-18T10:59:15.639Z",
+      "bytes": 8595,
+      "sha256": "37b519c799c25870245a999875d18b887870868d47be57367638985842ab1f01"
+    },
+    {
+      "name": "laps-9693",
+      "url": "https://api.openf1.org/v1/laps?session_key=9693",
+      "retrievedAt": "2026-10-18T10:59:18.122Z",
+      "bytes": 435236,
+      "sha256": "103313b3437125bb656409f802e5190755d5a7f24146e19b0f5e7dfcd1dbd4da"
+    },
+    {
+      "name": "race_control-9693",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9693",
+      "retrievedAt": "2026-10-18T10:59:20.044Z",
+      "bytes": 28788,
+      "sha256": "1218ccc069c51bec7acba38c8e858b445619bbd27a18a19a2e5e278c8727b1b6"
+    },
+    {
+      "name": "pit-9693",
+      "url": "https://api.openf1.org/v1/pit?session_key=9693",
+      "retrievedAt": "2026-10-18T10:59:22.205Z",
+      "bytes": 14705,
+      "sha256": "b706930ce12e0a90a35824768fa40a7e8e7e946372b9c8638c03a529042c4627"
+    },
+    {
+      "name": "stints-9693",
+      "url": "https://api.openf1.org/v1/stints?session_key=9693",
+      "retrievedAt": "2026-10-18T10:59:24.439Z",
+      "bytes": 15873,
+      "sha256": "d439ab35672a3d26e1b4b35426f9ac4dd34a9745156aaa27fc180d4bd1cc6d8e"
+    },
+    {
+      "name": "position-9693",
+      "url": "https://api.openf1.org/v1/position?session_key=9693",
+      "retrievedAt": "2026-10-18T10:59:26.639Z",
+      "bytes": 38298,
+      "sha256": "36c743c25d72a26d656c9f55bfb68d6812789bb90e9aee1991d6d87ba555f875"
+    },
+    {
+      "name": "laps-9998",
+      "url": "https://api.openf1.org/v1/laps?session_key=9998",
+      "retrievedAt": "2026-10-18T10:59:29.132Z",
+      "bytes": 500044,
+      "sha256": "c3d66178c7912a8031dd20bd54ecce08383c7cb6fb363c8ddfd4700bb387ee25"
+    },
+    {
+      "name": "race_control-9998",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9998",
+      "retrievedAt": "2026-10-18T10:59:31.095Z",
+      "bytes": 15294,
+      "sha256": "9a49a154150f3112ed41c64b3e19cc5f9466a70374cc860c2b4c2a758845ee37"
+    },
+    {
+      "name": "pit-9998",
+      "url": "https://api.openf1.org/v1/pit?session_key=9998",
+      "retrievedAt": "2026-10-18T10:59:33.338Z",
+      "bytes": 4539,
+      "sha256": "ae88da8f0442dc0da23c4d9c2b5c4ef88a1da50d0a16fd679be14608e434d712"
+    },
+    {
+      "name": "stints-9998",
+      "url": "https://api.openf1.org/v1/stints?session_key=9998",
+      "retrievedAt": "2026-10-18T10:59:35.450Z",
+      "bytes": 6488,
+      "sha256": "03ae1bc25a96dc8ffc0dc345c45ad7329d2bdcbff7c43d0f24331f0764050ee4"
+    },
+    {
+      "name": "position-9998",
+      "url": "https://api.openf1.org/v1/position?session_key=9998",
+      "retrievedAt": "2026-10-18T10:59:37.755Z",
+      "bytes": 52768,
+      "sha256": "35ac7c2af51bc1aaeffba7d58710d2ef73dead9d19ef6fc48b1317402086415d"
+    },
+    {
+      "name": "laps-10006",
+      "url": "https://api.openf1.org/v1/laps?session_key=10006",
+      "retrievedAt": "2026-10-18T10:59:40.226Z",
+      "bytes": 519196,
+      "sha256": "9d663f20c0d6f02874b65d6a0b414813edbf526df75c53c7ad5e6efa8ccc57a1"
+    },
+    {
+      "name": "race_control-10006",
+      "url": "https://api.openf1.org/v1/race_control?session_key=10006",
+      "retrievedAt": "2026-10-18T10:59:42.144Z",
+      "bytes": 6721,
+      "sha256": "d9be6616aa11d88d0796643a7a015e2687a2f46af2fd1c54f328ec69333fb4e7"
+    },
+    {
+      "name": "pit-10006",
+      "url": "https://api.openf1.org/v1/pit?session_key=10006",
+      "retrievedAt": "2026-10-18T10:59:44.300Z",
+      "bytes": 3836,
+      "sha256": "15834a793db596a1874eda8b7e054b40a114cfe4cffd81d22b64ce100c7c8c05"
+    },
+    {
+      "name": "stints-10006",
+      "url": "https://api.openf1.org/v1/stints?session_key=10006",
+      "retrievedAt": "2026-10-18T10:59:46.541Z",
+      "bytes": 5953,
+      "sha256": "35204925dedcf8888ac505edeb0912c7d115a9745e429f7788c86a3f47b13e7f"
+    },
+    {
+      "name": "position-10006",
+      "url": "https://api.openf1.org/v1/position?session_key=10006",
+      "retrievedAt": "2026-10-18T10:59:48.736Z",
+      "bytes": 32425,
+      "sha256": "6e9fd590240d1080b9220d6e54ef73e99d942677658019fd2d44e34c4b006c31"
+    },
+    {
+      "name": "laps-10014",
+      "url": "https://api.openf1.org/v1/laps?session_key=10014",
+      "retrievedAt": "2026-10-18T10:59:51.289Z",
+      "bytes": 561974,
+      "sha256": "c52b9f86e87a6e724a0edc864a65acff6bdaac22cd6b560d81da995a889cad91"
+    },
+    {
+      "name": "race_control-10014",
+      "url": "https://api.openf1.org/v1/race_control?session_key=10014",
+      "retrievedAt": "2026-10-18T10:59:53.149Z",
+      "bytes": 25474,
+      "sha256": "ee80693b44ece3d69de7595b256560be7f654990208c7dd6e178e3e410443894"
+    },
+    {
+      "name": "pit-10014",
+      "url": "https://api.openf1.org/v1/pit?session_key=10014",
+      "retrievedAt": "2026-10-18T10:59:55.360Z",
+      "bytes": 7648,
+      "sha256": "572749509bae80ba6ba691135243f44802a0e83d6cea777e5112447cc43b60ce"
+    },
+    {
+      "name": "stints-10014",
+      "url": "https://api.openf1.org/v1/stints?session_key=10014",
+      "retrievedAt": "2026-10-18T10:59:57.597Z",
+      "bytes": 9001,
+      "sha256": "25440897e9ba4fa36139c76e6760ca79836d8d35a2fcd48435fcd8f7e6fe359d"
+    },
+    {
+      "name": "position-10014",
+      "url": "https://api.openf1.org/v1/position?session_key=10014",
+      "retrievedAt": "2026-10-18T11:00:00.576Z",
+      "bytes": 135995,
+      "sha256": "1de34740f98dcce76ac6a6de520ef599d329827f2801e5b09b0aab108ffda767"
+    },
+    {
+      "name": "laps-10022",
+      "url": "https://api.openf1.org/v1/laps?session_key=10022",
+      "retrievedAt": "2026-10-18T11:00:02.320Z",
+      "bytes": 440588,
+      "sha256": "3b4af0481bd351e6487b715ccf1e40018cb01e565976ec7748953d2fd1bb43fc"
+    },
+    {
+      "name": "race_control-10022",
+      "url": "https://api.openf1.org/v1/race_control?session_key=10022",
+      "retrievedAt": "2026-10-18T11:00:05.067Z",
+      "bytes": 17615,
+      "sha256": "f8b4138849809ef5e99d662bf372cf0d07dd47fdcda6966ca62bfbfe5fb05ca4"
+    },
+    {
+      "name": "pit-10022",
+      "url": "https://api.openf1.org/v1/pit?session_key=10022",
+      "retrievedAt": "2026-10-18T11:00:06.618Z",
+      "bytes": 3467,
+      "sha256": "b57131214b1d8313adc4d080904599788d25d70b07fb4488cdc640fa4035353a"
+    },
+    {
+      "name": "stints-10022",
+      "url": "https://api.openf1.org/v1/stints?session_key=10022",
+      "retrievedAt": "2026-10-18T11:00:08.603Z",
+      "bytes": 5663,
+      "sha256": "0c25d69f784dfa08bfd5cc0a2c3ac6dd273c1bb53f39ee71133d893d738af973"
+    },
+    {
+      "name": "position-10022",
+      "url": "https://api.openf1.org/v1/position?session_key=10022",
+      "retrievedAt": "2026-10-18T11:00:10.911Z",
+      "bytes": 37143,
+      "sha256": "d8e5ebdc52d9b87340b45eb6cef18466483ae0c5fd5bbe3c84655f705427a910"
+    },
+    {
+      "name": "laps-10033",
+      "url": "https://api.openf1.org/v1/laps?session_key=10033",
+      "retrievedAt": "2026-10-18T11:00:13.373Z",
+      "bytes": 272527,
+      "sha256": "bbb69e01b7a51a2def28d24daa98757e4278efa2a5faa7d17f2f531506e4d1c4"
+    },
+    {
+      "name": "race_control-10033",
+      "url": "https://api.openf1.org/v1/race_control?session_key=10033",
+      "retrievedAt": "2026-10-18T11:00:15.246Z",
+      "bytes": 19928,
+      "sha256": "09c3833bf2b8f5a8b82764259105c82b49d644de7878e978306ba58779d72957"
+    },
+    {
+      "name": "pit-10033",
+      "url": "https://api.openf1.org/v1/pit?session_key=10033",
+      "retrievedAt": "2026-10-18T11:00:17.446Z",
+      "bytes": 3287,
+      "sha256": "ab4245747d2c166529316596fd09f2a1f7ded3c33a2adb9b1c839cdad2080465"
+    },
+    {
+      "name": "stints-10033",
+      "url": "https://api.openf1.org/v1/stints?session_key=10033",
+      "retrievedAt": "2026-10-18T11:00:19.696Z",
+      "bytes": 5538,
+      "sha256": "1d74dfd13aad74a7545c8574b9a464b07c0161c9cbf9a13293ba2efa63566713"
+    },
+    {
+      "name": "position-10033",
+      "url": "https://api.openf1.org/v1/position?session_key=10033",
+      "retrievedAt": "2026-10-18T11:00:22.058Z",
+      "bytes": 33566,
+      "sha256": "3a2d9f67abea6a25d1c21f388ed7dfa21c1d346243d2e63ee7061999e84e71a3"
+    },
+    {
+      "name": "laps-9987",
+      "url": "https://api.openf1.org/v1/laps?session_key=9987",
+      "retrievedAt": "2026-10-18T11:00:24.518Z",
+      "bytes": 560113,
+      "sha256": "3bec57c64e6434ac7911d9d6a9e89c21420f6219ceb0e0f7fb4aea1066bb127d"
+    },
+    {
+      "name": "race_control-9987",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9987",
+      "retrievedAt": "2026-10-18T11:00:26.277Z",
+      "bytes": 11693,
+      "sha256": "a4f126ee1bb082ed500a8e780b052fabbab8f74d026b14282e0c18515607e8d3"
+    },
+    {
+      "name": "pit-9987",
+      "url": "https://api.openf1.org/v1/pit?session_key=9987",
+      "retrievedAt": "2026-10-18T11:00:28.477Z",
+      "bytes": 6721,
+      "sha256": "d2e1d6f798442243e7d02453ac7c9f3ed2c3550384b119d3183c8e4f1f7e817e"
+    },
+    {
+      "name": "stints-9987",
+      "url": "https://api.openf1.org/v1/stints?session_key=9987",
+      "retrievedAt": "2026-10-18T11:00:30.849Z",
+      "bytes": 8220,
+      "sha256": "9e5754bb49e161607d48967343cb2c62acdc70cd92715d4b78fb4fa305d758ec"
+    },
+    {
+      "name": "position-9987",
+      "url": "https://api.openf1.org/v1/position?session_key=9987",
+      "retrievedAt": "2026-10-18T11:00:32.930Z",
+      "bytes": 57034,
+      "sha256": "91353154b1264aa6990331ce3b0d5457b02e919d331e83eb1f3b9568626de61f"
+    },
+    {
+      "name": "laps-9979",
+      "url": "https://api.openf1.org/v1/laps?session_key=9979",
+      "retrievedAt": "2026-10-18T11:00:35.683Z",
+      "bytes": 661261,
+      "sha256": "ebe62405f35ebd2f9c1170a61bb9e3c4e764b0584e09494497e45b91a990fe49"
+    },
+    {
+      "name": "race_control-9979",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9979",
+      "retrievedAt": "2026-10-18T11:00:37.332Z",
+      "bytes": 51626,
+      "sha256": "c58bbeecf29fc15fa083ad982040eee5002d75d3c1819fdf0551981ee1c1a333"
+    },
+    {
+      "name": "pit-9979",
+      "url": "https://api.openf1.org/v1/pit?session_key=9979",
+      "retrievedAt": "2026-10-18T11:00:39.562Z",
+      "bytes": 7259,
+      "sha256": "3ea4d48ba34ea76f12605067a92092111aaf829fcd3314dfce87032cb83b3e6b"
+    },
+    {
+      "name": "stints-9979",
+      "url": "https://api.openf1.org/v1/stints?session_key=9979",
+      "retrievedAt": "2026-10-18T11:00:41.800Z",
+      "bytes": 8510,
+      "sha256": "27140efe3fe0120d3032b06c3cc939f6a3b55714b42f764103c90887f698cd08"
+    },
+    {
+      "name": "position-9979",
+      "url": "https://api.openf1.org/v1/position?session_key=9979",
+      "retrievedAt": "2026-10-18T11:00:43.949Z",
+      "bytes": 38803,
+      "sha256": "84e3a86e56077786cbaf88809bfb9e2abcab5b9f5670e3effe378b232a78985c"
+    },
+    {
+      "name": "laps-9971",
+      "url": "https://api.openf1.org/v1/laps?session_key=9971",
+      "retrievedAt": "2026-10-18T11:00:46.603Z",
+      "bytes": 558522,
+      "sha256": "424d0f6852f400d3ee062bdfc2eabfa8a366f9001cf334380e4ff1a530e36a82"
+    },
+    {
+      "name": "race_control-9971",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9971",
+      "retrievedAt": "2026-10-18T11:00:48.368Z",
+      "bytes": 27235,
+      "sha256": "bc0a2d9f9bda8cb1f328c8d402be547fa6af3ecfd229cfce89ab837b78a38449"
+    },
+    {
+      "name": "pit-9971",
+      "url": "https://api.openf1.org/v1/pit?session_key=9971",
+      "retrievedAt": "2026-10-18T11:00:50.607Z",
+      "bytes": 9811,
+      "sha256": "e4df420432333c9d41f53f64563e1206d39f3399ee6051f70b1916b7000407f3"
+    },
+    {
+      "name": "laps-9912",
+      "url": "https://api.openf1.org/v1/laps?session_key=9912",
+      "retrievedAt": "2026-10-18T11:00:56.306Z",
+      "bytes": 458075,
+      "sha256": "89cee73604aaf44129b1a80cb10205f55eb16937dff0ba804ca38326532bbbae"
+    },
+    {
+      "name": "race_control-9912",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9912",
+      "retrievedAt": "2026-10-18T11:00:57.568Z",
+      "bytes": 19983,
+      "sha256": "b138137eadc17c3d10d1b1bfe7f5fe8beddf033753b0a5adad79904a5693fa25"
+    },
+    {
+      "name": "pit-9912",
+      "url": "https://api.openf1.org/v1/pit?session_key=9912",
+      "retrievedAt": "2026-10-18T11:00:59.813Z",
+      "bytes": 3453,
+      "sha256": "3ce2d68abcd3c6eae0fa99323de8ec2ce22a8b04d49473649caed455088bae90"
+    },
+    {
+      "name": "stints-9912",
+      "url": "https://api.openf1.org/v1/stints?session_key=9912",
+      "retrievedAt": "2026-10-18T11:01:02.066Z",
+      "bytes": 5619,
+      "sha256": "0f4ee9b127e7d1a6b4a994a5d231a7966dba0c20eaa352a5d3ab5864fca426bb"
+    },
+    {
+      "name": "position-9912",
+      "url": "https://api.openf1.org/v1/position?session_key=9912",
+      "retrievedAt": "2026-10-18T11:01:04.217Z",
+      "bytes": 48184,
+      "sha256": "afac7f7f6adbb79fe856bf329208506a0b772cdf5df6c726ba96f2bfc8b0827f"
+    },
+    {
+      "name": "laps-9165",
+      "url": "https://api.openf1.org/v1/laps?session_key=9165",
+      "retrievedAt": "2026-10-18T11:01:06.701Z",
+      "bytes": 521954,
+      "sha256": "4b7748d0adfc3aec4982d9733a1794d0c11958396498fcba5a72c85c7bc5402e"
+    },
+    {
+      "name": "race_control-9165",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9165",
+      "retrievedAt": "2026-10-18T11:01:08.625Z",
+      "bytes": 19451,
+      "sha256": "24a35ccdb2f46cdd4ef88aba4d0ef9e7c6db63969127ce8acd1380fa08f0168a"
+    },
+    {
+      "name": "pit-9165",
+      "url": "https://api.openf1.org/v1/pit?session_key=9165",
+      "retrievedAt": "2026-10-18T11:01:10.865Z",
+      "bytes": 4471,
+      "sha256": "707c2cbd31ce93fe18341dada886d9aa615b22774e7a6a12d6bbc821d8e629fa"
+    },
+    {
+      "name": "stints-9165",
+      "url": "https://api.openf1.org/v1/stints?session_key=9165",
+      "retrievedAt": "2026-10-18T11:01:13.015Z",
+      "bytes": 6356,
+      "sha256": "4d36c63103144ca73228147db938a4841da96fb4613e25231245bd4c1525ad49"
+    },
+    {
+      "name": "position-9165",
+      "url": "https://api.openf1.org/v1/position?session_key=9165",
+      "retrievedAt": "2026-10-18T11:01:15.266Z",
+      "bytes": 46391,
+      "sha256": "426b19310d730d179157eb88e3990b3ab5a8562cd05be954d6b5575686c1a016"
+    },
+    {
+      "name": "laps-9523",
+      "url": "https://api.openf1.org/v1/laps?session_key=9523",
+      "retrievedAt": "2026-10-18T11:01:18.047Z",
+      "bytes": 573858,
+      "sha256": "4f5abd3871c10e35231159ffd7f50ade9f0a4f8794d8acd765ec9ec36b90666c"
+    },
+    {
+      "name": "race_control-9523",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9523",
+      "retrievedAt": "2026-10-18T11:01:19.677Z",
+      "bytes": 30924,
+      "sha256": "4131447fa2ca5ccf63903ae7b58c2e237f7646e2f8bec9159314a91027f8c266"
+    },
+    {
+      "name": "pit-9523",
+      "url": "https://api.openf1.org/v1/pit?session_key=9523",
+      "retrievedAt": "2026-10-18T11:01:21.916Z",
+      "bytes": 4160,
+      "sha256": "1e7f5c5a82d2dcbaa01054c750d41742e7002b639fd073365b4f0774e220b931"
+    },
+    {
+      "name": "stints-9523",
+      "url": "https://api.openf1.org/v1/stints?session_key=9523",
+      "retrievedAt": "2026-10-18T11:01:24.065Z",
+      "bytes": 6185,
+      "sha256": "17fb71bab5571e3982aff600f8f24d4fcdb7f017f773769a9b07b228eca06392"
+    },
+    {
+      "name": "position-9523",
+      "url": "https://api.openf1.org/v1/position?session_key=9523",
+      "retrievedAt": "2026-10-18T11:01:26.320Z",
+      "bytes": 14549,
+      "sha256": "7654c27a78337892bd93d6d7046f9a52e062655d0241dc703f5458996e8dcf1c"
+    },
+    {
+      "name": "stints-9971",
+      "url": "https://api.openf1.org/v1/stints?session_key=9971",
+      "retrievedAt": "2026-10-18T11:01:28.476Z",
+      "bytes": 10513,
+      "sha256": "1b1c100acfc8fe4cb103161269cb8c438e1149dc470c716b7559c438d4ebe011"
+    },
+    {
+      "name": "position-9971",
+      "url": "https://api.openf1.org/v1/position?session_key=9971",
+      "retrievedAt": "2026-10-18T11:01:30.924Z",
+      "bytes": 67581,
+      "sha256": "9b359c433525b03046f9b706d88f3b8dd8933d4826a5da079b83e25949550151"
+    },
+    {
+      "name": "laps-9963",
+      "url": "https://api.openf1.org/v1/laps?session_key=9963",
+      "retrievedAt": "2026-10-18T11:01:33.354Z",
+      "bytes": 612643,
+      "sha256": "c13080ab279def1fc059caa050fb974cc8fa5ce034687e8e35e8ba9c7ad07a3c"
+    },
+    {
+      "name": "race_control-9963",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9963",
+      "retrievedAt": "2026-10-18T11:01:35.235Z",
+      "bytes": 25825,
+      "sha256": "3da565b978587a592852618c949f07858c0f18dbfc9927283f486157805319b7"
+    },
+    {
+      "name": "pit-9963",
+      "url": "https://api.openf1.org/v1/pit?session_key=9963",
+      "retrievedAt": "2026-10-18T11:01:37.371Z",
+      "bytes": 14756,
+      "sha256": "88aed23c931a9a8093b58aa65ab952825af5af9b0dc80aa9003c5547b8330421"
+    },
+    {
+      "name": "stints-9963",
+      "url": "https://api.openf1.org/v1/stints?session_key=9963",
+      "retrievedAt": "2026-10-18T11:01:39.618Z",
+      "bytes": 14754,
+      "sha256": "43eb834103e1126e878e60e0f992388b52a4f6ead28eef1b5456fd14d0af8bd9"
+    },
+    {
+      "name": "position-9963",
+      "url": "https://api.openf1.org/v1/position?session_key=9963",
+      "retrievedAt": "2026-10-18T11:01:41.771Z",
+      "bytes": 62910,
+      "sha256": "dec277eb3b8b0fe752bb20f1cca3af1136a77f96538b7f9394f67c3a9fa78bbf"
+    },
+    {
+      "name": "laps-9955",
+      "url": "https://api.openf1.org/v1/laps?session_key=9955",
+      "retrievedAt": "2026-10-18T11:01:44.355Z",
+      "bytes": 523473,
+      "sha256": "25b32214c52cfbe18f57028cfc197f4c32cf9b7407598b98be08ebdac3b2d809"
+    },
+    {
+      "name": "race_control-9955",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9955",
+      "retrievedAt": "2026-10-18T11:01:46.172Z",
+      "bytes": 30723,
+      "sha256": "10ee0b2473dba40a0b8cb4ac9d600adb1f66b9087766f21f2c71b64d23eacd73"
+    },
+    {
+      "name": "pit-9955",
+      "url": "https://api.openf1.org/v1/pit?session_key=9955",
+      "retrievedAt": "2026-10-18T11:01:48.419Z",
+      "bytes": 5810,
+      "sha256": "890abd83538b9ad24df4589ad155fe2bdf1cb951b7cac5f86a17add6b9f43eeb"
+    },
+    {
+      "name": "stints-9955",
+      "url": "https://api.openf1.org/v1/stints?session_key=9955",
+      "retrievedAt": "2026-10-18T11:01:50.665Z",
+      "bytes": 7512,
+      "sha256": "85a2cdd16adc3b312b425147bac6c24ce44e6ff320a3df51de4abf22acd683a4"
+    },
+    {
+      "name": "position-9955",
+      "url": "https://api.openf1.org/v1/position?session_key=9955",
+      "retrievedAt": "2026-10-18T11:01:52.938Z",
+      "bytes": 59378,
+      "sha256": "454b1f1b24f37fa56083f9c4c445574f552e4658c6a83eade918e1daec35d02a"
+    },
+    {
+      "name": "laps-9947",
+      "url": "https://api.openf1.org/v1/laps?session_key=9947",
+      "retrievedAt": "2026-10-18T11:01:55.467Z",
+      "bytes": 404275,
+      "sha256": "a04233280240e0a4c78977a86108c1331bc276f859b318c24838ed62a75b6463"
+    },
+    {
+      "name": "race_control-9947",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9947",
+      "retrievedAt": "2026-10-18T11:01:57.221Z",
+      "bytes": 38764,
+      "sha256": "a997eca81b3cf4ac39a92c513bd4c0957609bf508d2fc3e240fa35850ee14e86"
+    },
+    {
+      "name": "pit-9947",
+      "url": "https://api.openf1.org/v1/pit?session_key=9947",
+      "retrievedAt": "2026-10-18T11:01:59.463Z",
+      "bytes": 6336,
+      "sha256": "a30a3b644df48ee79907f943ef232e893d4671ff07e69ae2bd954174fa9965ff"
+    },
+    {
+      "name": "stints-9947",
+      "url": "https://api.openf1.org/v1/stints?session_key=9947",
+      "retrievedAt": "2026-10-18T11:02:01.725Z",
+      "bytes": 8167,
+      "sha256": "18c3d432c5ec5656db9120353145996c23602d7f62fbb07a892aff81cf10e491"
+    },
+    {
+      "name": "position-9947",
+      "url": "https://api.openf1.org/v1/position?session_key=9947",
+      "retrievedAt": "2026-10-18T11:02:03.847Z",
+      "bytes": 61535,
+      "sha256": "fe3c892fac3bb12a6559e705df2ca97ebdb44fd79a93ec9140674f166af6e920"
+    },
+    {
+      "name": "laps-9939",
+      "url": "https://api.openf1.org/v1/laps?session_key=9939",
+      "retrievedAt": "2026-10-18T11:02:06.351Z",
+      "bytes": 439823,
+      "sha256": "379df018819bda9d47513848c02e1e3e83c4a62beb428f7b686027aa4afbc1db"
+    },
+    {
+      "name": "race_control-9939",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9939",
+      "retrievedAt": "2026-10-18T11:02:08.384Z",
+      "bytes": 28573,
+      "sha256": "2f6a1878713b3179bf867c69859c05ee5b27215472de611ddeb70bba6e4debec"
+    },
+    {
+      "name": "pit-9939",
+      "url": "https://api.openf1.org/v1/pit?session_key=9939",
+      "retrievedAt": "2026-10-18T11:02:10.530Z",
+      "bytes": 4718,
+      "sha256": "c8045adeb3f8efc9269b2c1685b20ac7bdbe06e03421f63846eeb0b89ddf5c04"
+    },
+    {
+      "name": "stints-9939",
+      "url": "https://api.openf1.org/v1/stints?session_key=9939",
+      "retrievedAt": "2026-10-18T11:02:12.672Z",
+      "bytes": 8801,
+      "sha256": "23acd279b3f87e2c738258a2023eedcd4ba1864fa26468b595d4c9ac28f97015"
+    },
+    {
+      "name": "position-9939",
+      "url": "https://api.openf1.org/v1/position?session_key=9939",
+      "retrievedAt": "2026-10-18T11:02:14.906Z",
+      "bytes": 31520,
+      "sha256": "e1b3e6f3c703d654102607a3d42e4bc6be5395124f132360494d0078862f9323"
+    },
+    {
+      "name": "laps-9928",
+      "url": "https://api.openf1.org/v1/laps?session_key=9928",
+      "retrievedAt": "2026-10-18T11:02:17.608Z",
+      "bytes": 635869,
+      "sha256": "c2dc23034207160eee14210ce7a07d128ca0b47043cb3543fb62ff47308db17f"
+    },
+    {
+      "name": "race_control-9928",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9928",
+      "retrievedAt": "2026-10-18T11:02:19.328Z",
+      "bytes": 24991,
+      "sha256": "565fbf2048a23e4c2c0cf0d5d22f89a452a94d9cda9e70d8ae0b7cc8626c783f"
+    },
+    {
+      "name": "pit-9928",
+      "url": "https://api.openf1.org/v1/pit?session_key=9928",
+      "retrievedAt": "2026-10-18T11:02:21.554Z",
+      "bytes": 5254,
+      "sha256": "edf5bd23e0672968b12a503eb6c5474a0fc533e1b9f21976644dbeedb42d14d8"
+    },
+    {
+      "name": "stints-9928",
+      "url": "https://api.openf1.org/v1/stints?session_key=9928",
+      "retrievedAt": "2026-10-18T11:02:23.713Z",
+      "bytes": 7068,
+      "sha256": "d33afe08c74508ba70da3741d66c9566b829756c0f5b0c136eceff69179132d2"
+    },
+    {
+      "name": "position-9928",
+      "url": "https://api.openf1.org/v1/position?session_key=9928",
+      "retrievedAt": "2026-10-18T11:02:25.992Z",
+      "bytes": 55217,
+      "sha256": "0d7d180a325ddfc450bdc70c17a7032982d07767f6e391f1ef44036ffccb85cf"
+    },
+    {
+      "name": "laps-9920",
+      "url": "https://api.openf1.org/v1/laps?session_key=9920",
+      "retrievedAt": "2026-10-18T11:02:28.574Z",
+      "bytes": 654183,
+      "sha256": "279a56d021c9ae77f0d7ae391aec8cffdf4012365fff5e541b61f5318ba5c151"
+    },
+    {
+      "name": "race_control-9920",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9920",
+      "retrievedAt": "2026-10-18T11:02:30.382Z",
+      "bytes": 28193,
+      "sha256": "26c5b657fd9589088f9e7e08e6c4fd1ee7fabdb38a4c30e488157f9c2874e58d"
+    },
+    {
+      "name": "pit-9920",
+      "url": "https://api.openf1.org/v1/pit?session_key=9920",
+      "retrievedAt": "2026-10-18T11:02:32.541Z",
+      "bytes": 7261,
+      "sha256": "1eb9eac2ba347aea5ac9220cdd6eaec8c01c3751e960094a332e3d337f7fcaa4"
+    },
+    {
+      "name": "stints-9920",
+      "url": "https://api.openf1.org/v1/stints?session_key=9920",
+      "retrievedAt": "2026-10-18T11:02:34.781Z",
+      "bytes": 8645,
+      "sha256": "3f2b6088c7d8c3fd02f7bc3ea4f94e46b2ebe670b3159af209e0f0cf54ab595a"
+    },
+    {
+      "name": "position-9920",
+      "url": "https://api.openf1.org/v1/position?session_key=9920",
+      "retrievedAt": "2026-10-18T11:02:36.976Z",
+      "bytes": 55369,
+      "sha256": "124a50faba6069f5f6e10f82d93ab52c65b8c0b902cc352ccd486956b1804002"
+    },
+    {
+      "name": "laps-9904",
+      "url": "https://api.openf1.org/v1/laps?session_key=9904",
+      "retrievedAt": "2026-10-18T11:02:39.504Z",
+      "bytes": 474272,
+      "sha256": "d38ff098a5119f6b1cf5481b5891198cd8b2de582896a01b48c2a2da798d6136"
+    },
+    {
+      "name": "race_control-9904",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9904",
+      "retrievedAt": "2026-10-18T11:02:41.438Z",
+      "bytes": 18068,
+      "sha256": "5786c7e48b397716d92f842a4fca73e360796698f258e47ff5102bc8b85feaff"
+    },
+    {
+      "name": "pit-9904",
+      "url": "https://api.openf1.org/v1/pit?session_key=9904",
+      "retrievedAt": "2026-10-18T11:02:43.585Z",
+      "bytes": 3805,
+      "sha256": "8c2d8929d50c63f784b77250f03e5e3d22a20e65a5f548ecc737055367b5beac"
+    },
+    {
+      "name": "stints-9904",
+      "url": "https://api.openf1.org/v1/stints?session_key=9904",
+      "retrievedAt": "2026-10-18T11:02:45.828Z",
+      "bytes": 5912,
+      "sha256": "d92836ef1c64433a7821b9fa9da560a1172a56ea02577461c646f846bac1aa41"
+    },
+    {
+      "name": "position-9904",
+      "url": "https://api.openf1.org/v1/position?session_key=9904",
+      "retrievedAt": "2026-10-18T11:02:48.027Z",
+      "bytes": 38241,
+      "sha256": "8eefbe90d7c4445dfccb5ca8682429125830220bfc776ed119b2bb65cdcff17f"
+    },
+    {
+      "name": "laps-9896",
+      "url": "https://api.openf1.org/v1/laps?session_key=9896",
+      "retrievedAt": "2026-10-18T11:02:50.727Z",
+      "bytes": 589329,
+      "sha256": "2325f91aa0cb38585eee9dd64c5f725756302e3764634dfaf6bcff485e1d4905"
+    },
+    {
+      "name": "race_control-9896",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9896",
+      "retrievedAt": "2026-10-18T11:02:52.440Z",
+      "bytes": 31732,
+      "sha256": "fb9c53283690500867c95a21c163711c7fe0a1d1cb175f5be0750ab8976d4fd0"
+    },
+    {
+      "name": "pit-9896",
+      "url": "https://api.openf1.org/v1/pit?session_key=9896",
+      "retrievedAt": "2026-10-18T11:02:54.616Z",
+      "bytes": 4172,
+      "sha256": "dd5e8d4750af2a2496ecdb357958bee79dd83547b1681d2ee19b2670745e54c3"
+    },
+    {
+      "name": "stints-9896",
+      "url": "https://api.openf1.org/v1/stints?session_key=9896",
+      "retrievedAt": "2026-10-18T11:03:57.391Z",
+      "bytes": 6199,
+      "sha256": "3dab22f7740a982287d628f2cbb6ee5769b07ce1cb986f908271212d9e1ec647"
+    },
+    {
+      "name": "position-9896",
+      "url": "https://api.openf1.org/v1/position?session_key=9896",
+      "retrievedAt": "2026-10-18T11:04:00.438Z",
+      "bytes": 52032,
+      "sha256": "2cdd5c26ca3dd95ecbcd48589c21e56e2818fea82564803f83dac0f7bdcd38b7"
+    },
+    {
+      "name": "laps-9888",
+      "url": "https://api.openf1.org/v1/laps?session_key=9888",
+      "retrievedAt": "2026-10-18T11:04:02.893Z",
+      "bytes": 501114,
+      "sha256": "dba74631509c1222e88a2e290771c8f07f7056a42e93af7231e9c81b35d6ffdd"
+    },
+    {
+      "name": "race_control-9888",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9888",
+      "retrievedAt": "2026-10-18T11:04:03.637Z",
+      "bytes": 21382,
+      "sha256": "23e60ff431cbdbea53a7b175900630805a8a6cbf74a16f4f9f9de1be7e35c076"
+    },
+    {
+      "name": "pit-9888",
+      "url": "https://api.openf1.org/v1/pit?session_key=9888",
+      "retrievedAt": "2026-10-18T11:04:05.851Z",
+      "bytes": 3811,
+      "sha256": "2b07f9dcd66337c821ed343a05e8f8d8a5d372bec1a0d1813e7aa2047c8f4abc"
+    },
+    {
+      "name": "stints-9888",
+      "url": "https://api.openf1.org/v1/stints?session_key=9888",
+      "retrievedAt": "2026-10-18T11:04:08.205Z",
+      "bytes": 5911,
+      "sha256": "9d776da94d56de58fe868f54a3201cecadff35ad34d82fc561d3cfa7f585bcd8"
+    },
+    {
+      "name": "position-9888",
+      "url": "https://api.openf1.org/v1/position?session_key=9888",
+      "retrievedAt": "2026-10-18T11:04:10.254Z",
+      "bytes": 44329,
+      "sha256": "7a80d6cab34acdb478f99a685b4b249874d9f425343e1b735cc1988333b97188"
+    },
+    {
+      "name": "laps-9877",
+      "url": "https://api.openf1.org/v1/laps?session_key=9877",
+      "retrievedAt": "2026-10-18T11:04:13.134Z",
+      "bytes": 593747,
+      "sha256": "d7d8202b755c750c1867ea3e7a1954414269dcbfd572cbe755d5dd7bf837df1c"
+    },
+    {
+      "name": "race_control-9877",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9877",
+      "retrievedAt": "2026-10-18T11:04:14.661Z",
+      "bytes": 20909,
+      "sha256": "7018690cdb0252b1f57e3dfb63f87433741865246d82f7031d8616be0165d0d2"
+    },
+    {
+      "name": "pit-9877",
+      "url": "https://api.openf1.org/v1/pit?session_key=9877",
+      "retrievedAt": "2026-10-18T11:04:16.902Z",
+      "bytes": 4899,
+      "sha256": "74818b7b697dba3a8afb1e4738e95085cb23e77af076fd43463ddb88616b8192"
+    },
+    {
+      "name": "stints-9877",
+      "url": "https://api.openf1.org/v1/stints?session_key=9877",
+      "retrievedAt": "2026-10-18T11:04:19.082Z",
+      "bytes": 6771,
+      "sha256": "ac986f8240d2f15569887b1f2806b12c88d944adb878642eb952dcf60b1b1674"
+    },
+    {
+      "name": "position-9877",
+      "url": "https://api.openf1.org/v1/position?session_key=9877",
+      "retrievedAt": "2026-10-18T11:04:21.451Z",
+      "bytes": 67850,
+      "sha256": "09f47ea1511d926c594bb7faf0069d8446cfd4f027abd3dede609b3182989fc5"
+    },
+    {
+      "name": "laps-9869",
+      "url": "https://api.openf1.org/v1/laps?session_key=9869",
+      "retrievedAt": "2026-10-18T11:04:24.007Z",
+      "bytes": 581269,
+      "sha256": "e0989a1fece708ce1197d0a51ea2f839733ddd0b3fa255bcac46ab2ffce858e4"
+    },
+    {
+      "name": "race_control-9869",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9869",
+      "retrievedAt": "2026-10-18T11:04:25.720Z",
+      "bytes": 14916,
+      "sha256": "a376975f34ccc0820f4bc96321c62ac1abd561415c2d21bf19c2d50c3f18c416"
+    },
+    {
+      "name": "pit-9869",
+      "url": "https://api.openf1.org/v1/pit?session_key=9869",
+      "retrievedAt": "2026-10-18T11:04:27.957Z",
+      "bytes": 6717,
+      "sha256": "a457cf0a569dc6c2ae4a0ae0809ceb385eeb73335bbf3df3d3af75b36eab79c2"
+    },
+    {
+      "name": "stints-9869",
+      "url": "https://api.openf1.org/v1/stints?session_key=9869",
+      "retrievedAt": "2026-10-18T11:04:30.123Z",
+      "bytes": 8240,
+      "sha256": "493cf601eb107b9e5e6586056df5faa0cef58c222bd37df00043818d8a79aa33"
+    },
+    {
+      "name": "position-9869",
+      "url": "https://api.openf1.org/v1/position?session_key=9869",
+      "retrievedAt": "2026-10-18T11:04:32.393Z",
+      "bytes": 86855,
+      "sha256": "6794bda51a0ad2428b3a017ee6ea7d1489661d0a402840593b40c7f5ea5aa429"
+    },
+    {
+      "name": "laps-9858",
+      "url": "https://api.openf1.org/v1/laps?session_key=9858",
+      "retrievedAt": "2026-10-18T11:04:36.166Z",
+      "bytes": 417370,
+      "sha256": "8ec064197dc3a28abd263726eb53a797c34c33e51bc8e969e910836907c5f63d"
+    },
+    {
+      "name": "race_control-9858",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9858",
+      "retrievedAt": "2026-10-18T11:04:36.800Z",
+      "bytes": 16249,
+      "sha256": "49b111c21d22cb2c1d9ef61e0165de29a7fa8b5ecdf5ccd11c96343c87579ae6"
+    },
+    {
+      "name": "pit-9858",
+      "url": "https://api.openf1.org/v1/pit?session_key=9858",
+      "retrievedAt": "2026-10-18T11:04:39.007Z",
+      "bytes": 4174,
+      "sha256": "a29cba08acf3de7b9c4aaf0c7ac920890ba2212489af5a0eca065cfb04ca7be2"
+    },
+    {
+      "name": "stints-9858",
+      "url": "https://api.openf1.org/v1/stints?session_key=9858",
+      "retrievedAt": "2026-10-18T11:04:41.206Z",
+      "bytes": 6339,
+      "sha256": "65ad29b5173478fc87682927fcb17972c405afdc8a4d047241fd75b44d0065ed"
+    },
+    {
+      "name": "position-9858",
+      "url": "https://api.openf1.org/v1/position?session_key=9858",
+      "retrievedAt": "2026-10-18T11:04:43.410Z",
+      "bytes": 37671,
+      "sha256": "07c4aa5150aa7f35498e153116105ed13a26abefbda889a587ba689a05d17927"
+    },
+    {
+      "name": "laps-9850",
+      "url": "https://api.openf1.org/v1/laps?session_key=9850",
+      "retrievedAt": "2026-10-18T11:04:46.448Z",
+      "bytes": 512701,
+      "sha256": "69f9e7b4e64478d8b4aa11a7283006bb2d75d1a2d7aa9cb1a2ed13f1b9451662"
+    },
+    {
+      "name": "race_control-9850",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9850",
+      "retrievedAt": "2026-10-18T11:04:47.832Z",
+      "bytes": 21683,
+      "sha256": "b20cb00929651f8465a7fb58d37a56d4a9c55158fce257f7b7fc7ba1d0689eab"
+    },
+    {
+      "name": "pit-9850",
+      "url": "https://api.openf1.org/v1/pit?session_key=9850",
+      "retrievedAt": "2026-10-18T11:04:50.071Z",
+      "bytes": 7430,
+      "sha256": "3cfcc9d911a0425505c425b8d687df66630eb88be26a198d4f2a43d0a209f2d7"
+    },
+    {
+      "name": "stints-9850",
+      "url": "https://api.openf1.org/v1/stints?session_key=9850",
+      "retrievedAt": "2026-10-18T11:04:52.311Z",
+      "bytes": 8795,
+      "sha256": "57d101f7bb1d124f77a77224d0e20d71cfb823f7a94d545e0e396908f2fb85cf"
+    },
+    {
+      "name": "position-9850",
+      "url": "https://api.openf1.org/v1/position?session_key=9850",
+      "retrievedAt": "2026-10-18T11:04:54.564Z",
+      "bytes": 54427,
+      "sha256": "6e5b024bbbe840091d33831742056c95cfca23c4bbf0a92163f951a7e32eac94"
+    },
+    {
+      "name": "laps-9839",
+      "url": "https://api.openf1.org/v1/laps?session_key=9839",
+      "retrievedAt": "2026-10-18T11:04:57.206Z",
+      "bytes": 553912,
+      "sha256": "8a6a850686c75cde7620c8bea5f7882cc8205173941db7a03f21adde8d6afca2"
+    },
+    {
+      "name": "race_control-9839",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9839",
+      "retrievedAt": "2026-10-18T11:04:58.967Z",
+      "bytes": 30521,
+      "sha256": "ab1c1abbb9a3d964efd8f7ca4226a71ef2bd9da812ea704bc2c93caa0a9d380c"
+    },
+    {
+      "name": "pit-9839",
+      "url": "https://api.openf1.org/v1/pit?session_key=9839",
+      "retrievedAt": "2026-10-18T11:05:01.213Z",
+      "bytes": 4904,
+      "sha256": "c57bfee7eabafcc2da3bddef5a3cbac7ecad2498bfa63171c33fb312683101f5"
+    },
+    {
+      "name": "stints-9839",
+      "url": "https://api.openf1.org/v1/stints?session_key=9839",
+      "retrievedAt": "2026-10-18T11:05:03.369Z",
+      "bytes": 6780,
+      "sha256": "c5b52daff941ef2680698daa68640341619511ad295be593c9ca01a18c9ae1d8"
+    },
+    {
+      "name": "position-9839",
+      "url": "https://api.openf1.org/v1/position?session_key=9839",
+      "retrievedAt": "2026-10-18T11:05:05.618Z",
+      "bytes": 76536,
+      "sha256": "876c2540b4324fe99c4e01c7f5c4449b496c6b7fceee7019bf1c0627227d0595"
+    },
+    {
+      "name": "laps-9472",
+      "url": "https://api.openf1.org/v1/laps?session_key=9472",
+      "retrievedAt": "2026-10-18T11:05:09.320Z",
+      "bytes": 563928,
+      "sha256": "2cc77172d82e22620a2a104f3aa9be3bf066c225a19125bc86b53cde6f672b61"
+    },
+    {
+      "name": "race_control-9472",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9472",
+      "retrievedAt": "2026-10-18T11:05:09.979Z",
+      "bytes": 18425,
+      "sha256": "4208c7da50c9648062315c37aeb6572ecd6e64960ed2f32241efe8cec5ca34b5"
+    },
+    {
+      "name": "pit-9472",
+      "url": "https://api.openf1.org/v1/pit?session_key=9472",
+      "retrievedAt": "2026-10-18T11:05:12.163Z",
+      "bytes": 7686,
+      "sha256": "b3c94c4df7ccc985d53b88e199cdbb7cf9918ba5b3f4a415283c4d7575641ec9"
+    },
+    {
+      "name": "stints-9472",
+      "url": "https://api.openf1.org/v1/stints?session_key=9472",
+      "retrievedAt": "2026-10-18T11:05:14.330Z",
+      "bytes": 9036,
+      "sha256": "19bcf5e2ecea2153c1b9b226daa5bfc794c183c00e6a87c8fd94d3cfe145c2c5"
+    },
+    {
+      "name": "position-9472",
+      "url": "https://api.openf1.org/v1/position?session_key=9472",
+      "retrievedAt": "2026-10-18T11:05:16.568Z",
+      "bytes": 79876,
+      "sha256": "55cb525c7467e2c9bb8d18026a44c85db6ef29c53c7570d6716ec7379c46b840"
+    },
+    {
+      "name": "laps-9480",
+      "url": "https://api.openf1.org/v1/laps?session_key=9480",
+      "retrievedAt": "2026-10-18T11:05:19.285Z",
+      "bytes": 436780,
+      "sha256": "c4ad42bb5da959e0cc924c3242bed51d23beb2aae4c96beb68150363fdbda8cf"
+    },
+    {
+      "name": "race_control-9480",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9480",
+      "retrievedAt": "2026-10-18T11:05:21.074Z",
+      "bytes": 17795,
+      "sha256": "a5d7fab46dff799177ec653bcc2f5ca8a125fbc84d3914b992bbeda456dd5358"
+    },
+    {
+      "name": "pit-9480",
+      "url": "https://api.openf1.org/v1/pit?session_key=9480",
+      "retrievedAt": "2026-10-18T11:05:23.299Z",
+      "bytes": 3384,
+      "sha256": "aaf1507b49363aa277a4b2d2cee02c069474fd57ae672db004c6a1f3bd51b985"
+    },
+    {
+      "name": "stints-9480",
+      "url": "https://api.openf1.org/v1/stints?session_key=9480",
+      "retrievedAt": "2026-10-18T11:05:25.381Z",
+      "bytes": 5595,
+      "sha256": "cb1bb90cab6d54539101454e9d034b8c945ef0f0238180f9ee51b7f33df76e34"
+    },
+    {
+      "name": "position-9480",
+      "url": "https://api.openf1.org/v1/position?session_key=9480",
+      "retrievedAt": "2026-10-18T11:05:27.587Z",
+      "bytes": 26218,
+      "sha256": "181692fd988bbfbfc679d6d8ed791bf2d3cd61f8d84cafa302893cd6a85d13d6"
+    },
+    {
+      "name": "laps-9488",
+      "url": "https://api.openf1.org/v1/laps?session_key=9488",
+      "retrievedAt": "2026-10-18T11:05:31.729Z",
+      "bytes": 468189,
+      "sha256": "b4b8ed0cdb176f1e688b85a1cd1175e2301da0692311ad97a403b465ca3c40e1"
+    },
+    {
+      "name": "race_control-9488",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9488",
+      "retrievedAt": "2026-10-18T11:05:32.199Z",
+      "bytes": 21210,
+      "sha256": "25242932150b00737e3255c99af505cff398a8a31a96100ad5c95c5959fbc61d"
+    },
+    {
+      "name": "pit-9488",
+      "url": "https://api.openf1.org/v1/pit?session_key=9488",
+      "retrievedAt": "2026-10-18T11:05:34.370Z",
+      "bytes": 6429,
+      "sha256": "d4120ff3decad25d9c1436fafe01b8ccb5a8cb64cc7fb8fcb390cc21f1d5d444"
+    },
+    {
+      "name": "stints-9488",
+      "url": "https://api.openf1.org/v1/stints?session_key=9488",
+      "retrievedAt": "2026-10-18T11:05:36.410Z",
+      "bytes": 7902,
+      "sha256": "4148088893804b15e8d02fa835200c8ab3c9f351ab04512b30a3f2cb22c61ea2"
+    },
+    {
+      "name": "position-9488",
+      "url": "https://api.openf1.org/v1/position?session_key=9488",
+      "retrievedAt": "2026-10-18T11:05:38.672Z",
+      "bytes": 50608,
+      "sha256": "6ce2d4e54cc2755d8535bccce74fbcb573e1aa0559a0f1984699fc34c66e32d4"
+    },
+    {
+      "name": "laps-9496",
+      "url": "https://api.openf1.org/v1/laps?session_key=9496",
+      "retrievedAt": "2026-10-18T11:05:41.391Z",
+      "bytes": 439530,
+      "sha256": "56f8ef9b74255ae26e25bda121b3d10e2bd04f6265823378266a2fe7df5b53a0"
+    },
+    {
+      "name": "race_control-9496",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9496",
+      "retrievedAt": "2026-10-18T11:05:43.028Z",
+      "bytes": 17956,
+      "sha256": "f3e60c156c4b6852a77b2fbe2c9192be2be60ec5d1463e94e46aeab08f3ed05d"
+    },
+    {
+      "name": "pit-9496",
+      "url": "https://api.openf1.org/v1/pit?session_key=9496",
+      "retrievedAt": "2026-10-18T11:05:45.231Z",
+      "bytes": 9707,
+      "sha256": "f6ebbf48f36ec246178515eae5de552b29932e2fdefff34a96aecebc71d5b520"
+    },
+    {
+      "name": "stints-9496",
+      "url": "https://api.openf1.org/v1/stints?session_key=9496",
+      "retrievedAt": "2026-10-18T11:05:47.444Z",
+      "bytes": 10647,
+      "sha256": "48328e6349c6a5b050a41ffa354477276b4bb07bb99aaab672cdf8203524debc"
+    },
+    {
+      "name": "position-9496",
+      "url": "https://api.openf1.org/v1/position?session_key=9496",
+      "retrievedAt": "2026-10-18T11:05:49.700Z",
+      "bytes": 50692,
+      "sha256": "7374b6f45095acc65309006c0ac774bac3922c11d74da47e6dd62807408888a6"
+    },
+    {
+      "name": "laps-9673",
+      "url": "https://api.openf1.org/v1/laps?session_key=9673",
+      "retrievedAt": "2026-10-18T11:05:52.395Z",
+      "bytes": 485256,
+      "sha256": "b46c79634d8785345abbdd4e789bb23a0cde07fc84ae90ab38bda28b0b10d1eb"
+    },
+    {
+      "name": "race_control-9673",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9673",
+      "retrievedAt": "2026-10-18T11:05:54.120Z",
+      "bytes": 15279,
+      "sha256": "a13fdd0fb47929b1db89268af36df14c99aee77abd9b9ae31213431e452d94b8"
+    },
+    {
+      "name": "pit-9673",
+      "url": "https://api.openf1.org/v1/pit?session_key=9673",
+      "retrievedAt": "2026-10-18T11:05:56.489Z",
+      "bytes": 7147,
+      "sha256": "9879eaa3a07189818b76e55aad689eadfc88742d6b83d44cd92a855feb4d2033"
+    },
+    {
+      "name": "stints-9673",
+      "url": "https://api.openf1.org/v1/stints?session_key=9673",
+      "retrievedAt": "2026-10-18T11:05:58.521Z",
+      "bytes": 8654,
+      "sha256": "e93c1ade06932acb011549893bf26348cf3f5552fbbe97f1cf0b6e47074325ce"
+    },
+    {
+      "name": "position-9673",
+      "url": "https://api.openf1.org/v1/position?session_key=9673",
+      "retrievedAt": "2026-10-18T11:06:00.778Z",
+      "bytes": 70671,
+      "sha256": "2599f2ef5d71fd3131dcaad3785e1a270b55d645054d5a32c7f0d61688e9c2b8"
+    },
+    {
+      "name": "laps-9507",
+      "url": "https://api.openf1.org/v1/laps?session_key=9507",
+      "retrievedAt": "2026-10-18T11:06:03.495Z",
+      "bytes": 538497,
+      "sha256": "ffd5a3bced52941097f696de92f03293a666d4c646b5d027088c9d121ec2d9a4"
+    },
+    {
+      "name": "race_control-9507",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9507",
+      "retrievedAt": "2026-10-18T11:06:05.586Z",
+      "bytes": 20629,
+      "sha256": "4da0c339eb3b77286063fbac8ad10a503469cced647782c62be50fe1546b9c8c"
+    },
+    {
+      "name": "pit-9507",
+      "url": "https://api.openf1.org/v1/pit?session_key=9507",
+      "retrievedAt": "2026-10-18T11:06:07.428Z",
+      "bytes": 5009,
+      "sha256": "5e2dccb098068e89231a90e3485d4310b6fd0ab99400109f6665e35272702128"
+    },
+    {
+      "name": "stints-9507",
+      "url": "https://api.openf1.org/v1/stints?session_key=9507",
+      "retrievedAt": "2026-10-18T11:06:09.571Z",
+      "bytes": 6937,
+      "sha256": "45c210d46fbc3b64543846fcd559938750a7ab56c13c592c172c065c72cd1bdc"
+    },
+    {
+      "name": "position-9507",
+      "url": "https://api.openf1.org/v1/position?session_key=9507",
+      "retrievedAt": "2026-10-18T11:06:11.824Z",
+      "bytes": 46182,
+      "sha256": "e3c83ffb7d42e0f8504be01125c1684db6c57d491bbc4d3e768e22f063d06e37"
+    },
+    {
+      "name": "laps-9515",
+      "url": "https://api.openf1.org/v1/laps?session_key=9515",
+      "retrievedAt": "2026-10-18T11:06:14.407Z",
+      "bytes": 575079,
+      "sha256": "d703c9a3a6ba3c0b0aba57098796ada16f81855ffa51ad4e6216a65d1b9c1815"
+    },
+    {
+      "name": "race_control-9515",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9515",
+      "retrievedAt": "2026-10-18T11:06:16.196Z",
+      "bytes": 26011,
+      "sha256": "d47ab45d7f8b13297cd86f0838b9dfed056371a9855553bc926d638596cb93f4"
+    },
+    {
+      "name": "pit-9515",
+      "url": "https://api.openf1.org/v1/pit?session_key=9515",
+      "retrievedAt": "2026-10-18T11:06:18.375Z",
+      "bytes": 4825,
+      "sha256": "3adf11cebe6b9a104301449b9d8a794339e418c7d55b44ea0279dfe5337c19ec"
+    },
+    {
+      "name": "stints-9515",
+      "url": "https://api.openf1.org/v1/stints?session_key=9515",
+      "retrievedAt": "2026-10-18T11:06:20.627Z",
+      "bytes": 6781,
+      "sha256": "c33abebd252d440d2831b2c36db41a872e4ecec2a9688b19a99f4868ad6edade"
+    },
+    {
+      "name": "position-9515",
+      "url": "https://api.openf1.org/v1/position?session_key=9515",
+      "retrievedAt": "2026-10-18T11:06:22.833Z",
+      "bytes": 35258,
+      "sha256": "b7fe28b2bb57a829ddebd9ad885cc90522633f16ac9ded025d939fd1bc777c8c"
+    },
+    {
+      "name": "laps-9531",
+      "url": "https://api.openf1.org/v1/laps?session_key=9531",
+      "retrievedAt": "2026-10-18T11:06:25.558Z",
+      "bytes": 577570,
+      "sha256": "b507d108e4728b43b8d5228c7d7f00ae22a10aab7bd931fa4e30a4f860e64fde"
+    },
+    {
+      "name": "race_control-9531",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9531",
+      "retrievedAt": "2026-10-18T11:06:27.283Z",
+      "bytes": 34003,
+      "sha256": "344db3cc77473f9c29b8e7544e5360a3dc2ac92d0fe96af92bf0ff041d0bc9e6"
+    },
+    {
+      "name": "pit-9531",
+      "url": "https://api.openf1.org/v1/pit?session_key=9531",
+      "retrievedAt": "2026-10-18T11:06:29.531Z",
+      "bytes": 7512,
+      "sha256": "f972e4921215bfe299432698f1799ed0e17812d54e3253d939b0c18aab7469f4"
+    },
+    {
+      "name": "stints-9531",
+      "url": "https://api.openf1.org/v1/stints?session_key=9531",
+      "retrievedAt": "2026-10-18T11:06:31.680Z",
+      "bytes": 9225,
+      "sha256": "b53ef4a450b780393edc837abd7c1d751781e6163396f6be7ba0601838be0eea"
+    },
+    {
+      "name": "position-9531",
+      "url": "https://api.openf1.org/v1/position?session_key=9531",
+      "retrievedAt": "2026-10-18T11:06:33.929Z",
+      "bytes": 46510,
+      "sha256": "bedd594c0b4f04658ec1d1e6ae33a09e4c3779800951eb2b00ac8793419891d7"
+    },
+    {
+      "name": "laps-9539",
+      "url": "https://api.openf1.org/v1/laps?session_key=9539",
+      "retrievedAt": "2026-10-18T11:06:36.469Z",
+      "bytes": 608097,
+      "sha256": "8662df9db018b7c22568d54ccf5d7ee10175cbe9bfab1db4e1d7e8faf06bd63c"
+    },
+    {
+      "name": "race_control-9539",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9539",
+      "retrievedAt": "2026-10-18T11:06:38.309Z",
+      "bytes": 28466,
+      "sha256": "e3c48dcbe93a1f7c0505d386f7b37eac00804974ea11b9ec2a458e0f63655663"
+    },
+    {
+      "name": "pit-9539",
+      "url": "https://api.openf1.org/v1/pit?session_key=9539",
+      "retrievedAt": "2026-10-18T11:06:40.492Z",
+      "bytes": 7509,
+      "sha256": "5cf8c8815d783c66f89e63e726276373a402619ff1c5cb2fe9a28c5f51b4afa1"
+    },
+    {
+      "name": "stints-9539",
+      "url": "https://api.openf1.org/v1/stints?session_key=9539",
+      "retrievedAt": "2026-10-18T11:06:42.727Z",
+      "bytes": 8933,
+      "sha256": "1fab28131e4072631c761cb48538fc7c507bbfa54453c2fd957e97ff3509ad7f"
+    },
+    {
+      "name": "position-9539",
+      "url": "https://api.openf1.org/v1/position?session_key=9539",
+      "retrievedAt": "2026-10-18T11:06:44.996Z",
+      "bytes": 85175,
+      "sha256": "4f1172dd17c9630a0f84f2355b5d298b3dd08c7f34e0c7270ac92e1228f89f15"
+    },
+    {
+      "name": "laps-9550",
+      "url": "https://api.openf1.org/v1/laps?session_key=9550",
+      "retrievedAt": "2026-10-18T11:06:47.684Z",
+      "bytes": 645860,
+      "sha256": "8f7fe4af2cf9a9519d6ced5987b240a2504a28b962f2cdab43b44d403f559d56"
+    },
+    {
+      "name": "race_control-9550",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9550",
+      "retrievedAt": "2026-10-18T11:06:49.386Z",
+      "bytes": 33487,
+      "sha256": "90c29dba3336f3fc459ff5713df2001a1a155311f9c94c383fb1b82b5e7d2ac1"
+    },
+    {
+      "name": "pit-9550",
+      "url": "https://api.openf1.org/v1/pit?session_key=9550",
+      "retrievedAt": "2026-10-18T11:07:52.208Z",
+      "bytes": 8044,
+      "sha256": "5eabaa18e98f1d07f209a1a526ecc5e27292909f59346c49a152a476fd09b07f"
+    },
+    {
+      "name": "stints-9550",
+      "url": "https://api.openf1.org/v1/stints?session_key=9550",
+      "retrievedAt": "2026-10-18T11:07:54.041Z",
+      "bytes": 9395,
+      "sha256": "8b09e03386ffab043f7611618734e772f85b0e0e2527017cfe0f9dc439f00c7d"
+    },
+    {
+      "name": "position-9550",
+      "url": "https://api.openf1.org/v1/position?session_key=9550",
+      "retrievedAt": "2026-10-18T11:07:56.309Z",
+      "bytes": 67717,
+      "sha256": "3d1be17e1cbd8b75a0652ed88b4783fd3c3e5556fd8d7f7edf0de4cf8c7b5bf9"
+    },
+    {
+      "name": "laps-9566",
+      "url": "https://api.openf1.org/v1/laps?session_key=9566",
+      "retrievedAt": "2026-10-18T11:07:59.020Z",
+      "bytes": 623015,
+      "sha256": "a969ac098659a8d87dce34922b5030a3adf11340dc590fec20eeb6ef38a2d205"
+    },
+    {
+      "name": "race_control-9566",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9566",
+      "retrievedAt": "2026-10-18T11:08:01.625Z",
+      "bytes": 19458,
+      "sha256": "ed23cb256e7820a388ecb69f5948f734553912ee4da1b5d9933c1db9c7e67d09"
+    },
+    {
+      "name": "pit-9566",
+      "url": "https://api.openf1.org/v1/pit?session_key=9566",
+      "retrievedAt": "2026-10-18T11:08:02.862Z",
+      "bytes": 7144,
+      "sha256": "4eeb19ca3263df6a2dc252ddf4d76afc9a061a63e25ee666923ed4c5924e952d"
+    },
+    {
+      "name": "stints-9566",
+      "url": "https://api.openf1.org/v1/stints?session_key=9566",
+      "retrievedAt": "2026-10-18T11:08:05.615Z",
+      "bytes": 8640,
+      "sha256": "010d4e50453b2bb6dbc02f8989e2cf1e63148169d177d1e2f0d133d11a9ac294"
+    },
+    {
+      "name": "position-9566",
+      "url": "https://api.openf1.org/v1/position?session_key=9566",
+      "retrievedAt": "2026-10-18T11:08:07.315Z",
+      "bytes": 63203,
+      "sha256": "0701578c48e3b22d9c096e37240ea196c75ee878a8f6ff5d236c92eca26b5f7f"
+    },
+    {
+      "name": "laps-9574",
+      "url": "https://api.openf1.org/v1/laps?session_key=9574",
+      "retrievedAt": "2026-10-18T11:08:09.813Z",
+      "bytes": 416774,
+      "sha256": "4d0a431be376b8a5d1115f1ae47f4aab5a01421edb4e67df14c1e8dbd926580f"
+    },
+    {
+      "name": "race_control-9574",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9574",
+      "retrievedAt": "2026-10-18T11:08:11.777Z",
+      "bytes": 5989,
+      "sha256": "49d55414bddea147268fdf797d706163c6093448c2358c8001e6c9be8a525589"
+    },
+    {
+      "name": "pit-9574",
+      "url": "https://api.openf1.org/v1/pit?session_key=9574",
+      "retrievedAt": "2026-10-18T11:08:14.523Z",
+      "bytes": 6074,
+      "sha256": "8361d94e0f4d4c1371625d288a3163d2cf16be0ccf1c3b562198e97a654c5198"
+    },
+    {
+      "name": "stints-9574",
+      "url": "https://api.openf1.org/v1/stints?session_key=9574",
+      "retrievedAt": "2026-10-18T11:08:16.158Z",
+      "bytes": 8364,
+      "sha256": "5bb631a1d33750bc43c92c4e1d969bd30110aa0b6b67572c442a284c83273b27"
+    },
+    {
+      "name": "position-9574",
+      "url": "https://api.openf1.org/v1/position?session_key=9574",
+      "retrievedAt": "2026-10-18T11:08:18.418Z",
+      "bytes": 61666,
+      "sha256": "668bffc0fc2332d579b554998208d17c47a623b68daaf875920420a0fec53fbf"
+    },
+    {
+      "name": "laps-9582",
+      "url": "https://api.openf1.org/v1/laps?session_key=9582",
+      "retrievedAt": "2026-10-18T11:08:21.197Z",
+      "bytes": 676456,
+      "sha256": "ef7992120cf8bd5cae82d45f1dcefb7a51d29d1aa8aa2fa77f4bd1e408868be7"
+    },
+    {
+      "name": "race_control-9582",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9582",
+      "retrievedAt": "2026-10-18T11:08:22.775Z",
+      "bytes": 21571,
+      "sha256": "c10fbe4246b459ea2498c8ccb0d650eacee850a3602d781c3bdeb6c77af74035"
+    },
+    {
+      "name": "pit-9582",
+      "url": "https://api.openf1.org/v1/pit?session_key=9582",
+      "retrievedAt": "2026-10-18T11:08:25.067Z",
+      "bytes": 4651,
+      "sha256": "e2ff90f3692f7dd1982ccc9d8d8d150b121bcf6e9094e64c5c97f8c0c20a6b1b"
+    },
+    {
+      "name": "stints-9582",
+      "url": "https://api.openf1.org/v1/stints?session_key=9582",
+      "retrievedAt": "2026-10-18T11:08:27.215Z",
+      "bytes": 6637,
+      "sha256": "6a8ca2490388582bb4948bf5ff73849c9138154094893ee1dd0ab1d004c0d048"
+    },
+    {
+      "name": "position-9582",
+      "url": "https://api.openf1.org/v1/position?session_key=9582",
+      "retrievedAt": "2026-10-18T11:08:29.409Z",
+      "bytes": 61824,
+      "sha256": "c488af304ae45165e2d0ca916949f94afa70af3a26b63da0230ae10cc7bbf96f"
+    },
+    {
+      "name": "laps-9590",
+      "url": "https://api.openf1.org/v1/laps?session_key=9590",
+      "retrievedAt": "2026-10-18T11:08:31.940Z",
+      "bytes": 468305,
+      "sha256": "d2974c40ae37e37660926080667232c301f950b6d66016628a2869dbb85379f4"
+    },
+    {
+      "name": "race_control-9590",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9590",
+      "retrievedAt": "2026-10-18T11:08:33.797Z",
+      "bytes": 16305,
+      "sha256": "515e28b27aab121322827b94a97b3f26d7c7aa93af449ae0ff0d6c6988f5ccc4"
+    },
+    {
+      "name": "pit-9590",
+      "url": "https://api.openf1.org/v1/pit?session_key=9590",
+      "retrievedAt": "2026-10-18T11:08:36.020Z",
+      "bytes": 5365,
+      "sha256": "6f0de251e4b0873882139ac4985b58984bd2661b90ad188954ceaf2426983cf2"
+    },
+    {
+      "name": "stints-9590",
+      "url": "https://api.openf1.org/v1/stints?session_key=9590",
+      "retrievedAt": "2026-10-18T11:08:38.265Z",
+      "bytes": 7208,
+      "sha256": "fc5696a1ab11a579000ee69880dfc85fd204a9f3462347cff1073ab74c40d1d2"
+    },
+    {
+      "name": "position-9590",
+      "url": "https://api.openf1.org/v1/position?session_key=9590",
+      "retrievedAt": "2026-10-18T11:08:45.590Z",
+      "bytes": 55169,
+      "sha256": "bdde745d518a787934f0531fff80f5db15bfd25e6ce0c8172db6cac905df7d48"
+    },
+    {
+      "name": "laps-9598",
+      "url": "https://api.openf1.org/v1/laps?session_key=9598",
+      "retrievedAt": "2026-10-18T11:08:47.005Z",
+      "bytes": 472313,
+      "sha256": "59e1c3d1688db56825125d22bdb61bd870fc8d10ae9649571549a551b6164905"
+    },
+    {
+      "name": "race_control-9598",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9598",
+      "retrievedAt": "2026-10-18T11:08:48.922Z",
+      "bytes": 28007,
+      "sha256": "1ed0d978f3939d83eee6f5daae498d5e999734dc54fea45d3dd2927c6cf9c1f1"
+    },
+    {
+      "name": "pit-9598",
+      "url": "https://api.openf1.org/v1/pit?session_key=9598",
+      "retrievedAt": "2026-10-18T11:09:51.950Z",
+      "bytes": 3934,
+      "sha256": "807b036f43378f93a691995ab2ba18a7faa0921fe7845b2205368248294f4e90"
+    },
+    {
+      "name": "stints-9598",
+      "url": "https://api.openf1.org/v1/stints?session_key=9598",
+      "retrievedAt": "2026-10-18T11:09:53.588Z",
+      "bytes": 6054,
+      "sha256": "6358312737059d576772e5b82a790ec7effe102d7042f19b759a28e120fce16a"
+    },
+    {
+      "name": "position-9598",
+      "url": "https://api.openf1.org/v1/position?session_key=9598",
+      "retrievedAt": "2026-10-18T11:09:55.774Z",
+      "bytes": 41101,
+      "sha256": "a77014947106cd230eae07896c6acec87db37553a52d530f2a8103e1ec0603a9"
+    },
+    {
+      "name": "laps-9606",
+      "url": "https://api.openf1.org/v1/laps?session_key=9606",
+      "retrievedAt": "2026-10-18T11:09:58.507Z",
+      "bytes": 565162,
+      "sha256": "d8114c9b5a8f184cc4a26e21d606b233d7a3c0dc818a24478ab6ba4e499fd049"
+    },
+    {
+      "name": "race_control-9606",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9606",
+      "retrievedAt": "2026-10-18T11:10:00.156Z",
+      "bytes": 16694,
+      "sha256": "acec17be1bdcc69224c9311926f4d83915021ddc1b7a2ff68136ea767880c86e"
+    },
+    {
+      "name": "pit-9606",
+      "url": "https://api.openf1.org/v1/pit?session_key=9606",
+      "retrievedAt": "2026-10-18T11:10:02.390Z",
+      "bytes": 4113,
+      "sha256": "150d7b075666e4b17b83e5d17a623cad91cf9809ec958ba2176f498629e47237"
+    },
+    {
+      "name": "stints-9606",
+      "url": "https://api.openf1.org/v1/stints?session_key=9606",
+      "retrievedAt": "2026-10-18T11:10:04.566Z",
+      "bytes": 6203,
+      "sha256": "9d4bbd52f0c683f40f536e9edb0dad54d444e9afa36d6e66a410dbc010b014b2"
+    },
+    {
+      "name": "position-9606",
+      "url": "https://api.openf1.org/v1/position?session_key=9606",
+      "retrievedAt": "2026-10-18T11:10:11.591Z",
+      "bytes": 47693,
+      "sha256": "bf8b8a11107ed5fafd8d958a5287a4ceba6b99b3361a9e9f48c3e0757631f1c6"
+    },
+    {
+      "name": "laps-9617",
+      "url": "https://api.openf1.org/v1/laps?session_key=9617",
+      "retrievedAt": "2026-10-18T11:10:13.955Z",
+      "bytes": 492111,
+      "sha256": "57820f8b9b613720e10e83d528776b76276ce445f60757102b17877e6e45f614"
+    },
+    {
+      "name": "race_control-9617",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9617",
+      "retrievedAt": "2026-10-18T11:10:15.502Z",
+      "bytes": 32343,
+      "sha256": "78eb891791253002eea72cd19c50874b63ec2ded65b87502817377352229e0fc"
+    },
+    {
+      "name": "pit-9617",
+      "url": "https://api.openf1.org/v1/pit?session_key=9617",
+      "retrievedAt": "2026-10-18T11:10:17.758Z",
+      "bytes": 4177,
+      "sha256": "4913ac7201251c24caa05c66eb749d037c5552589b0d4d5795bd9a2a7744220c"
+    },
+    {
+      "name": "stints-9617",
+      "url": "https://api.openf1.org/v1/stints?session_key=9617",
+      "retrievedAt": "2026-10-18T11:10:22.648Z",
+      "bytes": 6210,
+      "sha256": "a27813ca295459f3280fb7af93802003c901fa5abbb9f841cf3a7a588cb84c86"
+    },
+    {
+      "name": "position-9617",
+      "url": "https://api.openf1.org/v1/position?session_key=9617",
+      "retrievedAt": "2026-10-18T11:10:26.689Z",
+      "bytes": 46190,
+      "sha256": "c928d690f6c9d5173ba24660e46e67cb5c5107238fcbeff9a8ccf2296b003edd"
+    },
+    {
+      "name": "laps-9625",
+      "url": "https://api.openf1.org/v1/laps?session_key=9625",
+      "retrievedAt": "2026-10-18T11:10:29.511Z",
+      "bytes": 564624,
+      "sha256": "9b66b97076e3415079c5889adf9a22c988b254fd24983634534aa334ff92febb"
+    },
+    {
+      "name": "race_control-9625",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9625",
+      "retrievedAt": "2026-10-18T11:10:33.493Z",
+      "bytes": 30647,
+      "sha256": "e60e19146e9a25e4f2b7080afca638073c56faa75f2d30f130cf8f9ad240a0e2"
+    },
+    {
+      "name": "pit-9625",
+      "url": "https://api.openf1.org/v1/pit?session_key=9625",
+      "retrievedAt": "2026-10-18T11:10:39.745Z",
+      "bytes": 3813,
+      "sha256": "f16134367f81e3720151287fc99859d98870ae011891999c799c64d23b2f151a"
+    },
+    {
+      "name": "stints-9625",
+      "url": "https://api.openf1.org/v1/stints?session_key=9625",
+      "retrievedAt": "2026-10-18T11:10:40.233Z",
+      "bytes": 5933,
+      "sha256": "8a70906c1805945166ba27e360311fc70a1f3089e9f18c85ce71242a24f9277b"
+    },
+    {
+      "name": "position-9625",
+      "url": "https://api.openf1.org/v1/position?session_key=9625",
+      "retrievedAt": "2026-10-18T11:10:42.499Z",
+      "bytes": 48333,
+      "sha256": "6cb617085b07e930e7b4b5d7922f2d0217d38e3c6d594470523703e29840df5a"
+    },
+    {
+      "name": "laps-9636",
+      "url": "https://api.openf1.org/v1/laps?session_key=9636",
+      "retrievedAt": "2026-10-18T11:10:45.268Z",
+      "bytes": 522095,
+      "sha256": "16bc906b0fad0b99ab26ba5e8f8e23400f73d6d811c095dcdd04f2a92679d280"
+    },
+    {
+      "name": "race_control-9636",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9636",
+      "retrievedAt": "2026-10-18T11:10:49.256Z",
+      "bytes": 28631,
+      "sha256": "ab6bf12fd26662ba855c6e892218ef3ffad43a639f4f2c0165c413587e21185a"
+    },
+    {
+      "name": "pit-9636",
+      "url": "https://api.openf1.org/v1/pit?session_key=9636",
+      "retrievedAt": "2026-10-18T11:10:51.698Z",
+      "bytes": 6361,
+      "sha256": "03ba3a7793d9b519462dedc27ea6b56d16e18eeacd4c1b6de5726db6624e3551"
+    },
+    {
+      "name": "stints-9636",
+      "url": "https://api.openf1.org/v1/stints?session_key=9636",
+      "retrievedAt": "2026-10-18T11:10:57.333Z",
+      "bytes": 8145,
+      "sha256": "e5be4004ddb5319fd917c3cfed19b6d06377297cafceb971304d361e3062060a"
+    },
+    {
+      "name": "position-9636",
+      "url": "https://api.openf1.org/v1/position?session_key=9636",
+      "retrievedAt": "2026-10-18T11:10:58.284Z",
+      "bytes": 41262,
+      "sha256": "4a8e92907e4c66192525b5e40edbd21d9aa7dd5d7ef801b11aecc32030629e55"
+    },
+    {
+      "name": "pits-2024-22",
+      "url": "https://api.jolpi.ca/ergast/f1/2024/22/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:10:59.501Z",
+      "bytes": 3832,
+      "sha256": "1c2fd40e0b9a7fec2e3bc1217e51159b66aa4bca8f555163ce3b8462039016a9"
+    },
+    {
+      "name": "winner-laps-2024-22",
+      "url": "https://api.jolpi.ca/ergast/f1/2024/22/drivers/russell/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:11:00.384Z",
+      "bytes": 4824,
+      "sha256": "c6da5e2676780c7434e308d3ec74ea24847bc97f849a4481610a285dc9677933"
+    },
+    {
+      "name": "laps-9655",
+      "url": "https://api.openf1.org/v1/laps?session_key=9655",
+      "retrievedAt": "2026-10-18T11:11:04.327Z",
+      "bytes": 447742,
+      "sha256": "dd2b173b6c82c2bb034b42eb1ea75c5c17a0a9483bd6575fbc3fba8494418ad8"
+    },
+    {
+      "name": "race_control-9655",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9655",
+      "retrievedAt": "2026-10-18T11:11:05.076Z",
+      "bytes": 29330,
+      "sha256": "36abe1a227188d6f4d19645d3d352088dd7850b7dc7ecb638acd5b00055ee6e7"
+    },
+    {
+      "name": "pit-9655",
+      "url": "https://api.openf1.org/v1/pit?session_key=9655",
+      "retrievedAt": "2026-10-18T11:11:10.744Z",
+      "bytes": 10813,
+      "sha256": "3395f4d41d9f57105a21f197a12c352e559cf57208395952b505c37958de60a6"
+    },
+    {
+      "name": "stints-9655",
+      "url": "https://api.openf1.org/v1/stints?session_key=9655",
+      "retrievedAt": "2026-10-18T11:11:11.970Z",
+      "bytes": 11852,
+      "sha256": "563b14f1fe3b1a9096b2fcfb85b705b624da7a4ce05a594dfba34120751ffc3f"
+    },
+    {
+      "name": "position-9655",
+      "url": "https://api.openf1.org/v1/position?session_key=9655",
+      "retrievedAt": "2026-10-18T11:11:16.703Z",
+      "bytes": 58401,
+      "sha256": "a43102ff620cbba9539d2f7f43ac14d707ec480b0e71a03691c1731f6a5ed961"
+    },
+    {
+      "name": "laps-9662",
+      "url": "https://api.openf1.org/v1/laps?session_key=9662",
+      "retrievedAt": "2026-10-18T11:11:22.934Z",
+      "bytes": 491562,
+      "sha256": "5e078cdfa96999db6a769c6425612a3f1bbfbfad9b86bc47372b19f773ce520f"
+    },
+    {
+      "name": "race_control-9662",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9662",
+      "retrievedAt": "2026-10-18T11:11:23.133Z",
+      "bytes": 34423,
+      "sha256": "af0d2031976b2fb8aca805200d1ea5ea89c4d613abe9cbc511fd87d6752ffd15"
+    },
+    {
+      "name": "pit-9662",
+      "url": "https://api.openf1.org/v1/pit?session_key=9662",
+      "retrievedAt": "2026-10-18T11:11:28.653Z",
+      "bytes": 5088,
+      "sha256": "defb75d4cd5a538a60335fdd1f438e393af43445c3f67bb2d5178ef50f6d824b"
+    },
+    {
+      "name": "stints-9662",
+      "url": "https://api.openf1.org/v1/stints?session_key=9662",
+      "retrievedAt": "2026-10-18T11:11:29.959Z",
+      "bytes": 6928,
+      "sha256": "33da3e8ef4c01bd46c513862668a3e7eb435e6a58bfb2bd8690ffbcb73be48d2"
+    },
+    {
+      "name": "position-9662",
+      "url": "https://api.openf1.org/v1/position?session_key=9662",
+      "retrievedAt": "2026-10-18T11:11:35.009Z",
+      "bytes": 58194,
+      "sha256": "7fb3b2416d9bc1d0d24da99f181efdb9435b2a424c9809abf42ef707388ee23b"
+    },
+    {
+      "name": "laps-7953",
+      "url": "https://api.openf1.org/v1/laps?session_key=7953",
+      "retrievedAt": "2026-10-18T11:11:37.069Z",
+      "bytes": 526418,
+      "sha256": "fa44efcdf9a4cbf9b9f9550322511ef94645e765aa5b231c11b86e69897d39a7"
+    },
+    {
+      "name": "race_control-7953",
+      "url": "https://api.openf1.org/v1/race_control?session_key=7953",
+      "retrievedAt": "2026-10-18T11:11:42.054Z",
+      "bytes": 19725,
+      "sha256": "06e8530c4dbee9a22ebf176ecda2d37cab5503887088add21861fe5b0fc5535e"
+    },
+    {
+      "name": "stints-7953",
+      "url": "https://api.openf1.org/v1/stints?session_key=7953",
+      "retrievedAt": "2026-10-18T11:11:48.514Z",
+      "bytes": 10048,
+      "sha256": "f1c4a78dcf38ad72a295b1bc85daf1de46a77aeedc094d6dc4ee5958683d7163"
+    },
+    {
+      "name": "position-7953",
+      "url": "https://api.openf1.org/v1/position?session_key=7953",
+      "retrievedAt": "2026-10-18T11:11:52.522Z",
+      "bytes": 76275,
+      "sha256": "6ad9c09a0552898aae42e14dc033d0f65ac9e8aae3b769e2e8b90b1172e02ec7"
+    },
+    {
+      "name": "laps-7779",
+      "url": "https://api.openf1.org/v1/laps?session_key=7779",
+      "retrievedAt": "2026-10-18T11:11:58.443Z",
+      "bytes": 456872,
+      "sha256": "27ef92ea15bae3b3ad767c2b9758bcd7c17463d82de2b0576e6dc1ffaf069e0c"
+    },
+    {
+      "name": "race_control-7779",
+      "url": "https://api.openf1.org/v1/race_control?session_key=7779",
+      "retrievedAt": "2026-10-18T11:11:59.356Z",
+      "bytes": 15069,
+      "sha256": "8c726ddfbcf1c30a23a0ed188865613067950310fb9f97a4b84ba57d4b1ca02c"
+    },
+    {
+      "name": "stints-7779",
+      "url": "https://api.openf1.org/v1/stints?session_key=7779",
+      "retrievedAt": "2026-10-18T11:12:08.295Z",
+      "bytes": 6345,
+      "sha256": "74b1b61ebc6d0e905cab6415a5ae14dd71fe63b1071e1d30328d7497ffb2270c"
+    },
+    {
+      "name": "position-7779",
+      "url": "https://api.openf1.org/v1/position?session_key=7779",
+      "retrievedAt": "2026-10-18T11:12:14.705Z",
+      "bytes": 39299,
+      "sha256": "935ea8c38374f7223e4c34055c3cee208127d73c5d76ec94971173ccd81f32e8"
+    },
+    {
+      "name": "laps-7787",
+      "url": "https://api.openf1.org/v1/laps?session_key=7787",
+      "retrievedAt": "2026-10-18T11:12:16.498Z",
+      "bytes": 470386,
+      "sha256": "ade45113e04830584f7a7bf7785a6f0de5b5846b806f1d4a909bd8c51b7d382a"
+    },
+    {
+      "name": "race_control-7787",
+      "url": "https://api.openf1.org/v1/race_control?session_key=7787",
+      "retrievedAt": "2026-10-18T11:12:20.342Z",
+      "bytes": 27162,
+      "sha256": "491a573c5fcc439560b82cbd33b2eb9a72d6c8e12da43360488e50bcfd46ddc2"
+    },
+    {
+      "name": "stints-7787",
+      "url": "https://api.openf1.org/v1/stints?session_key=7787",
+      "retrievedAt": "2026-10-18T11:12:24.112Z",
+      "bytes": 12188,
+      "sha256": "afb37809313093eca322d5299c9e5ebfaae42d991b2501fcd386df99e052cc3b"
+    },
+    {
+      "name": "position-7787",
+      "url": "https://api.openf1.org/v1/position?session_key=7787",
+      "retrievedAt": "2026-10-18T11:12:29.946Z",
+      "bytes": 54850,
+      "sha256": "863e99cfb17125677c41b429aded683f1fd955a26eb71a4486824f789fa4365c"
+    },
+    {
+      "name": "laps-9070",
+      "url": "https://api.openf1.org/v1/laps?session_key=9070",
+      "retrievedAt": "2026-10-18T11:12:31.306Z",
+      "bytes": 466164,
+      "sha256": "c8d1d40d21b45e852aba22a22790a179a047422bdc871bfb238228ef40f547e0"
+    },
+    {
+      "name": "race_control-9070",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9070",
+      "retrievedAt": "2026-10-18T11:12:33.631Z",
+      "bytes": 13057,
+      "sha256": "55f63a9ca7c01e4e2434f7ce37fbb68f868bf7bb8053ac4bf3312e4cbe82f4bf"
+    },
+    {
+      "name": "stints-9070",
+      "url": "https://api.openf1.org/v1/stints?session_key=9070",
+      "retrievedAt": "2026-10-18T11:12:39.935Z",
+      "bytes": 6188,
+      "sha256": "a4f8b431ec610b06d5a8fac3313a0ed4173d3135bf0fb30b526a6092ac77946e"
+    },
+    {
+      "name": "intervals-9912",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9912",
+      "retrievedAt": "2026-10-18T11:12:49.041Z",
+      "bytes": 2843814,
+      "sha256": "f275eccbf43d73ce6bdb9c4c77327f0a4176623d15b39a095fe059d9f603e906"
+    },
+    {
+      "name": "intervals-9165",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9165",
+      "retrievedAt": "2026-10-18T11:12:53.874Z",
+      "bytes": 3431796,
+      "sha256": "158841bd04d64a352d61ba8d34edc2a55cc76fc6c4d20839139762c4183216a5"
+    },
+    {
+      "name": "intervals-9523",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9523",
+      "retrievedAt": "2026-10-18T11:12:57.391Z",
+      "bytes": 3379689,
+      "sha256": "845b392f8207119c0eb6acd25261b77ff35b4f04d363effa72d98e920a2f1784"
+    },
+    {
+      "name": "intervals-9693",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9693",
+      "retrievedAt": "2026-10-18T11:13:02.478Z",
+      "bytes": 2668656,
+      "sha256": "e856db29b06def539d1bd026c7d133977cb3015d4ccd02d08365ebf63078d9e1"
+    },
+    {
+      "name": "intervals-9998",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9998",
+      "retrievedAt": "2026-10-18T11:13:06.147Z",
+      "bytes": 3120713,
+      "sha256": "4a2b92eda81579d95c6245abbb1c220f33927b4a709a8470170b21a63361b90e"
+    },
+    {
+      "name": "intervals-10006",
+      "url": "https://api.openf1.org/v1/intervals?session_key=10006",
+      "retrievedAt": "2026-10-18T11:13:10.376Z",
+      "bytes": 3689567,
+      "sha256": "e696bc0cc9ca18793474039e5ef62892ccf1a6ebee6dfe7f7446924c47429e02"
+    },
+    {
+      "name": "intervals-10014",
+      "url": "https://api.openf1.org/v1/intervals?session_key=10014",
+      "retrievedAt": "2026-10-18T11:13:16.337Z",
+      "bytes": 5209064,
+      "sha256": "11b0eb6f1e81eec6a2b4feab4123727e6df2a87f6c71b1a2e7bb6c251dc62734"
+    },
+    {
+      "name": "intervals-10022",
+      "url": "https://api.openf1.org/v1/intervals?session_key=10022",
+      "retrievedAt": "2026-10-18T11:13:20.063Z",
+      "bytes": 3113029,
+      "sha256": "1463bd5dafb4e5ae422e2d3850db2197f13f17f86781a92371f800cafc6a3cef"
+    },
+    {
+      "name": "intervals-10033",
+      "url": "https://api.openf1.org/v1/intervals?session_key=10033",
+      "retrievedAt": "2026-10-18T11:13:24.126Z",
+      "bytes": 3476804,
+      "sha256": "447d10834f2162fbfe6e368b84b67f7c48adb050adc9d9d8bc4cd51a691a294d"
+    },
+    {
+      "name": "intervals-9987",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9987",
+      "retrievedAt": "2026-10-18T11:13:27.354Z",
+      "bytes": 3371012,
+      "sha256": "864e0e33d2a0a96fbd71551bcb5adc95eb5c53b33fac679b0bcfc45925eaf2e3"
+    },
+    {
+      "name": "intervals-9979",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9979",
+      "retrievedAt": "2026-10-18T11:13:36.290Z",
+      "bytes": 3961587,
+      "sha256": "e6c1250f8c3aa2cc4e60e34d63fbc5eff1d60fd428e56da3ee1f2b06bf64f6ce"
+    },
+    {
+      "name": "intervals-9971",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9971",
+      "retrievedAt": "2026-10-18T11:13:40.170Z",
+      "bytes": 3341252,
+      "sha256": "d54ca3f731470a7057f9c5869d7429ad2d525f8c6aee9824c2b6adb0dfaf057d"
+    },
+    {
+      "name": "intervals-9963",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9963",
+      "retrievedAt": "2026-10-18T11:13:44.409Z",
+      "bytes": 3387660,
+      "sha256": "b00a8e042e54e62f5e1c6cecfc7057fe89600fa4ac5b3baf96e7e90c8169c48e"
+    },
+    {
+      "name": "intervals-9955",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9955",
+      "retrievedAt": "2026-10-18T11:13:48.619Z",
+      "bytes": 3092912,
+      "sha256": "8f864080cbe787334cccf4ddb082d0989d832871bc574eafb58ab25225301ace"
+    },
+    {
+      "name": "intervals-9947",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9947",
+      "retrievedAt": "2026-10-18T11:13:53.738Z",
+      "bytes": 2804625,
+      "sha256": "54c8e744bce20b6af279dc446d5f74335c2f2fc66804b9c7f92e249f8ace8769"
+    },
+    {
+      "name": "intervals-9939",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9939",
+      "retrievedAt": "2026-10-18T11:13:59.082Z",
+      "bytes": 3280585,
+      "sha256": "953363a4a3f024fabbc4c91ce40af1b1aea7152b10bfa53a7b60d9ad21e5627e"
+    },
+    {
+      "name": "intervals-9928",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9928",
+      "retrievedAt": "2026-10-18T11:14:04.431Z",
+      "bytes": 3825738,
+      "sha256": "389ff9e4f39f13dfa524a5cab4a4886d5beeab71d0ff549d54aeb21f9084ee9c"
+    },
+    {
+      "name": "intervals-9920",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9920",
+      "retrievedAt": "2026-10-18T11:14:10.257Z",
+      "bytes": 4334220,
+      "sha256": "2dc241fdd7c50aff1591cf1be27f35c04f3fe19ba098a16c9dcdc6146061953a"
+    },
+    {
+      "name": "intervals-9904",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9904",
+      "retrievedAt": "2026-10-18T11:14:15.942Z",
+      "bytes": 3346164,
+      "sha256": "951d458710eb88a89a531c5863c0cc7a0c650d8a997c92394bccb94c529a415c"
+    },
+    {
+      "name": "intervals-9896",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9896",
+      "retrievedAt": "2026-10-18T11:14:20.139Z",
+      "bytes": 3932381,
+      "sha256": "f6907ac0d2f28eaf8b7004e854847637024f7359ff0ec1e0b93fc46716d46096"
+    },
+    {
+      "name": "intervals-9888",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9888",
+      "retrievedAt": "2026-10-18T11:14:24.310Z",
+      "bytes": 3121258,
+      "sha256": "3dee6b23f4402800b42e53d87ba23c885d4c35479bde722143922e2b0135c205"
+    },
+    {
+      "name": "intervals-9877",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9877",
+      "retrievedAt": "2026-10-18T11:14:29.739Z",
+      "bytes": 3684747,
+      "sha256": "5d3e4a29727b6f0baf166b7e46ce7acb9abdc697dd386ffa636667b11a9a3293"
+    },
+    {
+      "name": "intervals-9869",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9869",
+      "retrievedAt": "2026-10-18T11:14:32.917Z",
+      "bytes": 3443600,
+      "sha256": "43cf69e2e0281b61550bdc60a9abfe9cfb1c9cf29b2eb7c8a8bcb1ea4e4f45c6"
+    },
+    {
+      "name": "intervals-9858",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9858",
+      "retrievedAt": "2026-10-18T11:14:35.342Z",
+      "bytes": 2463282,
+      "sha256": "c1af2bc3177cd1c1522e1675a35fd7058ed5be76aec8a057464dd28c9eaa3baa"
+    },
+    {
+      "name": "intervals-9850",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9850",
+      "retrievedAt": "2026-10-18T11:14:40.386Z",
+      "bytes": 3390125,
+      "sha256": "9acf82db38949b2bc8e940a4ddaae7c84992f5f4f5b4b257838d3e3b9b4655ac"
+    },
+    {
+      "name": "intervals-9839",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9839",
+      "retrievedAt": "2026-10-18T11:14:42.884Z",
+      "bytes": 3696817,
+      "sha256": "32735b3f74c2d826f64b3e7b1e1d3e77598f7ed7671a1161033cad6f22ac736d"
+    },
+    {
+      "name": "intervals-9472",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9472",
+      "retrievedAt": "2026-10-18T11:14:48.361Z",
+      "bytes": 4214545,
+      "sha256": "62198ce283b56ddfd93252db8fa1834bf31d1412052096ff7af7e499c126ac0b"
+    },
+    {
+      "name": "intervals-9480",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9480",
+      "retrievedAt": "2026-10-18T11:14:52.442Z",
+      "bytes": 3001104,
+      "sha256": "e472c49caa1f51f4d538508d851accae2c32e5dce3e8e2c6126b1f350d4b6638"
+    },
+    {
+      "name": "intervals-9488",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9488",
+      "retrievedAt": "2026-10-18T11:14:55.926Z",
+      "bytes": 2914656,
+      "sha256": "0c372899885174cfb91fd9cc5b502e10964f82f8eae731be3bf36edaa9fa0a34"
+    },
+    {
+      "name": "intervals-9496",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9496",
+      "retrievedAt": "2026-10-18T11:14:58.441Z",
+      "bytes": 2983733,
+      "sha256": "c47b3041f869fd1acbaa25a55708fdcf5533181c38d7dbaaf6bbdec6f99258a1"
+    },
+    {
+      "name": "intervals-9673",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9673",
+      "retrievedAt": "2026-10-18T11:15:00.796Z",
+      "bytes": 3055769,
+      "sha256": "b1791ee84bfd3092786c0a065495021cfc512c3f776d578f0cba840cfeb46df6"
+    },
+    {
+      "name": "intervals-9507",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9507",
+      "retrievedAt": "2026-10-18T11:15:06.581Z",
+      "bytes": 3691293,
+      "sha256": "7f7d1587ae0cfee9dd2c33440757dbea172dd0028118e6d230239c23407d39aa"
+    },
+    {
+      "name": "intervals-9515",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9515",
+      "retrievedAt": "2026-10-18T11:15:10.668Z",
+      "bytes": 3361296,
+      "sha256": "6cf5419a655840c66a3f977e1880a18f0944359bb493bab44af52434fec8e00b"
+    },
+    {
+      "name": "intervals-9531",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9531",
+      "retrievedAt": "2026-10-18T11:15:14.004Z",
+      "bytes": 3141234,
+      "sha256": "4be8a6503bf8e051ad1b71c8573aca126c2de7ccf37418bddd7c32d1c299290a"
+    },
+    {
+      "name": "intervals-9539",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9539",
+      "retrievedAt": "2026-10-18T11:15:24.378Z",
+      "bytes": 3663800,
+      "sha256": "da544202f3a3a856193d236bf7af04a163a15f9c4c7ef50b1379298b180b8ef8"
+    },
+    {
+      "name": "intervals-9550",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9550",
+      "retrievedAt": "2026-10-18T11:15:31.849Z",
+      "bytes": 3726313,
+      "sha256": "5a461e56dca6f58a7a098ee1cbb9dfb4c017e09efefce7c9ead7720267bdcc43"
+    },
+    {
+      "name": "intervals-9566",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9566",
+      "retrievedAt": "2026-10-18T11:15:37.049Z",
+      "bytes": 3609043,
+      "sha256": "3f3d90ce17189b3b6f0f32939a4a062d94f1b23e711bf9115894387b9a5f0044"
+    },
+    {
+      "name": "intervals-9574",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9574",
+      "retrievedAt": "2026-10-18T11:15:39.614Z",
+      "bytes": 3016947,
+      "sha256": "a503c3cabd0bcefcd67bb274c1118929191df0dff11161cfff95a246bf4014bc"
+    },
+    {
+      "name": "intervals-9582",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9582",
+      "retrievedAt": "2026-10-18T11:15:44.684Z",
+      "bytes": 4383825,
+      "sha256": "8597d20d6c16f487ce0335bebb8d6e04212c68e70c4a49e95306a76cd263d0a7"
+    },
+    {
+      "name": "intervals-9590",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9590",
+      "retrievedAt": "2026-10-18T11:15:46.902Z",
+      "bytes": 2878556,
+      "sha256": "039dc5bb80c8cbbd95c9c39987e6193b59dea46e266d77c83948f3c4e10fde86"
+    },
+    {
+      "name": "intervals-9598",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9598",
+      "retrievedAt": "2026-10-18T11:15:57.914Z",
+      "bytes": 3444639,
+      "sha256": "8653c3052df4d7222c4783ec9159975d862f1906495ed5d704dbf85b3830465b"
+    },
+    {
+      "name": "intervals-9606",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9606",
+      "retrievedAt": "2026-10-18T11:16:03.624Z",
+      "bytes": 3970787,
+      "sha256": "2e6b93eeea4d52943740fdd07a55415b0d2df405dadfe62a59dc379a4eb283c3"
+    },
+    {
+      "name": "intervals-9617",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9617",
+      "retrievedAt": "2026-10-18T11:16:09.503Z",
+      "bytes": 2965644,
+      "sha256": "ccbc09db9e3d60d92e61f2e2135785b959feaf56c08fca79754917af57f5f968"
+    },
+    {
+      "name": "intervals-9625",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9625",
+      "retrievedAt": "2026-10-18T11:16:13.373Z",
+      "bytes": 3379759,
+      "sha256": "04c0543b9a38b49087f14d1930c8e9e2f11e4fc7d0a42a3081d59bc946856eb2"
+    },
+    {
+      "name": "intervals-9636",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9636",
+      "retrievedAt": "2026-10-18T11:16:16.442Z",
+      "bytes": 2959263,
+      "sha256": "fc0ac72f9d8b40c292e544a2ae6a13527e4d7bffa4db58083c00a259c97c8cfb"
+    },
+    {
+      "name": "laps-9644",
+      "url": "https://api.openf1.org/v1/laps?session_key=9644",
+      "retrievedAt": "2026-10-18T11:16:18.553Z",
+      "bytes": 436111,
+      "sha256": "c4c73ae773b4542d5ef7f534f2e3e0464b0b067be89c0db2af95037d488d526d"
+    },
+    {
+      "name": "race_control-9644",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9644",
+      "retrievedAt": "2026-10-18T11:16:21.114Z",
+      "bytes": 9730,
+      "sha256": "3bbd666a9b97b3e1fd597415a97aed2db8cf56e569d75fab24337bbd16623836"
+    },
+    {
+      "name": "pit-9644",
+      "url": "https://api.openf1.org/v1/pit?session_key=9644",
+      "retrievedAt": "2026-10-18T11:16:22.850Z",
+      "bytes": 7083,
+      "sha256": "aa68ba192a1a502ec5fe9c96e17f76f6a83a3799fdbb3cb01f93b3f31b61376a"
+    },
+    {
+      "name": "stints-9644",
+      "url": "https://api.openf1.org/v1/stints?session_key=9644",
+      "retrievedAt": "2026-10-18T11:16:27.765Z",
+      "bytes": 8504,
+      "sha256": "ee0354790a9ed8fb5249e7a2f10ac847e6e79078c8f240b3ae307d76520cf4fe"
+    },
+    {
+      "name": "position-9644",
+      "url": "https://api.openf1.org/v1/position?session_key=9644",
+      "retrievedAt": "2026-10-18T11:16:29.579Z",
+      "bytes": 79135,
+      "sha256": "5e43f5f4e38852ebac7b7924c2173daf4a5ea8eb74063334e11dfaebfda7a22f"
+    },
+    {
+      "name": "intervals-9644",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9644",
+      "retrievedAt": "2026-10-18T11:16:36.757Z",
+      "bytes": 2617461,
+      "sha256": "b2d2208a2715c37cb279fc5010e161ab4a7d5b81077403ee3c3507239baa9be1"
+    },
+    {
+      "name": "intervals-9655",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9655",
+      "retrievedAt": "2026-10-18T11:16:39.088Z",
+      "bytes": 2844790,
+      "sha256": "fceaa8ee617497acb1a4a10aea9658212668c152e527d566a07c4406ec887f21"
+    },
+    {
+      "name": "intervals-9662",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9662",
+      "retrievedAt": "2026-10-18T11:16:45.765Z",
+      "bytes": 3287878,
+      "sha256": "e8a57b0935d6fc870405357e5b2b0a50e85c89c3fbef8ce3aadc79dd1312c81b"
+    },
+    {
+      "name": "intervals-7953",
+      "url": "https://api.openf1.org/v1/intervals?session_key=7953",
+      "retrievedAt": "2026-10-18T11:16:52.993Z",
+      "bytes": 3927035,
+      "sha256": "5427b014c3859816524d344aa7bd8dfc9ad54608dcfed26c1644b22d89b19d4c"
+    },
+    {
+      "name": "intervals-7779",
+      "url": "https://api.openf1.org/v1/intervals?session_key=7779",
+      "retrievedAt": "2026-10-18T11:16:59.402Z",
+      "bytes": 3129709,
+      "sha256": "bd961fc38b90735e4813cc00e806b9b270a69a04d2ec5ef729338116bd162662"
+    },
+    {
+      "name": "intervals-7787",
+      "url": "https://api.openf1.org/v1/intervals?session_key=7787",
+      "retrievedAt": "2026-10-18T11:17:10.518Z",
+      "bytes": 2889848,
+      "sha256": "fac2f7cb28a5a9722020447707c45fbf50edbeb39e720e9ec5b62ed45d8a801a"
+    },
+    {
+      "name": "position-9070",
+      "url": "https://api.openf1.org/v1/position?session_key=9070",
+      "retrievedAt": "2026-10-18T11:17:16.084Z",
+      "bytes": 37259,
+      "sha256": "377666f997b5274d168d83c89436e67023dd4535456d6f0ab7596d5b43f1cd94"
+    },
+    {
+      "name": "intervals-9070",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9070",
+      "retrievedAt": "2026-10-18T11:17:22.175Z",
+      "bytes": 3199654,
+      "sha256": "f97391f5e47e0f910a4a15bb66984963098d5f144e77b17269e488d543406693"
+    },
+    {
+      "name": "laps-9078",
+      "url": "https://api.openf1.org/v1/laps?session_key=9078",
+      "retrievedAt": "2026-10-18T11:17:22.949Z",
+      "bytes": 549841,
+      "sha256": "469813aa7a1ce8c8cf447620f0caea5d7a7f119fd26fb38d04ddee3679d8d20c"
+    },
+    {
+      "name": "race_control-9078",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9078",
+      "retrievedAt": "2026-10-18T11:17:27.603Z",
+      "bytes": 10351,
+      "sha256": "a0d12b876656843223672f468afd8ad2c50eba290bb8703cf22bff011182d1cd"
+    },
+    {
+      "name": "stints-9078",
+      "url": "https://api.openf1.org/v1/stints?session_key=9078",
+      "retrievedAt": "2026-10-18T11:17:34.280Z",
+      "bytes": 5765,
+      "sha256": "0f364f4a1c4b46403a1b09f4cbc44a47fb1f5bfac569efeac6ea10401846c0b4"
+    },
+    {
+      "name": "position-9078",
+      "url": "https://api.openf1.org/v1/position?session_key=9078",
+      "retrievedAt": "2026-10-18T11:17:36.340Z",
+      "bytes": 49255,
+      "sha256": "4ba83c52e2c35f47982d7b93e241aad9ad6e6787a893554f8bb2243859c0063a"
+    },
+    {
+      "name": "intervals-9078",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9078",
+      "retrievedAt": "2026-10-18T11:17:46.881Z",
+      "bytes": 3865539,
+      "sha256": "d02cafbbfdeaaa8ef411ed4298ad18c88e7bc9518575c6c1f9daefcab913cdf5"
+    },
+    {
+      "name": "laps-9094",
+      "url": "https://api.openf1.org/v1/laps?session_key=9094",
+      "retrievedAt": "2026-10-18T11:17:48.668Z",
+      "bytes": 702382,
+      "sha256": "5ca9ddade49942e30e889a9e3e419eb1c56a98458ea2eb132eb6bde60b776084"
+    },
+    {
+      "name": "race_control-9094",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9094",
+      "retrievedAt": "2026-10-18T11:17:49.705Z",
+      "bytes": 63150,
+      "sha256": "df28785249dae893a6489bf0a620a5550e2623335117fbba8527f45e5da03f9d"
+    },
+    {
+      "name": "stints-9094",
+      "url": "https://api.openf1.org/v1/stints?session_key=9094",
+      "retrievedAt": "2026-10-18T11:17:56.488Z",
+      "bytes": 8361,
+      "sha256": "792201898274e2352c155a8f3e9e10d63ebf99827076bde81fbd02b1ae22d0ae"
+    },
+    {
+      "name": "position-9094",
+      "url": "https://api.openf1.org/v1/position?session_key=9094",
+      "retrievedAt": "2026-10-18T11:18:02.025Z",
+      "bytes": 34379,
+      "sha256": "5e3489ecda2467fce93813394ad9d20cef849dbe23e89086626e1c5eacd8277f"
+    },
+    {
+      "name": "intervals-9094",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9094",
+      "retrievedAt": "2026-10-18T11:18:06.845Z",
+      "bytes": 4259391,
+      "sha256": "729bf0196320d9205dd040af481682dcbb4719a414ff97291480558040699314"
+    },
+    {
+      "name": "laps-9102",
+      "url": "https://api.openf1.org/v1/laps?session_key=9102",
+      "retrievedAt": "2026-10-18T11:18:10.229Z",
+      "bytes": 607590,
+      "sha256": "e407c236940fc22a793f0bc5aa4ba6822b3795ac003d3decf2c2b66b8e3a9087"
+    },
+    {
+      "name": "race_control-9102",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9102",
+      "retrievedAt": "2026-10-18T11:18:11.745Z",
+      "bytes": 12910,
+      "sha256": "da529fe25db251a0792a2825a2299a9a380a4f60a232aa0e817fe542f52da834"
+    },
+    {
+      "name": "pit-9102",
+      "url": "https://api.openf1.org/v1/pit?session_key=9102",
+      "retrievedAt": "2026-10-18T11:18:17.163Z",
+      "bytes": 7686,
+      "sha256": "51e3a2ee2dcff794360aedb930f01cee33fdd66cd8154726cdd5247924b2bda7"
+    },
+    {
+      "name": "stints-9102",
+      "url": "https://api.openf1.org/v1/stints?session_key=9102",
+      "retrievedAt": "2026-10-18T11:18:18.398Z",
+      "bytes": 9069,
+      "sha256": "2f6c8d234d71d471cdee9c164bc74887145a5ed310f1ee31962dd44de6f2b4fc"
+    },
+    {
+      "name": "position-9102",
+      "url": "https://api.openf1.org/v1/position?session_key=9102",
+      "retrievedAt": "2026-10-18T11:18:23.251Z",
+      "bytes": 80775,
+      "sha256": "5a459a0f9eb7a42fafaa5802224c6437644747874e0ae7f06b51992a9f946622"
+    },
+    {
+      "name": "intervals-9102",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9102",
+      "retrievedAt": "2026-10-18T11:18:30.119Z",
+      "bytes": 3673284,
+      "sha256": "83965f4742dbf0d8a89a838f1dddd3c82ac61171828dcf01fe2e7ccef0281174"
+    },
+    {
+      "name": "laps-9110",
+      "url": "https://api.openf1.org/v1/laps?session_key=9110",
+      "retrievedAt": "2026-10-18T11:18:32.496Z",
+      "bytes": 590510,
+      "sha256": "240d3320fbfafaf7685b5c961ce46fcda9b88754e728556616c098ee77371b42"
+    },
+    {
+      "name": "race_control-9110",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9110",
+      "retrievedAt": "2026-10-18T11:18:32.758Z",
+      "bytes": 19839,
+      "sha256": "c43b8071639aebe984102fffe76f8d84ec26db51a90c3c4276332a67c1e2e159"
+    },
+    {
+      "name": "pit-9110",
+      "url": "https://api.openf1.org/v1/pit?session_key=9110",
+      "retrievedAt": "2026-10-18T11:18:37.706Z",
+      "bytes": 5896,
+      "sha256": "d65dd6494f3978998b3ace60f7b7ffe981074b7514a45cc7d9c42a9adced8a91"
+    },
+    {
+      "name": "stints-9110",
+      "url": "https://api.openf1.org/v1/stints?session_key=9110",
+      "retrievedAt": "2026-10-18T11:18:39.575Z",
+      "bytes": 7645,
+      "sha256": "7e40ac2f51e3b10603f443a49041d5c26400ea87f1e66a90cf1154b991c81f96"
+    },
+    {
+      "name": "position-9110",
+      "url": "https://api.openf1.org/v1/position?session_key=9110",
+      "retrievedAt": "2026-10-18T11:18:44.174Z",
+      "bytes": 39669,
+      "sha256": "7dc7797b6b91acd4f4cc4ed3482d8881dd2365b3568310c36c7beccc0085f7a6"
+    },
+    {
+      "name": "intervals-9110",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9110",
+      "retrievedAt": "2026-10-18T11:18:55.705Z",
+      "bytes": 3152829,
+      "sha256": "b94f19286e64af686b05f0280a38665c76cf8e8152f68ec09f0688b22d7057ba"
+    },
+    {
+      "name": "laps-9118",
+      "url": "https://api.openf1.org/v1/laps?session_key=9118",
+      "retrievedAt": "2026-10-18T11:18:56.984Z",
+      "bytes": 620121,
+      "sha256": "7352bcb62776c184586353ae6dbd7f707e534f49b95c5de2b17a3e5c30758694"
+    },
+    {
+      "name": "race_control-9118",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9118",
+      "retrievedAt": "2026-10-18T11:18:58.407Z",
+      "bytes": 57073,
+      "sha256": "e869676e01c06c40b4d2836b990f121344cf056efdd751272d21983fe8773a94"
+    },
+    {
+      "name": "pit-9118",
+      "url": "https://api.openf1.org/v1/pit?session_key=9118",
+      "retrievedAt": "2026-10-18T11:19:04.359Z",
+      "bytes": 11245,
+      "sha256": "ccfa12e8232f41ba58a02bf78fcf4eed78aa35431fb3c69df4404d8859bec489"
+    },
+    {
+      "name": "stints-9118",
+      "url": "https://api.openf1.org/v1/stints?session_key=9118",
+      "retrievedAt": "2026-10-18T11:19:05.265Z",
+      "bytes": 11970,
+      "sha256": "c42d0b8f4a7e44927e4029ea68d4f87e68f1a829492b14710fa8b8ced55bb403"
+    },
+    {
+      "name": "position-9118",
+      "url": "https://api.openf1.org/v1/position?session_key=9118",
+      "retrievedAt": "2026-10-18T11:19:07.623Z",
+      "bytes": 60953,
+      "sha256": "2f63652fdd1023bade63f8efda38d62da28720ed16f6b07f0252066d51d93df5"
+    },
+    {
+      "name": "intervals-9118",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9118",
+      "retrievedAt": "2026-10-18T11:19:16.001Z",
+      "bytes": 3574248,
+      "sha256": "9598d728eb76bad177c4fce356b9293f8360035e0a891285e9645ec6a0ffade6"
+    },
+    {
+      "name": "laps-9126",
+      "url": "https://api.openf1.org/v1/laps?session_key=9126",
+      "retrievedAt": "2026-10-18T11:19:17.723Z",
+      "bytes": 470594,
+      "sha256": "b3baf0b748080c47bfd3aa3fd2b4a88a76267f20be3bcdc7ce0f5398e80f81a1"
+    },
+    {
+      "name": "race_control-9126",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9126",
+      "retrievedAt": "2026-10-18T11:19:19.691Z",
+      "bytes": 11983,
+      "sha256": "6160132b27796b17b9a4ebefbefba0975f28ac564cd3a1eca429d13952c2996a"
+    },
+    {
+      "name": "pit-9126",
+      "url": "https://api.openf1.org/v1/pit?session_key=9126",
+      "retrievedAt": "2026-10-18T11:19:21.931Z",
+      "bytes": 4293,
+      "sha256": "743f13808fa1c91821cee22ea20ca73e71971bb7630093e58093f0ddaa262812"
+    },
+    {
+      "name": "stints-9126",
+      "url": "https://api.openf1.org/v1/stints?session_key=9126",
+      "retrievedAt": "2026-10-18T11:19:27.061Z",
+      "bytes": 6344,
+      "sha256": "51ae399c01955af4d00dbef367ebae295eebf66f9524fa7f70bd74c19e69cb1e"
+    },
+    {
+      "name": "position-9126",
+      "url": "https://api.openf1.org/v1/position?session_key=9126",
+      "retrievedAt": "2026-10-18T11:19:28.724Z",
+      "bytes": 34959,
+      "sha256": "f0a5e8a5b739ba47a40a18413c6ad1a1d9a0dfd0f20fd43bb47e7a467a3868ed"
+    },
+    {
+      "name": "intervals-9126",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9126",
+      "retrievedAt": "2026-10-18T11:19:32.928Z",
+      "bytes": 3213793,
+      "sha256": "c9bf9342204a851b56db7431e3adca1c7362321f16a44c658d5c4d557f5e2107"
+    },
+    {
+      "name": "laps-9133",
+      "url": "https://api.openf1.org/v1/laps?session_key=9133",
+      "retrievedAt": "2026-10-18T11:19:33.726Z",
+      "bytes": 573895,
+      "sha256": "d69ccbb5f0a0ca0342eafe39602c809540bd3701705df8abb73c4362935a23cd"
+    },
+    {
+      "name": "race_control-9133",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9133",
+      "retrievedAt": "2026-10-18T11:19:39.562Z",
+      "bytes": 22757,
+      "sha256": "799c37740b54aab3acd05e0c1ddc4515537897d08efce01251954dd990ffe8e6"
+    },
+    {
+      "name": "pit-9133",
+      "url": "https://api.openf1.org/v1/pit?session_key=9133",
+      "retrievedAt": "2026-10-18T11:19:40.261Z",
+      "bytes": 6433,
+      "sha256": "61a0f7215c1894dfbbe879c6f908527f7679b434470f17a3a4766bdbeafaa040"
+    },
+    {
+      "name": "stints-9133",
+      "url": "https://api.openf1.org/v1/stints?session_key=9133",
+      "retrievedAt": "2026-10-18T11:19:42.509Z",
+      "bytes": 8074,
+      "sha256": "23c40e8dbd5a1d2d9436cdb6890a999da4bd092fca0739835b8e8149c9975332"
+    },
+    {
+      "name": "position-9133",
+      "url": "https://api.openf1.org/v1/position?session_key=9133",
+      "retrievedAt": "2026-10-18T11:19:44.860Z",
+      "bytes": 53131,
+      "sha256": "5d6e25dfa6a6fbaf5ff4e2d3a60f382bb4abe09aedd82dba3e849191d02fd086"
+    },
+    {
+      "name": "intervals-9133",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9133",
+      "retrievedAt": "2026-10-18T11:19:53.340Z",
+      "bytes": 3323666,
+      "sha256": "84e7649d5231b2d62a26cd63c37cb4e50721213df904a5f9b0d6dd720bec38c2"
+    },
+    {
+      "name": "laps-9141",
+      "url": "https://api.openf1.org/v1/laps?session_key=9141",
+      "retrievedAt": "2026-10-18T11:19:56.023Z",
+      "bytes": 403263,
+      "sha256": "a68b79b432998919ac0f26f96c79ae36f3bfc9b37da3c764b8699a027b8435e1"
+    },
+    {
+      "name": "race_control-9141",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9141",
+      "retrievedAt": "2026-10-18T11:20:02.348Z",
+      "bytes": 14068,
+      "sha256": "a64a7d9f5e43ad0c094579618bcf82d382fa2ed32c285a41ee41c5c6eee185a5"
+    },
+    {
+      "name": "pit-9141",
+      "url": "https://api.openf1.org/v1/pit?session_key=9141",
+      "retrievedAt": "2026-10-18T11:20:02.666Z",
+      "bytes": 6605,
+      "sha256": "9d8fee1362f5930ad020b16748454d9f50f320b802e9abf91722d891650ec77b"
+    },
+    {
+      "name": "stints-9141",
+      "url": "https://api.openf1.org/v1/stints?session_key=9141",
+      "retrievedAt": "2026-10-18T11:20:04.814Z",
+      "bytes": 8218,
+      "sha256": "866752b2c0e809e1911160bbff26312a47acd98d45dacf6e523c11134f5262b1"
+    },
+    {
+      "name": "position-9141",
+      "url": "https://api.openf1.org/v1/position?session_key=9141",
+      "retrievedAt": "2026-10-18T11:20:07.174Z",
+      "bytes": 71026,
+      "sha256": "6b072bc8056e27171edfbe51aba257016c52284b71fde93d54c9a2178745c131"
+    },
+    {
+      "name": "intervals-9141",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9141",
+      "retrievedAt": "2026-10-18T11:20:12.980Z",
+      "bytes": 2928015,
+      "sha256": "558b24d2b6cc74e5a22d2021b1dab69a0cc9e7ea0762a33c4ea5e2f59479f4aa"
+    },
+    {
+      "name": "laps-9149",
+      "url": "https://api.openf1.org/v1/laps?session_key=9149",
+      "retrievedAt": "2026-10-18T11:20:13.554Z",
+      "bytes": 635942,
+      "sha256": "373b766bf75cc46c8db000033dd96ad1fbfa91b60034a9a5f5bb3d06e1994ce7"
+    },
+    {
+      "name": "race_control-9149",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9149",
+      "retrievedAt": "2026-10-18T11:20:15.660Z",
+      "bytes": 19752,
+      "sha256": "eee183c8ba227f5d28413063d3044ff5f0e9b89a85d3d473a5aee523c96934c3"
+    },
+    {
+      "name": "pit-9149",
+      "url": "https://api.openf1.org/v1/pit?session_key=9149",
+      "retrievedAt": "2026-10-18T11:20:17.912Z",
+      "bytes": 18118,
+      "sha256": "3b15c883a0eb6f3e77007ffb9292ca92051d3a1d043c1f4e4fe8621f972deb7d"
+    },
+    {
+      "name": "stints-9149",
+      "url": "https://api.openf1.org/v1/stints?session_key=9149",
+      "retrievedAt": "2026-10-18T11:20:20.168Z",
+      "bytes": 17875,
+      "sha256": "5ab5382ff8926cccf27a82105a074fa6d77d3eb7325970e2d1ea228a40f9162a"
+    },
+    {
+      "name": "position-9149",
+      "url": "https://api.openf1.org/v1/position?session_key=9149",
+      "retrievedAt": "2026-10-18T11:20:22.477Z",
+      "bytes": 115907,
+      "sha256": "e82737eee2ddaef1ae0ab56b71b93ac0d4fbb240d6782f3d4a22e55bcbc914fc"
+    },
+    {
+      "name": "intervals-9149",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9149",
+      "retrievedAt": "2026-10-18T11:20:27.483Z",
+      "bytes": 4074478,
+      "sha256": "98729cccf6493108f028e854f6d0bd6b34eac2cab25a8dd2ea6159e7ca9eb45f"
+    },
+    {
+      "name": "laps-9157",
+      "url": "https://api.openf1.org/v1/laps?session_key=9157",
+      "retrievedAt": "2026-10-18T11:20:28.259Z",
+      "bytes": 464741,
+      "sha256": "3441761ad6af88973d771292f68f0cec7ab2d9a8dfca5cbf37d5046ab4726307"
+    },
+    {
+      "name": "race_control-9157",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9157",
+      "retrievedAt": "2026-10-18T11:20:30.295Z",
+      "bytes": 12013,
+      "sha256": "882ce473c813033d074d1391a3a8f45582849091ce72da242a86bf4eb97869dd"
+    },
+    {
+      "name": "pit-9157",
+      "url": "https://api.openf1.org/v1/pit?session_key=9157",
+      "retrievedAt": "2026-10-18T11:20:32.561Z",
+      "bytes": 4473,
+      "sha256": "1d1c1b6c0c6b40680086fda1afa4bd665a37c1f154917a6c58095dc412b2aa48"
+    },
+    {
+      "name": "stints-9157",
+      "url": "https://api.openf1.org/v1/stints?session_key=9157",
+      "retrievedAt": "2026-10-18T11:20:34.896Z",
+      "bytes": 6512,
+      "sha256": "030c52b82e794ffd6dff0cbb63d1e53062c9d6c6ef062b110faa7cf990647bbf"
+    },
+    {
+      "name": "position-9157",
+      "url": "https://api.openf1.org/v1/position?session_key=9157",
+      "retrievedAt": "2026-10-18T11:20:37.100Z",
+      "bytes": 54014,
+      "sha256": "33af2075431ad44a79fbe91f3d01dd6b440f304efea320fa4ea6b42eadee298c"
+    },
+    {
+      "name": "intervals-9157",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9157",
+      "retrievedAt": "2026-10-18T11:20:42.057Z",
+      "bytes": 3119296,
+      "sha256": "e5594f5fb1e1d2aa1807a7fc50eac7a0555605ec81bd6dcc30bea1bb09ad36b4"
+    },
+    {
+      "name": "laps-9173",
+      "url": "https://api.openf1.org/v1/laps?session_key=9173",
+      "retrievedAt": "2026-10-18T11:20:42.810Z",
+      "bytes": 427590,
+      "sha256": "c5826161897266d3a7230375b67f42e965d2c0fc9158da6af003e827d7601f24"
+    },
+    {
+      "name": "race_control-9173",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9173",
+      "retrievedAt": "2026-10-18T11:20:44.788Z",
+      "bytes": 18898,
+      "sha256": "bb386efb9c9e56a86c3ce327c78e73d047168f5134d9ffc5e14bce1cddd1caa7"
+    },
+    {
+      "name": "pit-9173",
+      "url": "https://api.openf1.org/v1/pit?session_key=9173",
+      "retrievedAt": "2026-10-18T11:20:47.033Z",
+      "bytes": 7685,
+      "sha256": "b8c2abfd0a8457ab82882910d4807a1a71a2ed009b93903e5f25057acd14e340"
+    },
+    {
+      "name": "stints-9173",
+      "url": "https://api.openf1.org/v1/stints?session_key=9173",
+      "retrievedAt": "2026-10-18T11:20:49.325Z",
+      "bytes": 9071,
+      "sha256": "ba618765ff77290d49dc785504322caf8cea2493da3210872f28e1f31a97094e"
+    },
+    {
+      "name": "position-9173",
+      "url": "https://api.openf1.org/v1/position?session_key=9173",
+      "retrievedAt": "2026-10-18T11:20:51.580Z",
+      "bytes": 59893,
+      "sha256": "06306ea6973ed2815db646fa4858e336cb63488969f394a4ed80540e0a23cc8e"
+    },
+    {
+      "name": "intervals-9173",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9173",
+      "retrievedAt": "2026-10-18T11:20:58.101Z",
+      "bytes": 2891713,
+      "sha256": "1a843b4b0d874111c25856494b695899cde6dd5c54edee0b12948ce9335757ff"
+    },
+    {
+      "name": "laps-9221",
+      "url": "https://api.openf1.org/v1/laps?session_key=9221",
+      "retrievedAt": "2026-10-18T11:20:59.165Z",
+      "bytes": 477193,
+      "sha256": "44635c3fe1d4eece5bab0e77e532c144f9de84321e0348e841b8d536eb43dc8f"
+    },
+    {
+      "name": "race_control-9221",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9221",
+      "retrievedAt": "2026-10-18T11:21:00.843Z",
+      "bytes": 37190,
+      "sha256": "b51d18f7d90acf7fee32167aa0ac137d4c133407ee562152af57b1cfd7a75169"
+    },
+    {
+      "name": "pit-9221",
+      "url": "https://api.openf1.org/v1/pit?session_key=9221",
+      "retrievedAt": "2026-10-18T11:21:03.079Z",
+      "bytes": 9653,
+      "sha256": "cb74dc72e2257aeefe0e924ccfa09c241d483ecb5b5aed11c1faf58453abff94"
+    },
+    {
+      "name": "stints-9221",
+      "url": "https://api.openf1.org/v1/stints?session_key=9221",
+      "retrievedAt": "2026-10-18T11:21:05.456Z",
+      "bytes": 10561,
+      "sha256": "aa685e1392721a1aa00f5883fbc48ee0c510d2a6e23396392ce18699c20ec4af"
+    },
+    {
+      "name": "position-9221",
+      "url": "https://api.openf1.org/v1/position?session_key=9221",
+      "retrievedAt": "2026-10-18T11:21:07.707Z",
+      "bytes": 121098,
+      "sha256": "0146e70e7c8bec1e8a348bf03f2e6a0a5a524669e274b09d08cf34ac7f8d7806"
+    },
+    {
+      "name": "intervals-9221",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9221",
+      "retrievedAt": "2026-10-18T11:21:12.802Z",
+      "bytes": 3072359,
+      "sha256": "567b03fcda6f0141980665acdb12844a35b32dd56b5db421ab468c92715bc688"
+    },
+    {
+      "name": "laps-9213",
+      "url": "https://api.openf1.org/v1/laps?session_key=9213",
+      "retrievedAt": "2026-10-18T11:21:13.703Z",
+      "bytes": 471010,
+      "sha256": "9b289e74172cf42bb9df05a012a6ae7d8024589dc1e7d2be45582de49276210a"
+    },
+    {
+      "name": "race_control-9213",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9213",
+      "retrievedAt": "2026-10-18T11:21:15.559Z",
+      "bytes": 21723,
+      "sha256": "e6ab0857345a48fc01d4cf696336a3980ff6544b88512209bd4bb56c44b65c6f"
+    },
+    {
+      "name": "pit-9213",
+      "url": "https://api.openf1.org/v1/pit?session_key=9213",
+      "retrievedAt": "2026-10-18T11:21:17.884Z",
+      "bytes": 6436,
+      "sha256": "9be92f0c8632382b52dc760cc40acbce4d9af8cca21b0a331ba3742ffedd6710"
+    },
+    {
+      "name": "stints-9213",
+      "url": "https://api.openf1.org/v1/stints?session_key=9213",
+      "retrievedAt": "2026-10-18T11:21:20.138Z",
+      "bytes": 8097,
+      "sha256": "5506852c522c4595359100a3d18433cc34b2519f2c6b00bda4fc0bd550627594"
+    },
+    {
+      "name": "position-9213",
+      "url": "https://api.openf1.org/v1/position?session_key=9213",
+      "retrievedAt": "2026-10-18T11:21:22.365Z",
+      "bytes": 61441,
+      "sha256": "13dcb80b907eaf3fde5ff419a6238cfd7734780da614d114a0d19d8c7a57dee5"
+    },
+    {
+      "name": "intervals-9213",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9213",
+      "retrievedAt": "2026-10-18T11:21:27.567Z",
+      "bytes": 2820270,
+      "sha256": "defab21ad9f7869495f32e273cd6a73fcc1e1daf90b087566bd2c501f9a36da1"
+    },
+    {
+      "name": "laps-9181",
+      "url": "https://api.openf1.org/v1/laps?session_key=9181",
+      "retrievedAt": "2026-10-18T11:21:28.336Z",
+      "bytes": 594263,
+      "sha256": "dc643c488f5d6f857adf1bd457c82991bec1d6c297167f345422831500bd791c"
+    },
+    {
+      "name": "race_control-9181",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9181",
+      "retrievedAt": "2026-10-18T11:21:30.387Z",
+      "bytes": 24712,
+      "sha256": "bd73388b1ee6ec5abf48a2b548841de78ac8b80988c03dc2df0b65a7a4984362"
+    },
+    {
+      "name": "pit-9181",
+      "url": "https://api.openf1.org/v1/pit?session_key=9181",
+      "retrievedAt": "2026-10-18T11:21:32.520Z",
+      "bytes": 6864,
+      "sha256": "f22512a917349cd1da83f76314bb0d5871e275ece5004064d05d1cd5232e4f6b"
+    },
+    {
+      "name": "stints-9181",
+      "url": "https://api.openf1.org/v1/stints?session_key=9181",
+      "retrievedAt": "2026-10-18T11:21:34.766Z",
+      "bytes": 8372,
+      "sha256": "48538276e7e36d1d01d0778ad801a2d9f03d9137fe5c450714c8076daa0836b7"
+    },
+    {
+      "name": "position-9181",
+      "url": "https://api.openf1.org/v1/position?session_key=9181",
+      "retrievedAt": "2026-10-18T11:21:37.057Z",
+      "bytes": 64574,
+      "sha256": "a23033918cfea93d10db44d54bc797196da54a6e785f8c4cbda7264696f63310"
+    },
+    {
+      "name": "intervals-9181",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9181",
+      "retrievedAt": "2026-10-18T11:21:41.622Z",
+      "bytes": 3568466,
+      "sha256": "08fc9a0851e3f7928fe364d085e1dd863d6479ce5e7e6569c85a9de4f8111b26"
+    },
+    {
+      "name": "laps-9205",
+      "url": "https://api.openf1.org/v1/laps?session_key=9205",
+      "retrievedAt": "2026-10-18T11:21:42.604Z",
+      "bytes": 508903,
+      "sha256": "fb3ff1acf805bf7bec673ddbc5a20f959906ec18ecffe2baecd9e4cd82311ca5"
+    },
+    {
+      "name": "race_control-9205",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9205",
+      "retrievedAt": "2026-10-18T11:21:44.486Z",
+      "bytes": 13677,
+      "sha256": "cbc7c359dff4e5dc24cf2caf14209e5a2252d5c4b2320a37ed4991e476bcb664"
+    },
+    {
+      "name": "pit-9205",
+      "url": "https://api.openf1.org/v1/pit?session_key=9205",
+      "retrievedAt": "2026-10-18T11:21:46.835Z",
+      "bytes": 12012,
+      "sha256": "86fc7dc33c5feb0edaf15c839f9295023acc8d6dcb22a67f3c3df3c8f96cddec"
+    },
+    {
+      "name": "stints-9205",
+      "url": "https://api.openf1.org/v1/stints?session_key=9205",
+      "retrievedAt": "2026-10-18T11:21:48.986Z",
+      "bytes": 12474,
+      "sha256": "4c32013c908b502716f932fcaa1f439c081a6c9bc03c1e3418f1342c6a2fc504"
+    },
+    {
+      "name": "position-9205",
+      "url": "https://api.openf1.org/v1/position?session_key=9205",
+      "retrievedAt": "2026-10-18T11:21:51.218Z",
+      "bytes": 50809,
+      "sha256": "5cf1be4b3f687093d02be451929ca70e89a70708b4b4e06d88ee0fe74b74f795"
+    },
+    {
+      "name": "intervals-9205",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9205",
+      "retrievedAt": "2026-10-18T11:21:55.218Z",
+      "bytes": 2813848,
+      "sha256": "b9493532877a4b0a8fbef57554bd54ca2505af4bf19d6f458b8d0195c318e85d"
+    },
+    {
+      "name": "laps-9189",
+      "url": "https://api.openf1.org/v1/laps?session_key=9189",
+      "retrievedAt": "2026-10-18T11:21:56.073Z",
+      "bytes": 440052,
+      "sha256": "5cd5acb88296d636f4037ba965b788150718bd04a82584e7427cf90a435a25af"
+    },
+    {
+      "name": "race_control-9189",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9189",
+      "retrievedAt": "2026-10-18T11:21:58.005Z",
+      "bytes": 18794,
+      "sha256": "a5e23af43f43bb734422054369fd9feaae1c8018df3934317c50402130c76711"
+    },
+    {
+      "name": "pit-9189",
+      "url": "https://api.openf1.org/v1/pit?session_key=9189",
+      "retrievedAt": "2026-10-18T11:22:00.248Z",
+      "bytes": 5541,
+      "sha256": "741a64091c358467f65f2d9f09d01b43d791e96677428e173d265a9844da2588"
+    },
+    {
+      "name": "stints-9189",
+      "url": "https://api.openf1.org/v1/stints?session_key=9189",
+      "retrievedAt": "2026-10-18T11:22:02.592Z",
+      "bytes": 7346,
+      "sha256": "4a120f3faf41662e916d81ba2a9d82e758547b0600c2555dd9f9376e92e06add"
+    },
+    {
+      "name": "position-9189",
+      "url": "https://api.openf1.org/v1/position?session_key=9189",
+      "retrievedAt": "2026-10-18T11:22:04.831Z",
+      "bytes": 71870,
+      "sha256": "da70f3bfaf3ed2a89ee321d21f3f544e144c0529ee0e5773c7ff5fa7ed8535b7"
+    },
+    {
+      "name": "intervals-9189",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9189",
+      "retrievedAt": "2026-10-18T11:22:09.035Z",
+      "bytes": 2642680,
+      "sha256": "67e92ebe260d49a546d381f59d6ded80de8eed408bc618200036aea2eac7d911"
+    },
+    {
+      "name": "laps-9197",
+      "url": "https://api.openf1.org/v1/laps?session_key=9197",
+      "retrievedAt": "2026-10-18T11:22:10.094Z",
+      "bytes": 548983,
+      "sha256": "5d0fab7db7c5a2d6d2414d850d5a65c6587fd58e470b1e18e159893f0794c7e7"
+    },
+    {
+      "name": "race_control-9197",
+      "url": "https://api.openf1.org/v1/race_control?session_key=9197",
+      "retrievedAt": "2026-10-18T11:22:11.754Z",
+      "bytes": 18678,
+      "sha256": "bfae32b5ffdcfa1ddb5b5b844197737f8967d4ac32e5d0ad619966913f8cd238"
+    },
+    {
+      "name": "pit-9197",
+      "url": "https://api.openf1.org/v1/pit?session_key=9197",
+      "retrievedAt": "2026-10-18T11:22:13.975Z",
+      "bytes": 6614,
+      "sha256": "1bab5c9c7da378bf8c2917a2b7450e0782280a588dcdc78d770420d9cd8fe256"
+    },
+    {
+      "name": "stints-9197",
+      "url": "https://api.openf1.org/v1/stints?session_key=9197",
+      "retrievedAt": "2026-10-18T11:22:16.247Z",
+      "bytes": 8213,
+      "sha256": "262dcc00d61b3533e9067fed625853576af7adaf6401505aa202fbbd877e3c47"
+    },
+    {
+      "name": "position-9197",
+      "url": "https://api.openf1.org/v1/position?session_key=9197",
+      "retrievedAt": "2026-10-18T11:22:18.541Z",
+      "bytes": 79183,
+      "sha256": "bac7c28bb1c0eec6c2e2f8e414e15cdc033d3500132e7d26a5ae05a13910d6f2"
+    },
+    {
+      "name": "intervals-9197",
+      "url": "https://api.openf1.org/v1/intervals?session_key=9197",
+      "retrievedAt": "2026-10-18T11:22:23.029Z",
+      "bytes": 3702753,
+      "sha256": "bbc93c0662387b0dd1b1a564026ab95aad0bc4acd4e426f5b002c083a1d36572"
+    },
+    {
+      "name": "pits-2022-1",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/1/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:25.118Z",
+      "bytes": 5437,
+      "sha256": "be16e97f2dc19b267f57de0977068acf010c8144d8253166d1691e42ae8ceb0a"
+    },
+    {
+      "name": "winner-laps-2022-1",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/1/drivers/leclerc/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:26.045Z",
+      "bytes": 5407,
+      "sha256": "568ad6940fde1a1968e4c7bef8bfdb680e20c16a65c120b908cf8ead171a9bb0"
+    },
+    {
+      "name": "pits-2022-2",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/2/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:27.388Z",
+      "bytes": 2178,
+      "sha256": "f41427465d1943e781a8e83b4b17bf3ead3df663f9ff573510ba70c90bbff52e"
+    },
+    {
+      "name": "winner-laps-2022-2",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/2/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:29.111Z",
+      "bytes": 5187,
+      "sha256": "242eb6b284cb93934df0758bced6a8ca54622d4641a8bf488a4fd606afc74af5"
+    },
+    {
+      "name": "pits-2022-3",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/3/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:30.022Z",
+      "bytes": 2435,
+      "sha256": "e038b0e69445443f27a28b5dd0939edf3905d310b56df444f4f2e19be575a95f"
+    },
+    {
+      "name": "winner-laps-2022-3",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/3/drivers/leclerc/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:31.558Z",
+      "bytes": 5498,
+      "sha256": "46bdf8a2ad585bf732fa0b6c950140657e13d2b8a06ac9c5f8a76b6ecbd6b7e7"
+    },
+    {
+      "name": "pits-2022-4",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/4/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:32.772Z",
+      "bytes": 2692,
+      "sha256": "797dde865161fb9876649c0cdc133bf21270a7235df3b33c9569cebec7335cbe"
+    },
+    {
+      "name": "winner-laps-2022-4",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/4/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:34.423Z",
+      "bytes": 6359,
+      "sha256": "01a76f3f291a60a89e6bfb012706e7ad346bbc2ef9058806983103227e2eb850"
+    },
+    {
+      "name": "pits-2022-5",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/5/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:35.578Z",
+      "bytes": 2687,
+      "sha256": "68a5209ed37ff77764d1d9ab95f9b4c6ad667d2f8e210c1782c3b4a2dac871fe"
+    },
+    {
+      "name": "winner-laps-2022-5",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/5/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:36.400Z",
+      "bytes": 5810,
+      "sha256": "8c71cc5c727285c525fbaeb19fbca9465a6ae3a61e2bf7a3440df44f6c8075bb"
+    },
+    {
+      "name": "pits-2022-6",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/6/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:37.799Z",
+      "bytes": 5007,
+      "sha256": "2287d611be5c90483209429eb3f6054dc55492979f0dca9f780d21a301d00e02"
+    },
+    {
+      "name": "winner-laps-2022-6",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/6/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:38.722Z",
+      "bytes": 6642,
+      "sha256": "8c42ed6fe48c0c3cc2e8dc520c6eb0101117571b5a8dd1fb1058ce57f5559fc2"
+    },
+    {
+      "name": "pits-2022-7",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/7/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:40.154Z",
+      "bytes": 5012,
+      "sha256": "5f37f655cc50500df6a4285768670087688825a9b991138712f4a8879edc0bd1"
+    },
+    {
+      "name": "winner-laps-2022-7",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/7/drivers/perez/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:41.088Z",
+      "bytes": 5841,
+      "sha256": "ff266a850b6893e8daa49b2c4e21094ba97355e0f0d0f3e7272f033a55730404"
+    },
+    {
+      "name": "pits-2022-8",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/8/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:42.413Z",
+      "bytes": 2828,
+      "sha256": "87ffaa840298625babbbbbd86e6c867d7b7f0bc3f296d355dd7ab8aea6621716"
+    },
+    {
+      "name": "winner-laps-2022-8",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/8/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:43.522Z",
+      "bytes": 5254,
+      "sha256": "de010d746d97fe77448878a6ea2441966da84dafd48993b1628fb6210a7d4c96"
+    },
+    {
+      "name": "pits-2022-9",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/9/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:44.371Z",
+      "bytes": 3238,
+      "sha256": "3b86bd5646764e136d1fcb5f7d217889ee4b4332bc02309c2792da5832528717"
+    },
+    {
+      "name": "winner-laps-2022-9",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/9/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:45.178Z",
+      "bytes": 6999,
+      "sha256": "895feab97a5ba55d827c82ad4e83e5397d82bfe5141650fa7e916982a3605927"
+    },
+    {
+      "name": "pits-2022-10",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/10/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:46.193Z",
+      "bytes": 4561,
+      "sha256": "06b3e8581a70e267e74a7d05f7d5a529651d9d05e0872aee9f15eb576bca4ef6"
+    },
+    {
+      "name": "winner-laps-2022-10",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/10/drivers/sainz/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:47.186Z",
+      "bytes": 4868,
+      "sha256": "0a959fe132c14fa564b5ebfefaedbb650d1378c806c7b8e728e8c10ebbe6965f"
+    },
+    {
+      "name": "pits-2022-11",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/11/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:48.269Z",
+      "bytes": 4085,
+      "sha256": "a328173dd24d1abbc9116c01a3919ffb8e33c86fea9b11dabd3160767535e3b4"
+    },
+    {
+      "name": "winner-laps-2022-11",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/11/drivers/leclerc/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:49.282Z",
+      "bytes": 6565,
+      "sha256": "06dbfe2b382965c632442bea549fe8be012f07695fbc37020949ba38ddbc9286"
+    },
+    {
+      "name": "pits-2022-12",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/12/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:51.102Z",
+      "bytes": 2671,
+      "sha256": "68fa3b93ac2def4a665eb4c4d76ff68dea68692cbf69ab82462eaac97851ee47"
+    },
+    {
+      "name": "winner-laps-2022-12",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/12/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:52.709Z",
+      "bytes": 5441,
+      "sha256": "637ddffaeb8ce872c6de02f06a8926539742fa789544ace096ce823de2c11846"
+    },
+    {
+      "name": "pits-2022-13",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/13/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:53.761Z",
+      "bytes": 4082,
+      "sha256": "eaf133da9d84a2102516257424728fdd188facbc1b00d5361e10e62493c0a288"
+    },
+    {
+      "name": "winner-laps-2022-13",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/13/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:55.288Z",
+      "bytes": 6980,
+      "sha256": "7b1266bfdce473e4f87f1dc2121ee0e3e93c64603e51117bbb87437a7c73842c"
+    },
+    {
+      "name": "pits-2022-14",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/14/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:56.585Z",
+      "bytes": 3756,
+      "sha256": "49b2ba1650748305741ecbadbbd6ec5953a54bb9511b735adaf7b18719670572"
+    },
+    {
+      "name": "winner-laps-2022-14",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/14/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:22:58.616Z",
+      "bytes": 4631,
+      "sha256": "4756b0a1a4a915471f58950987694605c87196757bfad6b48c146bd6e21c6ab1"
+    },
+    {
+      "name": "pits-2022-15",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/15/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:00.030Z",
+      "bytes": 6597,
+      "sha256": "82936d2a046c52e03a540a2bf9810215bb98897f6907e3a900cca336bca71de9"
+    },
+    {
+      "name": "winner-laps-2022-15",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/15/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:01.543Z",
+      "bytes": 7174,
+      "sha256": "7cccb600d11f1b4f1c1a813c9df8fbb0c5e74bb79cdd77d0a18a1424db662b25"
+    },
+    {
+      "name": "pits-2022-16",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/16/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:03.086Z",
+      "bytes": 2923,
+      "sha256": "a0f32267810bc32fc8f2c639526d94dcae79919d34e68f5f5b533ff343649833"
+    },
+    {
+      "name": "winner-laps-2022-16",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/16/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:04.326Z",
+      "bytes": 5437,
+      "sha256": "ab5fb027bfafe9f949d1268e6477308ac365d751901b51ff877f7d1695c6b13b"
+    },
+    {
+      "name": "pits-2022-17",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/17/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:05.340Z",
+      "bytes": 2387,
+      "sha256": "9ddcc2dd4e29cc88cbcb68f8ff53efa59e27422c76a83e3eddbe459848cf16c0"
+    },
+    {
+      "name": "winner-laps-2022-17",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/17/drivers/perez/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:07.098Z",
+      "bytes": 5460,
+      "sha256": "2f05e57d0ed5884f45edb975c99899468b4159bc0e2bda68954870545e0469c6"
+    },
+    {
+      "name": "pits-2022-18",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/18/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:08.203Z",
+      "bytes": 4088,
+      "sha256": "f9be4fab007c0a8d0d3e351a76e2b65996a053e872f333db194be7e33396ad8d"
+    },
+    {
+      "name": "winner-laps-2022-18",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/18/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:09.624Z",
+      "bytes": 3173,
+      "sha256": "effffe93443324c0493c2ecafc4d052dde62ac9fca49111b4350252638ad7d22"
+    },
+    {
+      "name": "pits-2022-19",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/19/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:10.706Z",
+      "bytes": 3595,
+      "sha256": "f457e70e22b5d92a202915aa08cd38087a6e18f1cccebfe7d7ec7e8805995de9"
+    },
+    {
+      "name": "winner-laps-2022-19",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/19/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:11.988Z",
+      "bytes": 5730,
+      "sha256": "09fed5bf515eaac2f6e94e1a0763d8e9c92dcb92a7d774ca917799649991081f"
+    },
+    {
+      "name": "pits-2022-20",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/20/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:13.612Z",
+      "bytes": 2540,
+      "sha256": "0a81500c54ba94df4a5a12aaa9e70897bf6ea2aab45ffb4244ed3e1a5aa71ddb"
+    },
+    {
+      "name": "winner-laps-2022-20",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/20/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:14.413Z",
+      "bytes": 7122,
+      "sha256": "32cf632a4d1e2cc9143447946429fea0612283780a79185e0bd7744e9a70829c"
+    },
+    {
+      "name": "pits-2022-21",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/21/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:15.675Z",
+      "bytes": 4244,
+      "sha256": "f5dd1354937179adcc290f7e2e8e399dbad4972e1a987c7f670b1aab55ab94fd"
+    },
+    {
+      "name": "winner-laps-2022-21",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/21/drivers/russell/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:16.701Z",
+      "bytes": 6588,
+      "sha256": "cf94b6f4d42cf9e402b8b959d35d67f1cc631f6f76574a184b8218e042c649fe"
+    },
+    {
+      "name": "pits-2022-22",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/22/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:18.622Z",
+      "bytes": 3158,
+      "sha256": "fe8724d13295010bd20ae467eb47ad5652f17ce75e0cc40346fc1197862cd9d3"
+    },
+    {
+      "name": "winner-laps-2022-22",
+      "url": "https://api.jolpi.ca/ergast/f1/2022/22/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:19.763Z",
+      "bytes": 5898,
+      "sha256": "b7d3bff6b6306f7c38d8e24d096a58f7f9f43ed315c032de0f48c67b44a53b90"
+    },
+    {
+      "name": "pits-2021-1",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/1/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:21.195Z",
+      "bytes": 3929,
+      "sha256": "a2d94d618e6b7827e447152c2d8bf3eeb1c3a081038b7f4b1f3ffe13e8f3b5eb"
+    },
+    {
+      "name": "winner-laps-2021-1",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/1/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:22.628Z",
+      "bytes": 5381,
+      "sha256": "e1d592057eaab46cb31fb2e572f6a019d4f3aee7ac81ff4198ab7ceea08d2530"
+    },
+    {
+      "name": "pits-2021-2",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/2/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:23.741Z",
+      "bytes": 5325,
+      "sha256": "6b6bcc2fdd00a2c398e2f0f03f7259b1c7d572b2ac1d74bb603926edf1c2ad1c"
+    },
+    {
+      "name": "winner-laps-2021-2",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/2/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:25.455Z",
+      "bytes": 6360,
+      "sha256": "d98be7c815102afc65a35e785713ea117c59684f9e92c1761a0cea9a386e21f2"
+    },
+    {
+      "name": "pits-2021-3",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/3/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:26.617Z",
+      "bytes": 5581,
+      "sha256": "5da4e3a659a3bf7caed50b5fb58cf5d5abcbaa63cf4f9f7cb890ece6b1e57212"
+    },
+    {
+      "name": "winner-laps-2021-3",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/3/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:28.055Z",
+      "bytes": 6247,
+      "sha256": "975245aa0001791d10714fc4b8581e999b3c006977cb54733aa417b5627f8691"
+    },
+    {
+      "name": "pits-2021-4",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/4/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:29.563Z",
+      "bytes": 3686,
+      "sha256": "28c45a9aadaa3f8139e7c3593066d5a89293fece5cfdd766c4f3f345903222cb"
+    },
+    {
+      "name": "winner-laps-2021-4",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/4/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:30.708Z",
+      "bytes": 6234,
+      "sha256": "802db8984c45dd17e93b3724e5dd048ae24a83a6ca8cee9c93e50594f658e31c"
+    },
+    {
+      "name": "pits-2021-5",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/5/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:32.257Z",
+      "bytes": 2163,
+      "sha256": "641003582d833657d95c563e03edea9cc62159c9af5331b27ebc1c02cdec7f05"
+    },
+    {
+      "name": "winner-laps-2021-5",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/5/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:33.493Z",
+      "bytes": 7708,
+      "sha256": "3b70bc94b8979971fc568a5ffe83ea944c9cde363b56dd3e8dcaa5a0596bb341"
+    },
+    {
+      "name": "pits-2021-6",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/6/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:34.496Z",
+      "bytes": 5563,
+      "sha256": "53ea912dfb073b84a10af5fa262b4d6d3267cfa889336b490a99db0b7d340a28"
+    },
+    {
+      "name": "winner-laps-2021-6",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/6/drivers/perez/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:36.050Z",
+      "bytes": 4778,
+      "sha256": "f44a94bc37319527c06297495b0e72e0c22471470ebc51fb6bc3f4408d4cf108"
+    },
+    {
+      "name": "pits-2021-7",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/7/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:37.076Z",
+      "bytes": 2422,
+      "sha256": "bba872db72f1efb77a90868826072557abe8ba1e0d5d4b55e4dc544d1efccbd2"
+    },
+    {
+      "name": "winner-laps-2021-7",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/7/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:38.482Z",
+      "bytes": 5438,
+      "sha256": "485df117317208c180151a21fee9c2781c944bf2bb2c9bfc8c151ea1cd1719fe"
+    },
+    {
+      "name": "pits-2021-8",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/8/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:39.612Z",
+      "bytes": 2574,
+      "sha256": "bdfd60937226ff0e1455aa4f974fe39e3199aae99de50717d545e9feedc367f2"
+    },
+    {
+      "name": "winner-laps-2021-8",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/8/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:40.336Z",
+      "bytes": 7071,
+      "sha256": "dea72768d591901ca53befbe099a21333273c693d9e678dbca53f128069f8b87"
+    },
+    {
+      "name": "pits-2021-9",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/9/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:41.759Z",
+      "bytes": 2830,
+      "sha256": "127a5534723b9fcaa23a9276bebbddae69151c25d02d3734599c73064e06ff2b"
+    },
+    {
+      "name": "winner-laps-2021-9",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/9/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:43.205Z",
+      "bytes": 7073,
+      "sha256": "4ec863a620ed4e3465cfe18168e09bea0b0fff5db5ab2707ba0b4a1592171b33"
+    },
+    {
+      "name": "pits-2021-10",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/10/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:44.320Z",
+      "bytes": 4024,
+      "sha256": "4b01d81a50d5794709191f82e978071db75e6856ebb091d49a23d64054974a0d"
+    },
+    {
+      "name": "winner-laps-2021-10",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/10/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:45.150Z",
+      "bytes": 5030,
+      "sha256": "e3d64427e97b60b85dbd8ae96270fca1c570e08e91448542637607e98048ea13"
+    },
+    {
+      "name": "pits-2021-11",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/11/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:46.001Z",
+      "bytes": 4963,
+      "sha256": "8d18020cccf60ca99146b90859833d9e99f0fa8aff8c0de4d9a7f5b5b1aa9e94"
+    },
+    {
+      "name": "winner-laps-2021-11",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/11/drivers/ocon/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:46.985Z",
+      "bytes": 6261,
+      "sha256": "ca2eb1f53b092b423fbe9813d3dca42fbdc8bd7bc3fbf125b5961dc186f50514"
+    },
+    {
+      "name": "pits-2021-12",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/12/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:47.718Z",
+      "bytes": 191,
+      "sha256": "160487a995ed048cee3ae8109ad757cd61d24c43ba587593c42412f737f54a64"
+    },
+    {
+      "name": "winner-laps-2021-12",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/12/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:48.921Z",
+      "bytes": 725,
+      "sha256": "7e15d1c1caebdd8cf98b47a89e292f4bbe26b7c67bfdac2e6c2ebfde8ee00804"
+    },
+    {
+      "name": "pits-2021-13",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/13/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:50.176Z",
+      "bytes": 3014,
+      "sha256": "8f4dbfe468faf681bc3c8b6f05c228fd92281420dcf9bc1addb25a5ed0144f14"
+    },
+    {
+      "name": "winner-laps-2021-13",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/13/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:51.222Z",
+      "bytes": 7174,
+      "sha256": "dee2c15a20c0a554a7eb3274fa1798c7915fdc5e514a1d1c58ff04c8fd6f3431"
+    },
+    {
+      "name": "pits-2021-14",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/14/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:52.192Z",
+      "bytes": 2414,
+      "sha256": "da75ea5b04f800e1c5643d49899c7a94f263de6f000ae720e38e0222c865a7fa"
+    },
+    {
+      "name": "winner-laps-2021-14",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/14/drivers/ricciardo/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:53.521Z",
+      "bytes": 5162,
+      "sha256": "b442a1722fc08799abdba337cf86fa0ae3d0ec4858e5f8ecdef33018b95d57fe"
+    },
+    {
+      "name": "pits-2021-15",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/15/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:54.361Z",
+      "bytes": 3814,
+      "sha256": "a88affe7231703e50d7014f38f8d46633ea88d45756ed5aa44069b43c9532ea1"
+    },
+    {
+      "name": "winner-laps-2021-15",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/15/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:55.241Z",
+      "bytes": 5095,
+      "sha256": "0936482e443db75e47da46fa57a5a2a7c3621601bbf120bee4d5895dd6149f19"
+    },
+    {
+      "name": "pits-2021-16",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/16/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:56.290Z",
+      "bytes": 2241,
+      "sha256": "99c34015d56069200d79581067f127f9a449eae5e1a127df0e5e8bff1ec8f958"
+    },
+    {
+      "name": "winner-laps-2021-16",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/16/drivers/bottas/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:57.208Z",
+      "bytes": 5403,
+      "sha256": "d6da697457951de6433d222cb0242a71cad747a36227e9d78da9536f04142da2"
+    },
+    {
+      "name": "pits-2021-17",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/17/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:58.130Z",
+      "bytes": 4013,
+      "sha256": "ba52547989f20984ad638403fe3a5c35aa8fdfce827174ada843650a056e042f"
+    },
+    {
+      "name": "winner-laps-2021-17",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/17/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:23:59.099Z",
+      "bytes": 5730,
+      "sha256": "664acd3b444d17259786c9b7efb425fdc2770d42d3bd9f409fbf3c6369965536"
+    },
+    {
+      "name": "pits-2021-18",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/18/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:00.591Z",
+      "bytes": 2697,
+      "sha256": "9137072504df3826704fb89cefcc58b00168f642aa29df9ff7c3e5df727a58d5"
+    },
+    {
+      "name": "winner-laps-2021-18",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/18/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:02.228Z",
+      "bytes": 7122,
+      "sha256": "ffdc05d23944a52f640a380c12716bb87ff0918511c903522ad001183ab26101"
+    },
+    {
+      "name": "pits-2021-19",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/19/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:03.877Z",
+      "bytes": 7160,
+      "sha256": "91ca894b3f8d84126ef719372dd66765b91fe2896229c5623611f1bd9313ef48"
+    },
+    {
+      "name": "winner-laps-2021-19",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/19/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:05.224Z",
+      "bytes": 6665,
+      "sha256": "51636401bfbd04a8632dbc7dfcaf16308490fadf43f21c421ac65e2d2e76a35f"
+    },
+    {
+      "name": "pits-2021-20",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/20/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:05.657Z",
+      "bytes": 3103,
+      "sha256": "c2f2bf8dd1b33348efb157c900ffb10dc4c06a404439eced23f9f56da80c225e"
+    },
+    {
+      "name": "winner-laps-2021-20",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/20/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:06.632Z",
+      "bytes": 5458,
+      "sha256": "405e5ab30e882b87d680a2bd2091ecd147a4bcbe278d4c4e64ae32346fb0cdff"
+    },
+    {
+      "name": "pits-2021-21",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/21/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:08.260Z",
+      "bytes": 4607,
+      "sha256": "c9ca470e811a1c266e0587ba05d059560a2badc123a3960680fe7a40260739b8"
+    },
+    {
+      "name": "winner-laps-2021-21",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/21/drivers/hamilton/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:09.763Z",
+      "bytes": 4880,
+      "sha256": "c983f2867cb99f350d52c8f844452ea539f4787c041cdbac134495ab96e6d74c"
+    },
+    {
+      "name": "pits-2021-22",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/22/pitstops.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:11.137Z",
+      "bytes": 3017,
+      "sha256": "b9165ad57aa59f1297738c5a61c91fae47757e8e9829c8bd226163a2a706d524"
+    },
+    {
+      "name": "winner-laps-2021-22",
+      "url": "https://api.jolpi.ca/ergast/f1/2021/22/drivers/max_verstappen/laps.json?limit=100",
+      "retrievedAt": "2026-10-18T11:24:12.085Z",
+      "bytes": 5898,
+      "sha256": "7c2c826db582fae0a647209e2a5bbf91ca190b522a25b8ee59e734ec8d955c41"
+    }
+  ]
+}

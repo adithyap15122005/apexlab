@@ -31,5 +31,41 @@
 .historical-scene-shell .historical-2d-driver{cursor:pointer;outline:none}
 .historical-scene-shell .historical-2d-driver:focus>circle{stroke:#f4ffe3;stroke-width:.07}
 .historical-scene-shell .scene-controls button:disabled{opacity:.25;cursor:default}
+.historical-scene-shell .hs-fullscreen{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #9db39c40;border-radius:5px;background:#1a2926;color:#d3e4cb;font:9px var(--body,'Inter Variable',sans-serif);cursor:pointer;flex-shrink:0}
+.historical-scene-shell .hs-fullscreen:hover{border-color:#c3e2ad;background:#26392c}
+.historical-scene-shell .is-immersive,.historical-scene-shell.is-immersive .historical-race-scene{height:610px}
+.historical-scene-shell.is-immersive .scene-label{color:#e8eee1;text-shadow:0 1px 6px #000}
+.historical-scene-shell.is-immersive .hs-camera-readout{padding:10px 12px;border-radius:5px;background:#0e1b20a8;backdrop-filter:blur(8px)}
+.historical-scene-shell.is-immersive .hs-camera-readout>span{color:#c7d2ca}
+.historical-scene-shell .hs-look-zone{position:absolute;inset:60px 0 78px;z-index:3;cursor:grab;touch-action:none;outline:none}
+.historical-scene-shell .hs-look-zone:active{cursor:grabbing}
+.historical-scene-shell .hs-look-zone:focus-visible{box-shadow:inset 0 0 0 2px #cce9a9}
+.historical-scene-shell .hs-cockpit-tools{position:absolute;z-index:5;left:50%;bottom:69px;transform:translateX(-50%);display:flex;gap:3px;padding:5px;border:1px solid #93a6a16b;border-radius:7px;background:#101e23d9;backdrop-filter:blur(8px)}
+.historical-scene-shell .hs-cockpit-tools button{display:flex;align-items:center;justify-content:center;gap:6px;min-width:34px;height:32px;border:0;border-radius:4px;background:#213237;color:#d9e6d4;cursor:pointer;font-size:10px}
+.historical-scene-shell .hs-cockpit-tools button:hover{background:#3d5346;color:#e8ffd7}
+.historical-scene-shell .hs-cockpit-tools button:nth-child(3){padding:0 11px}
+.historical-scene-shell .hs-onboard-note{left:auto;right:21px;bottom:116px;border-left:0;border-radius:4px;padding:7px 9px;font-size:7px;background:#132026bf;text-align:right}
+.historical-scene-shell .hs-onboard-note>span{display:block;font-size:8px}
+.historical-scene-shell .hs-fullscreen-exit{position:absolute;z-index:8;top:17px;right:120px;display:flex;align-items:center;gap:7px;background:#102025dc;color:#e0ead9;border:1px solid #91ac9c8a;border-radius:5px;padding:8px 11px;font-size:10px;cursor:pointer}
+.historical-scene-shell:fullscreen,.historical-scene-shell.is-fullscreen{width:100vw;height:100dvh;max-width:none;border:0;border-radius:0;display:flex;flex-direction:column;background:#102024}
+.historical-scene-shell.is-fullscreen{position:fixed;inset:0;z-index:10000}
+.historical-scene-shell:fullscreen .hs-scene-heading,.historical-scene-shell.is-fullscreen .hs-scene-heading,.historical-scene-shell:fullscreen .hs-accuracy-note,.historical-scene-shell.is-fullscreen .hs-accuracy-note{display:none}
+.historical-scene-shell:fullscreen .hs-scene-stage,.historical-scene-shell.is-fullscreen .hs-scene-stage{flex:1;min-height:0}
+.historical-scene-shell:fullscreen .historical-race-scene,.historical-scene-shell.is-fullscreen .historical-race-scene{height:100%;min-height:0}
+.historical-scene-shell:fullscreen .hs-data-strip,.historical-scene-shell.is-fullscreen .hs-data-strip{flex-shrink:0;padding:9px 20px}
+.historical-scene-shell .hs-fullscreen-player{position:absolute;z-index:7;bottom:18px;left:50%;transform:translateX(-50%);width:min(960px,calc(100% - 36px));display:flex;align-items:center;gap:18px;padding:12px 16px;border:1px solid #76958b80;border-radius:8px;background:#112329ed;box-shadow:0 4px 24px #0004;backdrop-filter:blur(12px)}
+.historical-scene-shell .hs-fullscreen-player label{display:flex;flex-direction:column;gap:6px;color:#8ba998;font:7px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.08em}
+.historical-scene-shell .hs-fullscreen-player select{max-width:200px;border:1px solid #4c655e;border-radius:4px;background:#1a3034;color:#ecf3e8;font:10px var(--body,'Inter Variable',sans-serif);padding:7px}
+.historical-scene-shell .hs-fullscreen-player .hs-fullscreen-timeline{flex:1;min-width:80px;color:#e7eddc;font-size:10px}
+.historical-scene-shell .hs-fullscreen-timeline b{font-weight:400;color:#8da695}
+.historical-scene-shell .hs-fullscreen-timeline input{width:100%;accent-color:#d7ff43;cursor:pointer}
+.historical-scene-shell .hs-fullscreen-play{display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 12px;border:0;border-radius:5px;background:#d7ff43;color:#102023;font-size:11px;cursor:pointer}
+.historical-scene-shell.is-fullscreen .scene-controls{display:none}
+.historical-scene-shell.is-fullscreen .hs-cockpit-tools{bottom:120px}
+.historical-scene-shell.is-fullscreen .hs-onboard-note{bottom:165px}
+@media(max-width:1000px){.historical-scene-shell.is-immersive .historical-race-scene{height:550px}}
+@media(max-width:600px){.historical-scene-shell.is-immersive .historical-race-scene{height:520px}.historical-scene-shell .hs-fullscreen{padding:8px;font-size:8px;gap:5px}.historical-scene-shell .hs-fullscreen span{max-width:58px;text-align:left;line-height:1.5}.historical-scene-shell .hs-scene-heading h3{font-size:18px;max-width:220px}.historical-scene-shell .hs-onboard-note{left:auto;right:14px;bottom:113px;max-width:170px;font-size:6px}.historical-scene-shell .hs-onboard-note>span{font-size:7px}.historical-scene-shell .hs-cockpit-tools{bottom:65px}.historical-scene-shell .hs-fullscreen-exit{right:94px;top:12px;font-size:9px;padding:8px}.historical-scene-shell:fullscreen .historical-race-scene,.historical-scene-shell.is-fullscreen .historical-race-scene{height:100%}.historical-scene-shell .hs-fullscreen-player{gap:8px;padding:11px;bottom:12px;flex-wrap:wrap}.historical-scene-shell .hs-fullscreen-player label:first-child{flex:1}.historical-scene-shell .hs-fullscreen-player select{max-width:160px}.historical-scene-shell .hs-fullscreen-player .hs-fullscreen-timeline{order:4;flex-basis:100%}.historical-scene-shell.is-fullscreen .hs-cockpit-tools{bottom:147px}.historical-scene-shell.is-fullscreen .hs-onboard-note{bottom:192px}}
 @media(max-width:1000px){.historical-scene-shell .historical-race-scene{height:490px}.historical-scene-shell .hs-scene-heading{padding:19px 20px 15px}.historical-scene-shell .hs-scene-heading h3{font-size:21px}.historical-scene-shell .hs-data-strip{padding:12px 18px;gap:13px;font-size:6px}.historical-scene-shell .hs-source-indicator{font-size:6px}}
 @media(max-width:600px){.historical-scene-shell .hs-scene-heading{padding:16px;align-items:flex-start;gap:10px}.historical-scene-shell .hs-kicker{font-size:7px}.historical-scene-shell .hs-scene-heading h3{font-size:20px;max-width:180px;line-height:1.2}.historical-scene-shell .hs-source-indicator{font-size:5px;gap:5px;line-height:1.6;white-space:normal;width:77px;margin-top:3px}.historical-scene-shell .hs-source-indicator>i{flex-shrink:0;width:4px;height:4px}.historical-scene-shell .historical-race-scene{height:390px}.historical-scene-shell .historical-race-scene .scene-toolbar{left:14px;right:14px;top:12px}.historical-scene-shell .historical-race-scene .scene-controls{left:14px;right:14px;bottom:12px}.historical-scene-shell .hs-camera-readout{left:15px;top:63px;gap:6px}.historical-scene-shell .hs-camera-readout>span{font-size:6px}.historical-scene-shell .hs-camera-readout>b{font-size:11px}.historical-scene-shell .hs-onboard-note{left:14px;right:14px;bottom:66px;padding:8px 10px;font-size:6px;line-height:1.8}.historical-scene-shell .hs-onboard-note>span{font-size:8px}.historical-scene-shell .hs-data-strip{flex-direction:column;align-items:flex-start;gap:7px;padding:12px 15px;font-size:6px}.historical-scene-shell .hs-accuracy-note{padding:12px 15px;font-size:8px}.historical-scene-shell .historical-2d{padding:66px 18px 45px}}
+.historical-scene-shell.is-immersive .scene-controls{display:none}
+@media(max-width:600px){.historical-scene-shell.is-immersive .hs-onboard-note{left:auto;right:14px;bottom:113px;padding:7px 9px;max-width:170px}.historical-scene-shell.is-immersive .hs-onboard-note>span{font-size:7px}.historical-scene-shell.is-fullscreen .hs-onboard-note{bottom:192px}.historical-scene-shell.is-immersive .hs-scene-heading h3{font-size:18px;max-width:210px}}

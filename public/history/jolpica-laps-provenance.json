@@ -1,0 +1,10 @@
+{
+  "source": "https://api.jolpi.ca/data/dumps/download/delayed/?dump_type=csv",
+  "uploadedAt": "2026-10-03T12:34:44.798796Z",
+  "retrievedAt": "2026-10-18T11:26:39.602Z",
+  "bytes": 14531027,
+  "sha256": "263b4c249c4695361f2a1a27adffeab5a8cdc5fa9a12def04fe49e4a987c11e3",
+  "processing": "All available 2021\u20132022 race-session lap durations; cumulative clocks only while lap sequence is complete.",
+  "races": 44,
+  "laps": 47217
+}
