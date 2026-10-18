@@ -1,0 +1,35 @@
+.historical-scene-shell{overflow:hidden;position:relative;min-width:0;border:1px solid #314038;border-radius:12px;background:#0e171a;isolation:isolate}
+.historical-scene-shell .hs-scene-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 24px 15px;border-bottom:1px solid #ffffff08;background:linear-gradient(115deg,#20302955,transparent 65%)}
+.historical-scene-shell .hs-kicker{font:8px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.15em;color:#9cb685}
+.historical-scene-shell .hs-scene-heading h3{margin:6px 0 0;font:500 22px var(--display,'Space Grotesk Variable',sans-serif);letter-spacing:-.04em;color:#e2ebdc}
+.historical-scene-shell .hs-source-indicator{display:flex;align-items:center;gap:7px;font:7px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.08em;color:#8fa797;white-space:nowrap}
+.historical-scene-shell .hs-source-indicator>i{height:5px;width:5px;border-radius:50%;background:#a9d386;box-shadow:0 0 12px #a9d38650}
+.historical-scene-shell .hs-scene-stage{position:relative;isolation:isolate}
+.historical-scene-shell .historical-race-scene{height:540px;background:radial-gradient(ellipse at 50% 45%,#203137 0%,#111d22 55%,#0b1418 100%)}
+.historical-scene-shell .historical-race-scene .scene-label{font-size:7px}
+.historical-scene-shell .historical-race-scene .scene-toolbar{left:21px;right:21px;top:17px}
+.historical-scene-shell .historical-race-scene .scene-controls{left:21px;right:21px;bottom:14px}
+.historical-scene-shell .hs-camera-readout{position:absolute;z-index:4;top:67px;left:22px;display:flex;gap:9px;flex-direction:column;pointer-events:none}
+.historical-scene-shell .hs-camera-readout>span{font:7px var(--mono,'IBM Plex Mono',monospace);color:#829c8f;letter-spacing:.1em}
+.historical-scene-shell .hs-camera-readout>b{font:500 13px var(--display,'Space Grotesk Variable',sans-serif);letter-spacing:.02em}
+.historical-scene-shell .hs-camera-readout>b>em{font:8px var(--mono,'IBM Plex Mono',monospace);font-style:normal;margin-left:4px;opacity:.7}
+.historical-scene-shell .hs-onboard-note{position:absolute;z-index:4;pointer-events:none;left:22px;bottom:66px;padding:10px 12px;border-left:2px solid #d7ff4370;background:#0b1418d9;color:#c4d5b4;font:8px/1.8 var(--mono,'IBM Plex Mono',monospace);letter-spacing:.04em}
+.historical-scene-shell .hs-onboard-note>span{font:9px/1.6 var(--body,'Inter Variable',sans-serif);color:#8ba292;letter-spacing:0}
+.historical-scene-shell .hs-location-notice{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);max-width:310px;min-width:230px;padding:18px 20px;border:1px solid #c4a36740;border-radius:5px;background:#111b1fe8;box-shadow:0 12px 40px #0004;text-align:center;pointer-events:none}
+.historical-scene-shell .hs-location-notice>span{color:#d4b787;font:8px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.12em}
+.historical-scene-shell .hs-location-notice>p{margin:9px 0 0;font-size:11px;line-height:1.7;color:#bac7bf}
+.historical-scene-shell .hs-location-notice>small{display:block;margin-top:8px;font-size:9px;color:#7f998b}
+.historical-scene-shell .hs-data-strip{display:flex;justify-content:space-between;align-items:center;gap:16px;border-top:1px solid #ffffff0d;border-bottom:1px solid #ffffff08;padding:13px 22px;color:#9cb1a3;background:#152125;font:7px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.04em}
+.historical-scene-shell .hs-data-strip>span{display:flex;gap:8px;align-items:center;line-height:1.5}
+.historical-scene-shell .hs-data-strip>span:last-child{color:#728f7f;letter-spacing:0;text-align:right}
+.historical-scene-shell .hs-data-strip>span:last-child>i{width:2px;height:2px;display:inline-block;border-radius:50%;background:#557360}
+.historical-scene-shell .hs-location-dot{display:block;width:5px;height:5px;border-radius:50%;background:#c9a66f;flex-shrink:0}
+.historical-scene-shell .hs-location-dot.is-valid{background:#b6d493;box-shadow:0 0 9px #b6d49340}
+.historical-scene-shell .hs-accuracy-note{margin:0;padding:13px 22px 15px;color:#718a7c;font-size:9px;line-height:1.8}
+.historical-scene-shell .historical-2d{height:100%;width:100%;display:flex;align-items:center;justify-content:center;padding:56px 30px 44px;background:radial-gradient(ellipse at center,#263a3c70,transparent 65%)}
+.historical-scene-shell .historical-2d>svg{height:100%;width:100%;max-width:100%;overflow:visible}
+.historical-scene-shell .historical-2d-driver{cursor:pointer;outline:none}
+.historical-scene-shell .historical-2d-driver:focus>circle{stroke:#f4ffe3;stroke-width:.07}
+.historical-scene-shell .scene-controls button:disabled{opacity:.25;cursor:default}
+@media(max-width:1000px){.historical-scene-shell .historical-race-scene{height:490px}.historical-scene-shell .hs-scene-heading{padding:19px 20px 15px}.historical-scene-shell .hs-scene-heading h3{font-size:21px}.historical-scene-shell .hs-data-strip{padding:12px 18px;gap:13px;font-size:6px}.historical-scene-shell .hs-source-indicator{font-size:6px}}
+@media(max-width:600px){.historical-scene-shell .hs-scene-heading{padding:16px;align-items:flex-start;gap:10px}.historical-scene-shell .hs-kicker{font-size:7px}.historical-scene-shell .hs-scene-heading h3{font-size:20px;max-width:180px;line-height:1.2}.historical-scene-shell .hs-source-indicator{font-size:5px;gap:5px;line-height:1.6;white-space:normal;width:77px;margin-top:3px}.historical-scene-shell .hs-source-indicator>i{flex-shrink:0;width:4px;height:4px}.historical-scene-shell .historical-race-scene{height:390px}.historical-scene-shell .historical-race-scene .scene-toolbar{left:14px;right:14px;top:12px}.historical-scene-shell .historical-race-scene .scene-controls{left:14px;right:14px;bottom:12px}.historical-scene-shell .hs-camera-readout{left:15px;top:63px;gap:6px}.historical-scene-shell .hs-camera-readout>span{font-size:6px}.historical-scene-shell .hs-camera-readout>b{font-size:11px}.historical-scene-shell .hs-onboard-note{left:14px;right:14px;bottom:66px;padding:8px 10px;font-size:6px;line-height:1.8}.historical-scene-shell .hs-onboard-note>span{font-size:8px}.historical-scene-shell .hs-data-strip{flex-direction:column;align-items:flex-start;gap:7px;padding:12px 15px;font-size:6px}.historical-scene-shell .hs-accuracy-note{padding:12px 15px;font-size:8px}.historical-scene-shell .historical-2d{padding:66px 18px 45px}}

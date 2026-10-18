@@ -7,3 +7,4 @@ dist/
 .sites-*
 .openai/*.local.*
 test-results/
+historical-ingestion/

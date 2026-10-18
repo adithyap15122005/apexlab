@@ -1,4 +1,5 @@
 @import "tailwindcss";
+.landing-app .hero h1{font-size:clamp(44px,5.8vw,93px);letter-spacing:-.055em}.landing-app .hero-description{max-width:480px}@media(max-width:600px){.landing-app .hero h1{font-size:clamp(35px,10.8vw,58px);line-height:1.02}}
 @font-face{font-family:'Inter Variable';font-style:normal;font-weight:100 900;font-display:swap;src:url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2')}
 @font-face{font-family:'Space Grotesk Variable';font-style:normal;font-weight:300 700;font-display:swap;src:url('../node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2') format('woff2')}
 
