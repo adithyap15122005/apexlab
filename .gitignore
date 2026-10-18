@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.local
+*.tsbuildinfo
+.env
+.env.*
+.sites-*
+.openai/*.local.*
+test-results/
