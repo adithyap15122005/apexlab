@@ -14,7 +14,7 @@ npm run build
 npm run preview
 ```
 
-Choose **Choose your race**, pick a highlighted recorded race, select a driver, and choose **Enter this cockpit**. The reconstructed driver's-seat camera supports drag or arrow-key look-around, recenter, full screen, driver switching, playback, lap selection, scrubbing and speed controls. Helicopter, trackside and free-orbit strategist views share the same recorded clock.
+Choose **Choose your race**, pick a highlighted recorded race, select a driver, and choose **Enter this cockpit**. The reconstructed driver's-seat camera supports drag or arrow-key look-around, recenter, full screen, driver switching, playback, lap selection, scrubbing and speed controls. Eight views share the same clock: Cockpit, T-cam, Chase, driver-following Top view, north-up Whole circuit, Helicopter, Trackside and Free orbit. The fullscreen player includes its own camera selector.
 
 ## Explore
 
@@ -29,7 +29,7 @@ Choose **Choose your race**, pick a highlighted recorded race, select a driver, 
 
 ## Accuracy and visual scope
 
-Bundled and downloaded trajectories retain actual source timestamps and coordinates, sampled near one second. Only valid brackets at most three seconds apart are interpolated. Longer gaps are hidden. No timing-based fictional trajectory substitutes for missing coordinates. OpenF1 positions are approximate and cannot reliably resolve lateral placement; cars can overlap in the source data.
+Bundled and downloaded trajectories retain actual source timestamps and coordinates, sampled near one second. Only valid brackets at most three seconds apart are interpolated. Longer gaps are hidden. No timing-based fictional trajectory substitutes for missing coordinates. OpenF1 positions are approximate and cannot reliably resolve lateral placement; cars can overlap in the source data. In cockpit view, a render-only visibility guard fades nearby rival models before their reconstructed bodies overlap the selected car. It does not shift source coordinates, change timing, or simulate collisions; overhead views continue to show the recorded locations.
 
 2021–2022 use historical results and timing rather than positional 3D. Coverage is visible per race. Recorded positions, interpolated positions, cumulative timing-derived clocks and hypothetical What-If results are distinguished.
 

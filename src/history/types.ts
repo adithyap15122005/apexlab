@@ -27,7 +27,7 @@ export type HistoricalRace = {
 }
 export type RecordedPosition = {x:number;y:number;z:number;heading:number;status:'recorded'|'interpolated'|'gap'|'unavailable'|'finished';sampleTime:number|null;gapSeconds:number|null}
 export type DriverRaceState = {driver:HistoricalDriver;lap:number;completedLaps:number;position:number|null;gap:number|string|null;interval:number|string|null;compound:HistoricalCompound;tyreAge:number|null;lastLap:HistoricalLap|null;currentLap:HistoricalLap|null;pit:HistoricalPit|null;retired:boolean;finished:boolean;location:RecordedPosition}
-export type CameraMode='helicopter'|'trackside'|'strategist'|'onboard'
+export type CameraMode='helicopter'|'trackside'|'strategist'|'onboard'|'tcam'|'chase'|'top'|'overview'
 export type ReplayClock={current:number;playing:boolean;speed:number}
 export type WhatIfSettings={driver:number;pitIndex:number;pitLap:number;compound:HistoricalCompound;degradation:number;pitLoss:number;traffic:number}
 export type WhatIfResult={valid:boolean;issues:string[];actualTime:number|null;hypotheticalTime:number|null;delta:number;pitDelta:number;paceDelta:number;position:number|null;actualPosition:number|null;historicalPit:HistoricalPit|null;lapDeltas:{lap:number;delta:number;actual:number|null;hypothetical:number|null}[];explanation:string;assumptions:string[]}

@@ -2,8 +2,60 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { Box3, Color, Group, Mesh, MeshBasicMaterial, Raycaster, Triangle, Vector3 } from 'three'
 import { bodyGeometry, cockpitCameraPose, createFormulaCarParts, formulaTeamLivery, historicalLighting, FORMULA_DRIVER_EYE } from './FormulaCarModel'
+import {circuitOverviewHeight,cockpitRivalVisibility,footprintSeparation,REPLAY_CAMERAS,sceneryClearsRoad} from './replayPresentation'
+import type {RecordedPosition} from '../../history/types'
+import {readFileSync} from 'node:fs'
+import {validateHistoricalRace} from '../../history/loader'
+import {getDriverState} from '../../history/replay'
 
 const epsilon=1e-6
+
+const location=(x:number,y:number,heading=0):RecordedPosition=>({x,y,z:0,heading,status:'recorded',sampleTime:0,gapSeconds:0})
+test('cockpit visibility suppresses intersecting rival bodies before they reach driver eyes',()=>{
+  const own=location(0,0),overlap=location(2,0),sideOverlap=location(0,1),clear=location(12,0)
+  const before=JSON.stringify([own,overlap,sideOverlap,clear])
+  assert.equal(cockpitRivalVisibility(own,overlap,1),0)
+  assert.equal(cockpitRivalVisibility(own,sideOverlap,1),0)
+  assert.equal(cockpitRivalVisibility(own,clear,1),1)
+  const transition=cockpitRivalVisibility(own,location(6.8,0),1)
+  assert.ok(transition>0&&transition<1,'model fades before the bodies meet')
+  assert.equal(cockpitRivalVisibility(location(0,0),location(68,0),10),transition)
+  assert.equal(cockpitRivalVisibility({...own,status:'unavailable'},clear,1),1)
+  assert.equal(JSON.stringify([own,overlap,sideOverlap,clear]),before,'visibility cannot rewrite source coordinates')
+})
+
+test('crossing and side-by-side car footprints use both cars’ orientations',()=>{
+  const a={x:0,z:0,heading:0},crossed={x:1,z:1,heading:Math.PI/2},outside={x:0,z:6,heading:0}
+  assert.ok(footprintSeparation(a,crossed)<0)
+  assert.equal(footprintSeparation(a,crossed),footprintSeparation(crossed,a))
+  assert.ok(footprintSeparation(a,outside)>0)
+  assert.equal(footprintSeparation({...a,x:NaN},crossed),Infinity)
+})
+
+test('British race-start overlapping source locations are suppressed without moving cars',()=>{
+  const race=validateHistoricalRace(JSON.parse(readFileSync(new URL('../../../public/history/2024-british/race.json',import.meta.url),'utf8')))
+  let rawLength=0;for(let i=1;i<race.track.points.length;i++)rawLength+=Math.hypot(race.track.points[i][0]-race.track.points[i-1][0],race.track.points[i][1]-race.track.points[i-1][1])
+  let suppressed=0
+  for(let time=0;time<=10;time+=.5){const own=getDriverState(race,44,time);for(const driver of race.drivers.filter(d=>d.number!==44)){const rival=getDriverState(race,driver.number,time);if(cockpitRivalVisibility(own.location,rival.location,rawLength/race.track.length)===0)suppressed++}}
+  assert.ok(suppressed>0,'the actual reported race-start overlap must exercise the visibility guard')
+})
+
+test('north-up whole-circuit camera fits wide and tall tracks on desktop and mobile',()=>{
+  for(const [width,depth] of [[16,4],[4,16],[16,16]])for(const aspect of [.46,1,1.8]){
+    const height=circuitOverviewHeight(width,depth,aspect),verticalSpan=2*height*Math.tan(42*Math.PI/360)
+    assert.ok(verticalSpan>depth&&verticalSpan*aspect>width)
+  }
+  assert.equal(REPLAY_CAMERAS.length,8)
+  assert.equal(new Set(REPLAY_CAMERAS.map(view=>view.id)).size,8)
+  for(const id of ['top','overview','onboard','tcam','chase','helicopter','trackside','strategist'])assert.ok(REPLAY_CAMERAS.some(view=>view.id===id))
+})
+
+test('illustrative structures cannot cover a recorded road segment, including rotated buildings',()=>{
+  const road=[{x:0,z:0},{x:0,z:40},{x:0,z:80}]
+  assert.equal(sceneryClearsRoad(road,{x:12,z:40},0,10,73,1),false)
+  assert.equal(sceneryClearsRoad(road,{x:40,z:40},0,10,73,1),true)
+  assert.equal(sceneryClearsRoad(road,{x:40,z:40},Math.PI/2,10,73,1),false)
+})
 
 test('venue lighting preserves recognizable night races and normal daytime circuits',()=>{
   for(const venue of ['Marina Bay Street Circuit','Singapore','Bahrain International Circuit','Jeddah Corniche Circuit','Las Vegas Strip Circuit','Lusail'])assert.equal(historicalLighting(venue),'night')
