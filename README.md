@@ -14,6 +14,14 @@ npm run build
 npm run preview
 ```
 
+## Azure deployment
+
+Live site: **[apexlab on Azure](https://ambitious-glacier-0b1dc7200.2.azurestaticapps.net)**.
+
+Hosted on Azure Static Web Apps **Free**, in **East Asia**, using the `apexlab-adithya` app in resource group `apexlab-rg`. Pushes to `main` run the test suite, build the latest code and deploy through [the Azure workflow](.github/workflows/azure-static-web-apps.yml). The workflow can also be run manually in GitHub Actions. Its deployment token is kept in the encrypted repository secret `AZURE_STATIC_WEB_APPS_API_TOKEN`.
+
+`public/staticwebapp.config.json` provides SPA refresh routing, long-lived caching for hashed assets, and separate caching for race data. Missing assets and historical JSON return 404 instead of the app HTML. Vite serves assets from the domain root. No application backend, database, or paid App Service plan is required.
+
 Choose **Choose your race**, pick a highlighted recorded race, select a driver, and choose **Enter this cockpit**. The driver's-seat camera supports drag or arrow-key look-around, recenter, full screen, driver switching, playback, lap selection, scrubbing and speed controls. Eleven views share the same clock: **Director** (automatic broadcast cuts), Cockpit, T-cam, Nose cam, Rear cam, Chase, driver-following Top view, north-up Whole circuit, Helicopter, Trackside TV and Free orbit. **Engine sound** and a **Graphics** preset (Ultra / High / Medium / Low) sit beside the scene; the fullscreen player includes its own camera and graphics selectors.
 
 ## Strategy School — F1 strategy for beginners and kids
