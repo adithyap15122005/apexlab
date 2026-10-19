@@ -85,7 +85,9 @@ export default function SceneFrame({label,className='',fallback,camera=[8,4.3,7]
   useEffect(()=>{try{localStorage.setItem('apexlab-3d',enabled?'on':'off')}catch{/* Optional preference. */}},[enabled])
   const reset=()=>{setRotation(0);setZoom(0);setResetKey(k=>k+1)}
   const show3d=enabled&&supported
-  useEffect(()=>{onPresentationChange?.({is3D:show3d,motion})},[show3d,motion,onPresentationChange])
+  // Report only real changes; parents often pass a fresh inline callback on every render.
+  const presentationChange=useRef(onPresentationChange);presentationChange.current=onPresentationChange
+  useEffect(()=>{presentationChange.current?.({is3D:show3d,motion})},[show3d,motion])
   return <div ref={container} className={`scene-frame ${className} ${show3d?'is-3d':'is-2d'}`} aria-label={label}>
     <div className="scene-toolbar"><span className="scene-label mono"><span className="tiny-dot"/>{show3d?'LIVE 3D STUDIO':'ANALYTICAL 2D'}</span><div className="scene-mode-switch" role="group" aria-label={`${label} display mode`}><button aria-pressed={show3d} disabled={!supported} onClick={()=>setEnabled(true)}><Box size={12}/>3D</button><button aria-pressed={!show3d} onClick={()=>setEnabled(false)}><View size={12}/>2D</button></div></div>
     <div className="scene-viewport" role="img" aria-label={`${label}. ${show3d?'Drag to orbit, pinch to zoom. Equivalent controls below.':'Two-dimensional alternative.'}`}>

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { Euler, Matrix4, PerspectiveCamera, Quaternion, Vector3 } from 'three'
-import { pathFrame, wrap, type TrackGuide } from '../../history/trackGuide'
+import { pathFrame, projectToPath, wrap, type TrackGuide } from '../../history/trackGuide'
 import type { CameraMode } from '../../history/types'
 import { circuitOverviewHeight } from '../historical/replayPresentation'
 import { CAR } from './carGeometry'
@@ -44,7 +44,7 @@ export default function CameraRig({mode,runtime,selected,look,guide,bounds,activ
   const state=useRef({
     mode:mode as CameraMode,shot:'chase' as Shot,shotUntil:0,selected,time:0,initialized:false,
     blendFrom:{pos:new Vector3(),quat:new Quaternion(),fov:50},blend:1,
-    orbitReady:false,chaseYaw:0,chasePos:new Vector3(),heliPos:new Vector3(),heliTarget:new Vector3(),tvIndex:-1,tvTarget:new Vector3(),tvFov:30,
+    orbitReady:false,chaseYaw:0,chasePos:new Vector3(),pitCam:new Vector3(),heliPos:new Vector3(),heliTarget:new Vector3(),tvIndex:-1,tvTarget:new Vector3(),tvFov:30,
   })
   const tmp=useMemo(()=>({m:new Matrix4(),q:new Quaternion(),q2:new Quaternion(),e:new Euler(),p:new Vector3(),t:new Vector3(),f:new Vector3(),s:new Vector3()}),[])
   useEffect(()=>{
@@ -130,10 +130,21 @@ export default function CameraRig({mode,runtime,selected,look,guide,bounds,activ
           tv.forEach((c,i)=>{const ahead=wrap(c.s-pose.s,L);if(ahead>-20&&ahead<bestAhead){best=i;bestAhead=ahead}})
           s.tvIndex=best;s.tvTarget.set(carX,carY+.5,carZ)
         }
+      }else if(pose.mode===2&&guide){
+        // Pit lane: a camera over the pit wall, on the track side, looking into the box.
+        if(s.tvIndex!==-3||jump){
+          const near=projectToPath(guide.track,carX,carZ,carY,120)
+          const f=near?pathFrame(guide.track,near.s):null
+          let dx=f?f.x+f.tz*f.offset-carX:1,dz=f?f.z-f.tx*f.offset-carZ:0
+          const l=Math.hypot(dx,dz)||1;dx/=l;dz/=l
+          s.pitCam.set(carX+dx*13+Math.sin(pose.yaw)*9,carY+5.2,carZ+dz*13+Math.cos(pose.yaw)*9)
+          s.tvIndex=-3;s.tvTarget.set(carX,carY+.5,carZ)
+        }
+        if(s.pitCam.distanceTo(tmp.t.set(carX,carY,carZ))>60)s.tvIndex=-1
       }else if(s.tvIndex<0||jump){
         s.tvIndex=-2;s.tvTarget.set(carX,carY,carZ)
       }
-      const c=s.tvIndex>=0?tv[s.tvIndex]:{x:carX+30,y:carY+8,z:carZ+30}
+      const c=s.tvIndex>=0?tv[s.tvIndex]:s.tvIndex===-3?s.pitCam:{x:carX+30,y:carY+8,z:carZ+30}
       if(s.tvIndex===-2&&s.tvTarget.distanceTo(tmp.t.set(carX,carY,carZ))>200)s.tvIndex=-1
       position.set(c.x,c.y,c.z)
       s.tvTarget.lerp(tmp.t.set(carX,carY+.5,carZ),jump?1:1-Math.exp(-dt*7))

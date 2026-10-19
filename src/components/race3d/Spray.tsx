@@ -32,7 +32,7 @@ export default function Spray({runtime,carCount}:{runtime:{current:RaceRuntime};
         void main(){
           #include <logdepthbuf_fragment>
           vec2 q=vUv-.5;float d=length(q)*2.;
-          float wisps=.65+.35*sin(atan(q.y,q.x)*5.+uTime*3.+vSeed*20.)*sin(d*7.-uTime*4.);
+          float wisps=.84+.16*sin(atan(q.y,q.x)*3.+uTime*2.+vSeed*20.)*sin(d*5.-uTime*3.);
           float a=smoothstep(1.,.15,d)*wisps*vAlpha;
           if(a<.004)discard;
           gl_FragColor=vec4(uColor,a);

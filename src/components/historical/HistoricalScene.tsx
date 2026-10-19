@@ -17,12 +17,14 @@ import { buildCircuit } from '../race3d/circuitBuilder'
 import Cockpit from '../race3d/Cockpit'
 import Effects from '../race3d/Effects'
 import Spray from '../race3d/Spray'
+import People from '../race3d/People'
 import { EngineAudio } from '../race3d/engineAudio'
 import { buildPendingMotion, createRuntime, trackStatus, updateRuntime, type RaceRuntime, type TrackStatus } from '../race3d/raceRuntime'
 import { venueFor } from '../race3d/venues'
+import BroadcastOverlay from './BroadcastOverlay'
 import './HistoricalScene.css'
 
-type HistoricalSceneProps={race:HistoricalRace;clockRef:MutableRefObject<ReplayClock>;time:number;selectedDriver:number;cameraMode:CameraMode;onSelectDriver:(number:number)=>void;playing:boolean;onCameraChange?:(mode:CameraMode)=>void;onTogglePlay?:()=>void;onSeek?:(time:number)=>void;onSpeedChange?:(speed:number)=>void}
+type HistoricalSceneProps={race:HistoricalRace;clockRef:MutableRefObject<ReplayClock>;time:number;selectedDriver:number;cameraMode:CameraMode;onSelectDriver:(number:number)=>void;playing:boolean;onCameraChange?:(mode:CameraMode)=>void;onTogglePlay?:()=>void;onSeek?:(time:number)=>void;onSpeedChange?:(speed:number)=>void;onLearn?:()=>void}
 type QualityLevel=SceneQuality['level']
 const CAMERA_LABELS:Record<CameraMode,string>={director:'BROADCAST DIRECTOR / AUTO CUTS',strategist:'FREE ORBIT / WHOLE FIELD',helicopter:'HELICOPTER / FOLLOW',trackside:'TRACKSIDE TV / FOLLOW',onboard:'DRIVER EYES / LOOK AROUND',tcam:'ROLL HOOP / T-CAM',nose:'NOSE CAMERA / LOW',rear:'REAR-FACING / ROLL HOOP',chase:'CHASE / FOLLOW',top:'TOP VIEW / FOLLOW DRIVER',overview:'WHOLE CIRCUIT / NORTH UP'}
 const STATUS_TEXT:Partial<Record<TrackStatus,string>>={yellow:'YELLOW FLAG',sc:'SAFETY CAR',vsc:'VIRTUAL SAFETY CAR',red:'RED FLAG',chequered:'CHEQUERED FLAG'}
@@ -84,10 +86,12 @@ function RaceWorld({race,clockRef,time,selectedDriver,cameraMode,onSelectDriver,
     const t=guide.track;for(let i=0;i<t.count;i++){minX=Math.min(minX,t.x[i]);maxX=Math.max(maxX,t.x[i]);minZ=Math.min(minZ,t.z[i]);maxZ=Math.max(maxZ,t.z[i]);y+=t.y[i]/t.count}
     return {x:(minX+maxX)/2,z:(minZ+maxZ)/2,width:maxX-minX,depth:maxZ-minZ,y}
   },[guide])
+  const teamColours=useMemo(()=>[...new Set(runtime.current.cars.map(c=>'#'+c.livery.a.getHexString()))],[runtime])
   const obstacles=useMemo(()=>layout?[...layout.buildings,...layout.grandstands.map(g=>({...g,w:16,d:16,h:15})),...layout.garages.map(g=>({...g,w:14,d:24,h:12}))]:[],[layout])
   const lapStart=useMemo(()=>{const leader=race.drivers.find(d=>d.finishPosition===1)??race.drivers[0];return race.laps[leader.number]?.find(l=>l.lap===1)?.start??0},[race])
   const rain=race.weather.filter(w=>w.time<=time).at(-1)?.rainfall===1
   useEffect(()=>invalidate(),[time,selectedDriver,cameraMode,telemetry,quality,invalidate])
+  useEffect(()=>{camera.layers.enable(1)},[camera])
   // Guided motion is prepared a few cars per frame, followed car first.
   useFrame(()=>{if(runtime.current.pending.length){buildPendingMotion(runtime.current,race,guide,9,selectedIndex);invalidate()}},-3)
   useFrame((_,delta)=>{
@@ -105,6 +109,7 @@ function RaceWorld({race,clockRef,time,selectedDriver,cameraMode,onSelectDriver,
       <CircuitSurface layout={layout} venue={venue} wet={rain?1:0} length={guide.track.length} halfWidth={guide.track.halfWidth} gridCount={race.drivers.length}/>
       <CircuitScenery layout={layout} venue={venue} runtime={runtime} lapStart={lapStart}/>
       <Horizon venue={venue} radius={layout.terrainSize*2.2+1500} baseY={layout.baseY}/>
+      <People layout={layout} runtime={runtime} teams={teamColours} density={quality.crowd} lapStart={lapStart} finishTime={race.meta.duration+1}/>
       <GroundPlane venue={venue} y={layout.baseY-.4}/>
     </>}
     {rain&&<Spray runtime={runtime} carCount={race.drivers.length}/>}
@@ -150,6 +155,7 @@ export default function HistoricalScene(props:HistoricalSceneProps){
         {({active})=><RaceWorld race={race} clockRef={props.clockRef} time={time} selectedDriver={selectedDriver} cameraMode={cameraMode} onSelectDriver={props.onSelectDriver} active={active} look={look} telemetry={telemetry} quality={quality} audio={audio}/>}
       </SceneFrame>
       <div className="hs-camera-readout"><span>{CAMERA_LABELS[cameraMode]}</span><b style={{color:driverColor(selected.driver)}}>{selected.driver.code} <em>#{selectedDriver} / {selected.driver.team}</em></b></div>
+      {presentation3D&&<BroadcastOverlay race={race} time={time} selected={selectedDriver} telemetry={telemetry} onSelect={props.onSelectDriver} onLearn={props.onLearn} onboard={onboard}/>}
       {presentation3D&&STATUS_TEXT[trackState]&&<div className={`hs-status-banner is-${trackState}`} role="status">{STATUS_TEXT[trackState]}</div>}
       {presentation3D&&visible&&!['strategist','overview'].includes(cameraMode)&&<div className="hs-hud" aria-label={`${selected.driver.name} live data`}>
         <div className="hs-hud-driver"><b>P{selected.position??'—'}</b><i style={{background:driverColor(selected.driver)}}/><span>{selected.driver.code}</span><em>LAP {selected.lap||'—'}</em></div>

@@ -84,7 +84,7 @@
 .historical-scene-shell .hs-status-banner.is-red{background:#e2231a;color:#fff}
 .historical-scene-shell .hs-status-banner.is-chequered{background:repeating-conic-gradient(#f2f2f2 0 25%,#111 0 50%) 0 0/14px 14px;color:#111;text-shadow:0 0 6px #fff,0 0 2px #fff;animation:none}
 @keyframes hs-flag{from{opacity:.78}to{opacity:1}}
-.historical-scene-shell .hs-hud{position:absolute;z-index:4;right:21px;top:62px;width:214px;padding:11px 13px 10px;border:1px solid #ffffff17;border-radius:8px;background:linear-gradient(160deg,#0d1a20ee,#0a1317e6);backdrop-filter:blur(10px);box-shadow:0 10px 30px #0005;color:#e6efe2;pointer-events:none;font-family:var(--mono,'IBM Plex Mono',monospace)}
+.historical-scene-shell .hs-hud{position:absolute;z-index:4;right:21px;top:62px;width:214px;padding:11px 13px 10px;border:1px solid #ffffff17;border-radius:8px;background:linear-gradient(160deg,#0d1a20f5,#0a1317f0);box-shadow:0 10px 30px #0005;color:#e6efe2;pointer-events:none;font-family:var(--mono,'IBM Plex Mono',monospace)}
 .historical-scene-shell .hs-hud-driver{display:flex;align-items:center;gap:8px;font-size:11px}
 .historical-scene-shell .hs-hud-driver>b{font:700 15px var(--display,'Space Grotesk Variable',sans-serif);color:#d7ff43;min-width:30px}
 .historical-scene-shell .hs-hud-driver>i{width:3px;height:16px;border-radius:2px}

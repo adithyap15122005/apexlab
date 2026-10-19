@@ -4,12 +4,12 @@ import { Environment, Lightformer, Sky } from '@react-three/drei'
 import { AdditiveBlending, BackSide, BufferGeometry, Color, DirectionalLight, Float32BufferAttribute, FogExp2, LineSegments, LineBasicMaterial, Mesh, Object3D, ShaderMaterial, Vector3 } from 'three'
 import type { Venue } from './venues'
 
-export type SceneQuality={level:'ultra'|'high'|'medium'|'low';shadows:number;dpr:number;trees:number;buildings:number;post:boolean;msaa:number;bloom:boolean;speedBlur:boolean}
+export type SceneQuality={level:'ultra'|'high'|'medium'|'low';shadows:number;dpr:number;trees:number;buildings:number;crowd:number;post:boolean;msaa:number;bloom:boolean;speedBlur:boolean}
 export const QUALITY:Record<SceneQuality['level'],SceneQuality>={
-  ultra:{level:'ultra',shadows:4096,dpr:2,trees:1,buildings:1,post:true,msaa:4,bloom:true,speedBlur:true},
-  high:{level:'high',shadows:2048,dpr:1.5,trees:.65,buildings:.8,post:true,msaa:2,bloom:true,speedBlur:true},
-  medium:{level:'medium',shadows:1024,dpr:1,trees:.35,buildings:.5,post:true,msaa:0,bloom:true,speedBlur:false},
-  low:{level:'low',shadows:0,dpr:.8,trees:.15,buildings:.3,post:false,msaa:0,bloom:false,speedBlur:false},
+  ultra:{level:'ultra',shadows:4096,dpr:2,trees:1,buildings:1,crowd:1,post:true,msaa:4,bloom:true,speedBlur:true},
+  high:{level:'high',shadows:2048,dpr:1.5,trees:.65,buildings:.8,crowd:.75,post:true,msaa:2,bloom:true,speedBlur:true},
+  medium:{level:'medium',shadows:1024,dpr:1,trees:.35,buildings:.5,crowd:.45,post:true,msaa:0,bloom:true,speedBlur:false},
+  low:{level:'low',shadows:0,dpr:.8,trees:.15,buildings:.3,crowd:0,post:false,msaa:0,bloom:false,speedBlur:false},
 }
 
 export function sunDirection(venue:Venue,rain:boolean){

@@ -16,6 +16,17 @@ npm run preview
 
 Choose **Choose your race**, pick a highlighted recorded race, select a driver, and choose **Enter this cockpit**. The driver's-seat camera supports drag or arrow-key look-around, recenter, full screen, driver switching, playback, lap selection, scrubbing and speed controls. Eleven views share the same clock: **Director** (automatic broadcast cuts), Cockpit, T-cam, Nose cam, Rear cam, Chase, driver-following Top view, north-up Whole circuit, Helicopter, Trackside TV and Free orbit. **Engine sound** and a **Graphics** preset (Ultra / High / Medium / Low) sit beside the scene; the fullscreen player includes its own camera and graphics selectors.
 
+## Strategy School — F1 strategy for beginners and kids
+
+**Strategy School** (landing page, top navigation, race-archive header and the in-replay coach all link to it) explains race strategy simply enough for an 8-year-old:
+
+- Seven animated lessons: *Tyres are like shoes* (a live three-tyre race with draining grip bars), *The pit stop trade* (an animated pit crew changing four tyres, then a balance scale showing when a stop pays back), *The undercut* (two cars play out an undercut lap by lap; a slider shows when it works or fails), *Safety car = cheap stop*, *DRS & slipstream* (the rear-wing flap opens), *Rain changes everything* (a wetness slider picks the right tyre) and *Build a race plan* (the two-tyre rule, a strategy builder and the engineer's optimal plan).
+- A quick question after each lesson, stars and ranks from Spectator to Race Engineer and Champion, a picture glossary of racing words, and a link into real races.
+- **Be the Race Engineer**: a real-time mini race against four rival teams. Pick a starting tyre, watch the grip bar, shout **BOX BOX** and choose new tyres. A random safety car rewards a smart stop, the two-tyre rule is enforced, and an engineer explains the result.
+- Lessons and the game share one deliberately simple, deterministic teaching model (`src/school/schoolModel.ts`), separate from historical data.
+
+In real races, every **Tyre strategies** page now opens with a plain-language strategy story: how the winner won and how your driver raced, drawn as tyre timelines, plus *moments that decided the race* — real undercuts, overcuts and weather calls detected from recorded pit stops and positions, each with a *Watch it in 3D* button.
+
 ## The 3D race engine
 
 The replay is a purpose-built real-time renderer (`src/components/race3d/`, `src/history/trackGuide.ts`):
@@ -30,6 +41,9 @@ The replay is a purpose-built real-time renderer (`src/components/race3d/`, `src
 - **Post-processing.** ACES tone mapping, bloom for floodlights and lamps, vignette and a radial speed blur in onboard and chase cameras. Rendering runs at the display refresh rate while playing.
 - **Engine sound.** A synthesized hybrid V6 (three firings per revolution) driven by recorded RPM and throttle, attenuated by camera distance.
 - **Live HUD.** Position, recorded speed, gear, throttle/brake, DRS, tyre and gap, plus a track-status banner.
+- **Broadcast graphics.** An animated race-title card that draws the circuit, a live mini track map, and toasts for overtakes, lead changes, pit stops (with the tyre change), fastest laps, the final lap and the chequered flag — all from recorded data.
+- **Race Coach.** A beginner panel explains, in one or two simple sentences, what matters for your driver right now: a pit stop, fresh tyres, rain, a safety car or red flag, DRS, a battle within a second, or worn-out tyres.
+- **People.** Grandstands full of spectators doing a Mexican wave (cheering at the start and finish), marshals who wave flags whenever race control shows yellow, safety car or red, crews waiting in front of every garage, and a full pit crew that surrounds each car when it stops in the pit lane — with a pit-wall camera to watch it.
 
 Production builds held about 45–60 fps at the High preset on Intel integrated graphics in headless Chrome across the cameras tested (cockpit with live mirrors is the heaviest). Medium and Low trade shadows, trees, mirrors and post-processing for speed.
 
@@ -66,7 +80,9 @@ See [docs/historical-archive.md](docs/historical-archive.md) for archive ingesti
 - `src/components/race3d/`: the real-time race engine: car geometry and materials, vehicle dynamics, per-frame race runtime, circuit builder and scenery, atmosphere, cameras, cockpit, spray, post-processing and engine audio.
 - `src/components/historical/`: calendar, lineup, replay scene and HUD, synchronized charts and What-If workspace.
 - `src/components/showroom/`: interactive four-team garage using the race engine's car.
+- `src/history/strategyStory.ts`: broadcast moments, the race coach, strategy stories and undercut/overcut detection from recorded data.
+- `src/school/` and `src/components/school/`: the Strategy School teaching model, lessons, visuals and the race-engineer game.
 
-The test suite verifies race counts and every snapshot route, all entrants' portrait/constructor identity, recorded duration coverage, DNS/retirement/disqualification behavior, interpolation limits, actual telemetry, What-If determinism and baseline identity, car geometry, cockpit sight lines, team paint and venue lighting. It also checks that track-guided motion follows corner geometry where straight chords cut inside it, keeps recorded lap progress, never reverses, and hides gaps and teleports; that real British GP motion stays on the road at plausible speeds; the 2022-style car's proportions and the driver's sight lines; suspension and steering directions; that barriers and scenery stay off the racing surface; that rendered cars never intersect; and race-control status parsing. Production builds run strict TypeScript checks. Desktop and mobile browser checks cover the showroom, archive, cockpit and replay controls.
+The test suite verifies race counts and every snapshot route, all entrants' portrait/constructor identity, recorded duration coverage, DNS/retirement/disqualification behavior, interpolation limits, actual telemetry, What-If determinism and baseline identity, car geometry, cockpit sight lines, team paint and venue lighting. It also checks that track-guided motion follows corner geometry where straight chords cut inside it, keeps recorded lap progress, never reverses, and hides gaps and teleports; that real British GP motion stays on the road at plausible speeds; the 2022-style car's proportions and the driver's sight lines; suspension and steering directions; that barriers and scenery stay off the racing surface; that rendered cars never intersect; and race-control status parsing. Strategy tests check the winner's story, real undercut detection (Hamilton's switch to slicks a lap before Norris at Silverstone 2024), coach topics and broadcast moments; school tests check tyre behaviour, pit payback, when the undercut works, the two-tyre rule and plan optimiser, and that the game rewards a safety-car stop and classifies a one-tyre race last. Production builds run strict TypeScript checks. Desktop and mobile browser checks cover the showroom, archive, cockpit and replay controls.
 
 Public source: [github.com/adithyap15122005/apexlab](https://github.com/adithyap15122005/apexlab).
