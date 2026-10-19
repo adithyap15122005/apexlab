@@ -2,6 +2,7 @@ import { Color, Matrix4 } from 'three'
 import { getDriverState, sampleTelemetry } from '../../history/replay'
 import { createDriverMotion, emptyPose, sampleMotion, toWorld, wrap, type DriverMotion, type MotionPose, type TrackGuide } from '../../history/trackGuide'
 import { historicalCompound, type DriverRaceState, type HistoricalDriver, type HistoricalRace, type TelemetrySample } from '../../history/types'
+import { boxWeight, pitPhase, planPitStops, type PitPhase, type PitStopPlan } from '../../history/pitStops'
 import { formulaTeamLivery } from '../historical/FormulaCarModel'
 import { footprintSeparation } from '../historical/replayPresentation'
 import { chassisMatrix, createDynamics, groundMatrix, spring, updateDynamics, wheelMatrix, type CarDynamics } from './vehicleDynamics'
@@ -13,11 +14,18 @@ export type CarRuntime={
   lateral:number;lateralV:number;fade:number;flap:number;rainLight:number;lod:0|1;distance:number
   ground:Matrix4;chassis:Matrix4;wheels:Matrix4[]
   livery:{a:Color;b:Color;c:Color};helmet:Color;tcam:Color;compound:Color
+  /** The pit stop in progress, if any: phase, service progress and how firmly the car is held in its box. */
+  pit:{plan:PitStopPlan;phase:PitPhase;progress:number;weight:number}|null
+  /** Jack height (m) and whether the wheels are off the car during the tyre change. */
+  lift:number;wheelsOff:boolean
 }
+export type PitBox={x:number;y:number;z:number;yaw:number}
 export type TrackStatus='green'|'yellow'|'sc'|'vsc'|'red'|'chequered'
 export type RaceRuntime={
   cars:CarRuntime[];time:number;initialized:boolean;status:TrackStatus;rain:boolean
   pending:number[]
+  /** Every recorded pit stop, and where each car stood in its box once motion is ready. */
+  pitStops:PitStopPlan[];boxes:Map<PitStopPlan,PitBox>;boxesReady:boolean
 }
 
 const HELMETS=['#f4d03f','#e8ecef','#2f6fd6','#e3342f','#f28c28','#18b4a8','#9b59b6','#1b1f24','#d5ff3f','#ff5fa2']
@@ -30,6 +38,7 @@ export function createRuntime(race:HistoricalRace):RaceRuntime{
   race.drivers.forEach(d=>byTeam.set(d.team,[...(byTeam.get(d.team)??[]),d.number].sort((a,b)=>a-b)))
   return {
     time:0,initialized:false,status:'green',rain:false,pending:race.drivers.map((_,i)=>i),
+    pitStops:planPitStops(race),boxes:new Map(),boxesReady:false,
     cars:race.drivers.map((driver,index)=>{
       const paint=formulaTeamLivery(driver.team,driverColor(driver)),teammates=byTeam.get(driver.team)??[]
       return {
@@ -39,7 +48,7 @@ export function createRuntime(race:HistoricalRace):RaceRuntime{
         livery:{a:new Color(paint.primary),b:new Color(paint.secondary),c:new Color(paint.accent)},
         helmet:new Color(HELMETS[hash(driver.code)%HELMETS.length]),
         tcam:new Color(teammates.length>1&&teammates.indexOf(driver.number)===1?'#e6ff1f':'#101214'),
-        compound:new Color('#f2dc5c'),
+        compound:new Color('#f2dc5c'),pit:null,lift:0,wheelsOff:false,
       }
     }),
   }
@@ -85,6 +94,16 @@ export function updateRuntime(runtime:RaceRuntime,race:HistoricalRace,options:Up
   runtime.status=trackStatus(race,time)
   runtime.rain=race.weather.filter(w=>w.time<=time).at(-1)?.rainfall===1
   const maxGap=race.coverage.maxInterpolationGap
+  // Once every car's motion is ready, find where each one stood in its pit box.
+  if(!runtime.boxesReady&&!runtime.pending.length){
+    for(const plan of runtime.pitStops){
+      const car=runtime.cars.find(c=>c.driver.number===plan.driver)
+      if(!plan.standard||!car?.motion)continue
+      const pose=sampleMotion(guide,car.motion,plan.stopAt,maxGap,emptyPose())
+      if(pose)runtime.boxes.set(plan,{x:pose.x,y:pose.y,z:pose.z,yaw:pose.yaw})
+    }
+    runtime.boxesReady=true
+  }
   for(const car of runtime.cars){
     const state=getDriverState(race,car.driver.number,time)
     car.state=state;car.visible=false;car.moving=false
@@ -101,8 +120,9 @@ export function updateRuntime(runtime:RaceRuntime,race:HistoricalRace,options:Up
       car.guided=false
     }
     if(finished){car.pose.speed=0;car.pose.accel=0;car.pose.latAccel=0;car.pose.curvature=0}
-    car.visible=true;car.moving=car.pose.speed>.5
     car.compound.set(historicalCompound(state.compound).color)
+    applyPitStop(runtime,car,time)
+    car.visible=true;car.moving=car.pose.speed>.5
   }
   separate(runtime,guide,wallDt,snap)
   const sample=telemetry.length?sampleTelemetry(telemetry,time):null
@@ -112,6 +132,8 @@ export function updateRuntime(runtime:RaceRuntime,race:HistoricalRace,options:Up
     groundMatrix(car.pose,car.ground,car.lateral)
     chassisMatrix(car.ground,car.dynamics,car.chassis)
     car.wheels.forEach((m,i)=>wheelMatrix(car.ground,car.dynamics,WHEELS[i],m))
+    // On the jacks, the whole car (and any fitted wheel) rises a few centimetres.
+    if(car.lift>0){car.chassis.elements[13]+=car.lift;car.wheels.forEach(m=>{m.elements[13]+=car.lift})}
     // DRS opens only where recorded telemetry says so (OpenF1 values 10, 12, 14).
     const drsOpen=car.driver.number===selected&&sample&&sample.sampleAge<=2&&(sample.drs??0)>=10?1:0
     car.flap+=(drsOpen-car.flap)*(1-Math.exp(-Math.min(wallDt,.1)*10))
@@ -138,7 +160,7 @@ const foot=(car:CarRuntime)=>{const nx=Math.cos(car.pose.yaw),nz=-Math.sin(car.p
  * the road; progress along the lap (and therefore every gap and position) is unchanged.
  */
 function separate(runtime:RaceRuntime,guide:TrackGuide|null,wallDt:number,snap:boolean){
-  const cars=runtime.cars.filter(c=>c.visible&&c.guided)
+  const cars=runtime.cars.filter(c=>c.visible&&c.guided&&!(c.pit&&c.pit.weight>.3))
   const target=new Map<CarRuntime,number>(cars.map(c=>[c,0]))
   if(guide)for(let iteration=0;iteration<4;iteration++){
     for(let i=0;i<cars.length;i++)for(let j=i+1;j<cars.length;j++){
@@ -165,4 +187,32 @@ function separate(runtime:RaceRuntime,guide:TrackGuide|null,wallDt:number,snap:b
     if(snap||!car.visible){car.lateral=goal;car.lateralV=0;continue}
     ;[car.lateral,car.lateralV]=spring(car.lateral,car.lateralV,goal,11,1,Math.min(wallDt,.1))
   }
+}
+
+/**
+ * Render-only pit stop: the car is eased into the spot where its recorded positions stood
+ * still, held there for the stationary time (recorded, or a typical 2.5 s), lifted on the
+ * jacks while the wheels are changed, then released. Timing and positions are unchanged.
+ */
+function applyPitStop(runtime:RaceRuntime,car:CarRuntime,time:number){
+  car.pit=null;car.lift=0;car.wheelsOff=false
+  const plan=runtime.pitStops.find(p=>p.driver===car.driver.number&&time>=p.entry-1&&time<=p.exit+1)
+  const phase=plan?pitPhase(plan,time):null
+  if(!plan||!phase)return
+  const box=runtime.boxes.get(plan),weight=box?boxWeight(plan,time):0
+  if(box&&weight>0){
+    const pose=car.pose,keep=1-weight
+    pose.x+=(box.x-pose.x)*weight;pose.y+=(box.y-pose.y)*weight;pose.z+=(box.z-pose.z)*weight
+    pose.yaw+=wrap(box.yaw-pose.yaw,Math.PI*2)*weight
+    pose.speed*=keep;pose.accel*=keep;pose.latAccel*=keep;pose.yawRate*=keep;pose.curvature*=keep;pose.grade*=keep
+  }
+  car.pit={plan,phase:phase.phase,progress:phase.progress,weight}
+  const k=phase.progress
+  if(phase.phase==='service'){
+    const up=Math.min(1,Math.max(0,(k-.05)/.08)),down=Math.min(1,Math.max(0,(.95-k)/.06))
+    car.lift=.065*Math.min(up,down)
+    car.wheelsOff=k>.18&&k<.8
+  }
+  // The new compound goes on halfway through the change.
+  car.compound.set(historicalCompound(phase.phase==='approach'||(phase.phase==='service'&&k<.55)?plan.from:plan.to).color)
 }

@@ -5,6 +5,8 @@ import { getDriverState, getStandings, sampleTelemetry } from '../../history/rep
 import type { HistoricalDriver, HistoricalRace, TelemetrySample } from '../../history/types'
 import { trackStatus } from '../race3d/raceRuntime'
 import { coachMessage, raceStoryEvents, type StoryEvent } from '../../history/strategyStory'
+import { featuredPitStop, planPitStops } from '../../history/pitStops'
+import PitStopGraphics from './PitStopGraphics'
 import './BroadcastOverlay.css'
 
 const colourOf=(driver:HistoricalDriver)=>/^#?[0-9a-f]{6}$/i.test(driver.color)?`#${driver.color.replace('#','')}`:'#c8d9ba'
@@ -64,7 +66,10 @@ export default function BroadcastOverlay({race,time,selected,telemetry,onSelect,
   const [intro,setIntro]=useState(true)
   const [coach,setCoach]=useState(()=>{try{return localStorage.getItem('apexlab-coach')!=='off'}catch{return true}})
   const [toasts,setToasts]=useState<Toast[]>([])
-  const events=useMemo(()=>raceStoryEvents(race,selected),[race,selected])
+  const plans=useMemo(()=>planPitStops(race),[race])
+  // The pit-stop panel covers the followed driver's normal stops, so they get no separate toast.
+  const events=useMemo(()=>raceStoryEvents(race,selected).filter(e=>e.kind!=='pit'||!plans.some(p=>p.standard&&p.driver===selected&&p.entry===e.time)),[race,selected,plans])
+  const pitStop=featuredPitStop(plans,selected,time)
   const previous=useRef(time)
   useEffect(()=>{try{localStorage.setItem('apexlab-coach',coach?'on':'off')}catch{/* Optional preference. */}},[coach])
   useEffect(()=>{setToasts([]);previous.current=time},[selected,race]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -86,10 +91,12 @@ export default function BroadcastOverlay({race,time,selected,telemetry,onSelect,
       </motion.div>)}</AnimatePresence>
     </div>
     <MiniMap race={race} time={time} selected={selected} onSelect={onSelect}/>
-    <AnimatePresence mode="wait">{message?<motion.aside key={message.id} className={`bo-coach ${onboard?'is-onboard':''}`} initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} exit={{opacity:0,y:6}} transition={{duration:.25}} aria-live="polite">
+    <PitStopGraphics race={race} plans={plans} time={time} selected={selected} onSelect={onSelect} onboard={onboard}/>
+    {/* The coach steps aside while the pit-stop panel explains the stop. */}
+    {!pitStop&&<AnimatePresence mode="wait">{message?<motion.aside key={message.id} className={`bo-coach ${onboard?'is-onboard':''}`} initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} exit={{opacity:0,y:6}} transition={{duration:.25}} aria-live="polite">
       <div className="bo-coach-head"><span className="bo-coach-avatar" aria-hidden="true">{message.icon}</span><b>RACE COACH</b><span className="bo-coach-topic">{message.topic}</span><button onClick={()=>setCoach(false)} aria-label="Hide the race coach"><X size={13}/></button></div>
       <p>{message.text}</p>
       {onLearn&&message.lesson&&<button className="bo-coach-learn" onClick={onLearn}><GraduationCap size={13}/>Learn it in Strategy School</button>}
-    </motion.aside>:<button key="coach-off" className="bo-coach-toggle" onClick={()=>setCoach(true)}><GraduationCap size={14}/>Race coach</button>}</AnimatePresence>
+    </motion.aside>:<button key="coach-off" className="bo-coach-toggle" onClick={()=>setCoach(true)}><GraduationCap size={14}/>Race coach</button>}</AnimatePresence>}
   </>
 }

@@ -1,4 +1,4 @@
-import { BoxGeometry, BufferGeometry, Color, Float32BufferAttribute, IcosahedronGeometry, InstancedBufferAttribute, InstancedMesh, MeshStandardMaterial, Object3D } from 'three'
+import { BoxGeometry, BufferGeometry, CapsuleGeometry, Color, Float32BufferAttribute, IcosahedronGeometry, InstancedBufferAttribute, InstancedMesh, MeshStandardMaterial, Object3D } from 'three'
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js'
 
 /**
@@ -7,7 +7,7 @@ import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js
  * body are animated on the GPU, so thousands of people cost one draw call per group.
  * Units are metres; feet at the origin, facing +Z.
  */
-export const POSE={cheer:0,work:1,flag:2,idle:3} as const
+export const POSE={cheer:0,work:1,flag:2,idle:3,celebrate:4} as const
 type Part='legs'|'shirt'|'skin'|'helmet'
 
 function piece(geometry:BufferGeometry,part:Part,arm:number,tint:string){
@@ -15,9 +15,11 @@ function piece(geometry:BufferGeometry,part:Part,arm:number,tint:string){
   flat.setAttribute('tint',new Float32BufferAttribute(new Float32Array(count*3).map((_,i)=>[c.r,c.g,c.b][i%3]),3))
   flat.setAttribute('part',new Float32BufferAttribute(new Float32Array(count).fill(part==='legs'?0:part==='shirt'?1:part==='skin'?2:3),1))
   flat.setAttribute('arm',new Float32BufferAttribute(new Float32Array(count).fill(arm),1))
-  flat.deleteAttribute('uv');flat.computeVertexNormals()
+  flat.deleteAttribute('uv');if(!flat.getAttribute('normal'))flat.computeVertexNormals()
   return flat
 }
+/** A rounded limb or torso: a capsule centred at `y`, with `length` its full height. */
+const limb=(radius:number,length:number,x:number,y:number,z=0)=>new CapsuleGeometry(radius,Math.max(.01,length-radius*2),2,7).translate(x,y,z)
 /** A standing person, ~1.75 m. `crew` adds a helmet and gloves; `simple` is a ~60-triangle spectator for crowds. */
 export function personGeometry(crew=false,simple=false){
   if(simple){
@@ -30,17 +32,21 @@ export function personGeometry(crew=false,simple=false){
     ]
     const merged=mergeGeometries(parts,false)!;parts.forEach(q=>q.dispose());return merged
   }
+  // Rounded figures: capsule legs, torso and arms; crews wear fireproof overalls, gloves and a helmet with a visor.
+  const trousers=crew?'#20262b':'#2d3440'
   const parts=[
-    piece(new BoxGeometry(.13,.82,.16).translate(-.09,.41,0),'legs',0,crew?'#20262b':'#2d3440'),
-    piece(new BoxGeometry(.13,.82,.16).translate(.09,.41,0),'legs',0,crew?'#20262b':'#2d3440'),
-    piece(new BoxGeometry(.38,.6,.22).translate(0,1.13,0),'shirt',0,'#ffffff'),
-    piece(new BoxGeometry(.1,.56,.12).translate(-.25,1.15,0),'shirt',-1,'#ffffff'),
-    piece(new BoxGeometry(.1,.56,.12).translate(.25,1.15,0),'shirt',1,'#ffffff'),
-    piece(new BoxGeometry(.09,.1,.1).translate(-.25,.82,0),crew?'legs':'skin',-1,'#1a1d20'),
-    piece(new BoxGeometry(.09,.1,.1).translate(.25,.82,0),crew?'legs':'skin',1,'#1a1d20'),
-    piece(new IcosahedronGeometry(.115,1).translate(0,1.58,0),crew?'helmet':'skin',0,'#ffffff'),
+    piece(limb(.075,.84,-.095,.46),'legs',0,trousers),
+    piece(limb(.075,.84,.095,.46),'legs',0,trousers),
+    piece(new BoxGeometry(.12,.08,.27).translate(-.095,.04,.04),'legs',0,'#15181b'),
+    piece(new BoxGeometry(.12,.08,.27).translate(.095,.04,.04),'legs',0,'#15181b'),
+    piece(limb(.17,.66,0,1.15).scale(1.12,1,.7),'shirt',0,'#ffffff'),
+    piece(limb(.055,.58,-.255,1.135),'shirt',-1,'#ffffff'),
+    piece(limb(.055,.58,.255,1.135),'shirt',1,'#ffffff'),
+    piece(new IcosahedronGeometry(.062,0).translate(-.255,.82,0),crew?'legs':'skin',-1,'#1a1d20'),
+    piece(new IcosahedronGeometry(.062,0).translate(.255,.82,0),crew?'legs':'skin',1,'#1a1d20'),
+    piece(new IcosahedronGeometry(crew?.13:.115,1).translate(0,1.6,0),crew?'helmet':'skin',0,'#ffffff'),
   ]
-  if(crew)parts.push(piece(new BoxGeometry(.2,.06,.14).translate(0,1.58,.09),'legs',0,'#11161a'))
+  if(crew)parts.push(piece(new BoxGeometry(.21,.07,.1).translate(0,1.6,.095),'legs',0,'#0d1114'))
   const merged=mergeGeometries(parts,false)!
   parts.forEach(p=>p.dispose())
   return merged
@@ -71,6 +77,10 @@ export function peopleMaterial(){
         }else if(pose<2.5){
           // Marshal: the right arm waves a flag overhead.
           if(arm>.5)raise=2.5+.45*sin(uTime*7.+phase);
+        }else if(pose>3.5){
+          // Pit crew after a good stop: both arms up, bouncing.
+          raise=2.55+.35*sin(uTime*10.+phase);
+          transformed.y+=.06*max(0.,sin(uTime*10.+phase));
         }
         if(arm!=0.&&raise>0.){
           vec3 pivot=vec3(arm*.25,1.42,0.);vec3 p=transformed-pivot;float a=raise*arm;

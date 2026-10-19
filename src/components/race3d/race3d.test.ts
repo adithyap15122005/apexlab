@@ -1,8 +1,9 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { Box3, Mesh, MeshBasicMaterial, Raycaster, Vector3, type BufferGeometry } from 'three'
+import { Box3, Color, Mesh, MeshBasicMaterial, Raycaster, Vector3, type BufferGeometry } from 'three'
 import { validateHistoricalRace } from '../../history/loader'
+import { historicalCompound } from '../../history/types'
 import { createTrackGuide, projectToPath, wrap } from '../../history/trackGuide'
 import { footprintSeparation } from '../historical/replayPresentation'
 import { CAR, createF1CarGeometry } from './carGeometry'
@@ -103,6 +104,26 @@ test('rendered cars never intersect after render-only lateral separation',()=>{
     }
   }
   assert.ok(checked>10,'the race start exercises close running')
+})
+
+test('a pitting car stops in its box, rises on the jacks and leaves on new tyres',()=>{
+  const guide=createTrackGuide(british),runtime=createRuntime(british)
+  while(!buildPendingMotion(runtime,british,guide,1e6));
+  const plan=runtime.pitStops.find(p=>p.driver===44&&p.lap===27)!
+  const at=(time:number)=>{updateRuntime(runtime,british,{guide,time,wallDt:1/30,selected:44,onboard:false,telemetry:[],camera:{x:0,y:0,z:0}});return runtime.cars.find(c=>c.driver.number===44)!}
+  at(plan.entry-3)
+  const box=runtime.boxes.get(plan)!
+  assert.ok(runtime.boxesReady&&box,'every stop has a box once motion is built')
+  const start=plan.stopAt-plan.service/2,colour=(c:ReturnType<typeof at>)=>c.compound.getHexString(),tyre=(compound:string)=>new Color(historicalCompound(compound).color).getHexString()
+  let car=at(start+plan.service*.1)
+  assert.equal(car.pit?.phase,'service');assert.equal(colour(car),tyre(plan.from))
+  car=at(plan.stopAt)
+  assert.ok(Math.hypot(car.pose.x-box.x,car.pose.z-box.z)<1e-6&&car.pose.speed<1e-6,'stationary in the box')
+  assert.ok(car.lift>.05&&car.wheelsOff,'jacked up with the wheels off')
+  car=at(start+plan.service*.9)
+  assert.equal(car.wheelsOff,false);assert.equal(colour(car),tyre(plan.to))
+  car=at(plan.exit+3)
+  assert.equal(car.pit,null);assert.equal(car.lift,0)
 })
 
 test('track status follows recorded race-control messages',()=>{

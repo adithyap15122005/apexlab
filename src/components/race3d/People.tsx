@@ -84,7 +84,8 @@ export default function People({layout,runtime,teams,density,lapStart,finishTime
     const people=scratch.people;people.length=0
     let key=''
     for(const car of rt.cars){
-      if(!car.visible||car.pose.mode!==2||car.dynamics.speed>1.2||people.length>=pit.instanceMatrix.count)continue
+      // Normal stops are choreographed by PitStopCrew; this crew only surrounds cars parked in the lane (e.g. under a red flag).
+      if(!car.visible||car.pit||car.pose.mode!==2||car.dynamics.speed>1.2||people.length>=pit.instanceMatrix.count)continue
       key+=car.index+','
       for(const [k,[x,z,yaw]] of CREW_SPOTS.entries()){
         const v=scratch.v.set(x,0,z).applyMatrix4(car.ground)

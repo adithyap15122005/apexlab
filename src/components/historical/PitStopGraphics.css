@@ -1,0 +1,63 @@
+/* Broadcast pit-stop panel and ticker over the 3D replay. The panel takes the coach's corner so the box stays in view. */
+.pg-panel{position:absolute;z-index:7;right:21px;bottom:54px;width:min(450px,calc(100% - 236px));border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#101d23f7,#0a1418f7);border:1px solid #ffffff1c;box-shadow:0 18px 44px #000a;color:#eef5ea}
+.pg-panel.is-onboard{bottom:118px}
+.pg-panel>header{display:flex;align-items:center;gap:10px;padding:7px 12px;background:linear-gradient(90deg,var(--team),color-mix(in srgb,var(--team) 25%,#0a1418));font:700 10px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.12em;text-shadow:0 1px 3px #0009}
+.pg-tag{padding:3px 8px;border-radius:4px;background:#5ec8f2;color:#06141b;text-shadow:none}
+.pg-status{margin-left:auto;color:#fff}
+.pg-panel.is-service .pg-status{color:#ffe14d;animation:pg-pulse .5s ease-in-out infinite alternate}
+.pg-panel.is-release .pg-status,.pg-panel.is-done .pg-status{color:#7ff09c}
+@keyframes pg-pulse{to{opacity:.55}}
+.pg-body{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:14px;padding:10px 14px}
+.pg-driver{display:flex;align-items:center;gap:10px;min-width:0}
+.pg-driver b{display:block;font:700 21px/1.1 var(--display,'Space Grotesk Variable',sans-serif);letter-spacing:.02em;border-left:4px solid var(--team);padding-left:8px}
+.pg-driver small{display:block;padding-left:12px;font-size:10px;color:#9fb3a9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-portrait{margin:0;width:46px;height:46px;border-radius:50%;overflow:hidden;border:2px solid var(--team);background:#13232a;flex-shrink:0}
+.pg-portrait img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.pg-portrait span{display:grid;place-items:center;height:100%;font:700 13px var(--mono,'IBM Plex Mono',monospace)}
+.pg-clock{display:flex;flex-direction:column;align-items:center;padding:2px 12px;border-left:1px solid #ffffff14;border-right:1px solid #ffffff14}
+.pg-clock small{font:700 8px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.14em;color:#8fa79b}
+.pg-clock b{font:700 32px/1.05 var(--display,'Space Grotesk Variable',sans-serif);color:#d7ff43;font-variant-numeric:tabular-nums}
+.pg-clock b i{font-style:normal;font-size:15px;margin-left:2px}
+.pg-clock span{font-size:9px;color:#7f978b;white-space:nowrap}
+.pg-wheels{display:grid;grid-template-columns:repeat(2,auto);gap:4px 8px}
+.pg-wheels>div{display:flex;align-items:center;gap:4px;transition:transform .2s}
+.pg-wheels>div.is-working .pg-tyre{animation:pg-spin .22s linear infinite}
+.pg-wheels>div.is-done{transform:scale(1.06)}
+.pg-wheels small{font:9px var(--mono,'IBM Plex Mono',monospace);color:#8fa79b}
+@keyframes pg-spin{to{transform:rotate(360deg)}}
+.pg-tyre{position:relative;display:inline-grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#2a2f33 0 38%,#141618 40%);border:3px solid var(--tyre);flex-shrink:0;box-sizing:border-box;box-shadow:0 0 0 1px #000a}
+.pg-tyre b{font:800 10px var(--body,'Inter Variable',sans-serif);color:var(--tyre)}
+.pg-tyre.is-worn{filter:saturate(.5) brightness(.75);border-style:dashed}
+.pg-progress{height:4px;background:#ffffff10}
+.pg-progress span{display:block;height:100%;background:linear-gradient(90deg,#5ec8f2,#d7ff43);transition:width .12s linear}
+.pg-panel>footer{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:9px 14px 11px;font:9px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.08em;color:#8fa79b}
+.pg-panel>footer b{color:#eef5ea;font-size:11px}
+.pg-panel>footer b.is-loss{color:#ff8a80}.pg-panel>footer b.is-gain{color:#7ff09c}
+.pg-change{display:flex;align-items:center;gap:5px;flex-basis:100%;letter-spacing:.04em}
+.pg-change small{font-size:10px;color:#c9d8ce}
+.pg-change i{font-style:normal;color:#d7ff43;font-size:14px;margin:0 3px}
+.pg-panel>footer p{flex-basis:100%;margin:1px 0 0;font:12px/1.45 var(--body,'Inter Variable',sans-serif);letter-spacing:0;color:#d4e1d7}
+.pg-ticker{position:absolute;z-index:6;left:21px;bottom:232px;display:flex;flex-direction:column;gap:6px;pointer-events:none}
+.pg-ticker-item{display:flex;align-items:center;gap:7px;padding:5px 10px 5px 0;border:1px solid #ffffff18;border-left:4px solid var(--team);border-radius:6px;background:#0b1418ee;color:#eef5ea;font-size:12px;cursor:pointer;pointer-events:auto;box-shadow:0 6px 18px #0006;overflow:hidden}
+.pg-ticker-item:hover:not(:disabled){color:#eef5ea;border-color:#d7ff4366}
+.pg-ticker-tag{align-self:stretch;display:flex;align-items:center;margin:-5px 0;padding:0 7px;background:#5ec8f2;color:#06141b;font:800 9px var(--mono,'IBM Plex Mono',monospace);letter-spacing:.1em}
+.pg-ticker-item b{font:700 13px var(--display,'Space Grotesk Variable',sans-serif)}
+.pg-ticker-item i{font-style:normal;color:#d7ff43}
+.pg-ticker-item small{font:10px var(--mono,'IBM Plex Mono',monospace);color:#9fb3a9}
+.pg-ticker-item .pg-tyre{border-width:2px}
+.pg-ticker-item .pg-tyre b{font-size:8px}
+@media(max-width:700px){
+  .pg-panel{left:14px;right:14px;width:auto;bottom:52px}
+  .pg-panel.is-onboard{bottom:112px}
+  .pg-panel>header{padding:5px 10px;font-size:9px}
+  .pg-body{grid-template-columns:1fr auto;gap:10px;padding:6px 10px}
+  .pg-wheels,.pg-driver small,.pg-change small,.pg-panel>footer p{display:none}
+  .pg-portrait{width:32px;height:32px}
+  .pg-driver b{font-size:17px}
+  .pg-clock{padding:0 0 0 10px;border-right:0}
+  .pg-clock b{font-size:22px}
+  .pg-clock span{font-size:8px}
+  .pg-panel>footer{padding:6px 10px 7px;gap:4px 12px}
+  .pg-change{flex-basis:auto}
+  .pg-ticker{top:118px;bottom:auto;left:14px}
+}

@@ -72,7 +72,9 @@ export default function CarFleet({runtime,carCount,selected,hideSelectedDriver,s
         const sweep=Math.min(.5,car.dynamics.spinRate*Math.max(1/60,Math.abs(runtime.current.time-lastTime.current))/(Math.PI*2))
         for(let w=0;w<4;w++){
           const i=k*4+w
-          m.tyre.setMatrixAt(i,car.wheels[w]);m.wheelFace.setMatrixAt(i,car.wheels[w]);m.wheelFace.setColorAt(i,car.compound)
+          // During a pit stop the crew has the wheels off; the tyres are drawn as props instead.
+          const wheel=car.wheelsOff?HIDE:car.wheels[w]
+          m.tyre.setMatrixAt(i,wheel);m.wheelFace.setMatrixAt(i,wheel);m.wheelFace.setColorAt(i,car.compound)
           fade('tyre').setX(i,car.fade);fade('wheelFace').setX(i,car.fade);blur.setX(i,car.moving?sweep:0)
         }
         lod.map[k]=car.index

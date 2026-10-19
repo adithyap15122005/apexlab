@@ -44,7 +44,7 @@ export default function CameraRig({mode,runtime,selected,look,guide,bounds,activ
   const state=useRef({
     mode:mode as CameraMode,shot:'chase' as Shot,shotUntil:0,selected,time:0,initialized:false,
     blendFrom:{pos:new Vector3(),quat:new Quaternion(),fov:50},blend:1,
-    orbitReady:false,chaseYaw:0,chasePos:new Vector3(),pitCam:new Vector3(),heliPos:new Vector3(),heliTarget:new Vector3(),tvIndex:-1,tvTarget:new Vector3(),tvFov:30,
+    orbitReady:false,chaseYaw:0,chasePos:new Vector3(),pitCam:new Vector3(),pitAim:new Vector3(),pitPlan:null as unknown,heliPos:new Vector3(),heliTarget:new Vector3(),tvIndex:-1,tvTarget:new Vector3(),tvFov:30,
   })
   const tmp=useMemo(()=>({m:new Matrix4(),q:new Quaternion(),q2:new Quaternion(),e:new Euler(),p:new Vector3(),t:new Vector3(),f:new Vector3(),s:new Vector3()}),[])
   useEffect(()=>{
@@ -67,6 +67,9 @@ export default function CameraRig({mode,runtime,selected,look,guide,bounds,activ
         s.shot=pick===s.shot?'trackside':pick;s.shotUntil=performance.now()+(5500+Math.random()*4500);s.tvIndex=-1;s.blend=1
       }
       effective=s.shot
+      // The director always cuts to the pit-wall camera for the followed driver's stop.
+      const pit=car?.pit
+      if(pit&&(pit.phase==='service'||(pit.phase==='approach'&&rt.time>pit.plan.stopAt-pit.plan.service/2-7)||(pit.phase==='release'&&rt.time<pit.plan.stopAt+pit.plan.service/2+4)))effective='trackside'
     }
     if(effective==='strategist'){
       if(!s.orbitReady){cam.up.copy(UP);cam.position.set(bounds.x+bounds.width*.55,bounds.y+Math.max(bounds.width,bounds.depth)*.5,bounds.z+bounds.depth*.65);cam.lookAt(bounds.x,bounds.y,bounds.z);s.orbitReady=true}
@@ -105,12 +108,14 @@ export default function CameraRig({mode,runtime,selected,look,guide,bounds,activ
       // The chase camera trails the car's heading with a lag, so it rotates into corners.
       if(jump)s.chaseYaw=pose.yaw
       s.chaseYaw+=wrap(pose.yaw-s.chaseYaw,Math.PI*2)*(1-Math.exp(-dt*4.2))
-      const back=5.3+dyn.speed*.012,fx2=Math.sin(s.chaseYaw),fz2=Math.cos(s.chaseYaw)
-      const wanted=tmp.t.set(carX-fx2*back,carY+1.38+speedNorm*.12,carZ-fz2*back)
+      // In the pit box it rises and looks down, so the crew around the car does not block the view.
+      const boxed=car.pit?car.pit.weight:0
+      const back=5.3+dyn.speed*.012+boxed*1.2,fx2=Math.sin(s.chaseYaw),fz2=Math.cos(s.chaseYaw)
+      const wanted=tmp.t.set(carX-fx2*back,carY+1.38+speedNorm*.12+boxed*2.6,carZ-fz2*back)
       // Heading lag alone gives the motion; only the height is softened so kerbs don't jolt the view.
       if(jump)s.chasePos.copy(wanted);else{s.chasePos.x=wanted.x;s.chasePos.z=wanted.z;s.chasePos.y+=(wanted.y-s.chasePos.y)*(1-Math.exp(-dt*10))}
       position.copy(s.chasePos)
-      tmp.f.set(carX+fx2*5,carY+.62,carZ+fz2*5)
+      tmp.f.set(carX+fx2*(5-boxed*3.4)-fz2*boxed*1.6,carY+.62-boxed*.3,carZ+fz2*(5-boxed*3.4)+fx2*boxed*1.6)
       tmp.m.lookAt(position,tmp.f,UP);quat.setFromRotationMatrix(tmp.m)
       fov=50+speedNorm*8
     }else if(effective==='top'){
@@ -130,6 +135,19 @@ export default function CameraRig({mode,runtime,selected,look,guide,bounds,activ
           tv.forEach((c,i)=>{const ahead=wrap(c.s-pose.s,L);if(ahead>-20&&ahead<bestAhead){best=i;bestAhead=ahead}})
           s.tvIndex=best;s.tvTarget.set(carX,carY+.5,carZ)
         }
+      }else if(pose.mode===2&&guide&&car.pit&&rt.boxes.get(car.pit.plan)){
+        // A pit stop: a raised pit-wall camera looking down into the team's box, slightly ahead of the car, over the crew's heads.
+        const box=rt.boxes.get(car.pit.plan)!
+        if(s.pitPlan!==car.pit.plan||s.tvIndex!==-3||jump){
+          const near=projectToPath(guide.track,box.x,box.z,box.y,120),f=near?pathFrame(guide.track,near.s):null
+          let dx=f?f.x+f.tz*f.offset-box.x:1,dz=f?f.z-f.tx*f.offset-box.z:0
+          const l=Math.hypot(dx,dz)||1;dx/=l;dz/=l
+          s.pitCam.set(box.x+dx*8+Math.sin(box.yaw)*5,box.y+6.4,box.z+dz*8+Math.cos(box.yaw)*5)
+          // Aim a little right of the car so it sits left of the pit-stop panel.
+          const ax=box.x-s.pitCam.x,az=box.z-s.pitCam.z,al=Math.hypot(ax,az)||1
+          s.pitAim.set(-az/al*2.4,0,ax/al*2.4)
+          s.pitPlan=car.pit.plan;s.tvIndex=-3;s.tvTarget.set(box.x,box.y+.5,box.z).add(s.pitAim)
+        }
       }else if(pose.mode===2&&guide){
         // Pit lane: a camera over the pit wall, on the track side, looking into the box.
         if(s.tvIndex!==-3||jump){
@@ -147,7 +165,8 @@ export default function CameraRig({mode,runtime,selected,look,guide,bounds,activ
       const c=s.tvIndex>=0?tv[s.tvIndex]:s.tvIndex===-3?s.pitCam:{x:carX+30,y:carY+8,z:carZ+30}
       if(s.tvIndex===-2&&s.tvTarget.distanceTo(tmp.t.set(carX,carY,carZ))>200)s.tvIndex=-1
       position.set(c.x,c.y,c.z)
-      s.tvTarget.lerp(tmp.t.set(carX,carY+.5,carZ),jump?1:1-Math.exp(-dt*7))
+      tmp.t.set(carX,carY+.5,carZ);if(s.tvIndex===-3&&car.pit&&s.pitPlan===car.pit.plan)tmp.t.add(s.pitAim)
+      s.tvTarget.lerp(tmp.t,jump?1:1-Math.exp(-dt*7))
       tmp.m.lookAt(position,s.tvTarget,UP);quat.setFromRotationMatrix(tmp.m)
       const distance=position.distanceTo(s.tvTarget),wantedFov=clamp(2*Math.atan(11/Math.max(1,distance))*180/Math.PI,5,48)
       s.tvFov=jump?wantedFov:s.tvFov+(wantedFov-s.tvFov)*(1-Math.exp(-dt*3))

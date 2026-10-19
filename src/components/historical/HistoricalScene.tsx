@@ -18,6 +18,7 @@ import Cockpit from '../race3d/Cockpit'
 import Effects from '../race3d/Effects'
 import Spray from '../race3d/Spray'
 import People from '../race3d/People'
+import PitStopCrew from '../race3d/PitStopCrew'
 import { EngineAudio } from '../race3d/engineAudio'
 import { buildPendingMotion, createRuntime, trackStatus, updateRuntime, type RaceRuntime, type TrackStatus } from '../race3d/raceRuntime'
 import { venueFor } from '../race3d/venues'
@@ -110,6 +111,7 @@ function RaceWorld({race,clockRef,time,selectedDriver,cameraMode,onSelectDriver,
       <CircuitScenery layout={layout} venue={venue} runtime={runtime} lapStart={lapStart}/>
       <Horizon venue={venue} radius={layout.terrainSize*2.2+1500} baseY={layout.baseY}/>
       <People layout={layout} runtime={runtime} teams={teamColours} density={quality.crowd} lapStart={lapStart} finishTime={race.meta.duration+1}/>
+      <PitStopCrew runtime={runtime}/>
       <GroundPlane venue={venue} y={layout.baseY-.4}/>
     </>}
     {rain&&<Spray runtime={runtime} carCount={race.drivers.length}/>}
